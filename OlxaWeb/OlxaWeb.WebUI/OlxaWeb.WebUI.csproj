@@ -182,8 +182,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\Style.css" />
+    <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font_aw\css\font-awesome.css" />
     <Content Include="fonts\font_aw\css\font-awesome.min.css" />
