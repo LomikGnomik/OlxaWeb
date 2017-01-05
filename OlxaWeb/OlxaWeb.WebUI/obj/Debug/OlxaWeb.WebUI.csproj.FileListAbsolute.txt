@@ -136,3 +136,12 @@ C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Microsoft.Owin.Security.Micro
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\obj\Debug\OlxaWeb.WebUI.csprojResolveAssemblyReference.cache
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\obj\Debug\OlxaWeb.WebUI.dll
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\obj\Debug\OlxaWeb.WebUI.pdb
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Common.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Mvc.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\OlxaWeb.Domain.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\WebActivatorEx.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\OlxaWeb.Domain.pdb
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.xml
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Common.xml
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Mvc.xml
