@@ -6,39 +6,218 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/fonts/font_aw/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+   
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <div id="preloader" data-spinner="spinner1" data-screenbg="#fff"></div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">      
+        
+        <!-- Navbar -->
+        <!-- Add class ".navbar-sticky" to make navbar stuck when it hits the top of the page. Another modifier class is: "navbar-fullwidth" to stretch navbar and make it occupy 100% of the page width. The screen width at which navbar collapses can be controlled through the variable "$nav-collapse" in sass/variables.scss -->
+        <header class="navbar navbar-sticky">
+            <!-- --------------------------------------Toopbar  (Уплывающая шапка с лого) ---------------------------->
+            <div class="topbar">
+                <div class="container">
+                    <a href="index.html" class="site-logo">
+                        <img src="~/Content/img/logo.png" alt="OlxaWeb" /> 
+                    </a><!-- .site-logo -->
+                    <!-- Mobile Menu Toggle -->
+                    <div class="nav-toggle"><span></span></div>
+                    <div class="toolbar">
+                        <a href="#" class="text-sm" data-toggle="modal" data-target="#loginModal">Зпишись</a>
+                        <a href="#" class="btn btn-sm btn-default btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="icon-head"></i></a>
+                        <!-- <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a> -->
+                        <div class="search-btn">
+                            <i class="icon-search"></i>
+                            <form method="post" class="search-box">
+                                <input type="text" class="form-control input-sm" placeholder="Search">
+                                <button type="submit"><i class="icon-search"></i></button>
+                            </form>
+                        </div><!-- .search-btn -->
+                    </div><!-- .toolbar -->
+                </div><!-- .container -->
+            </div><!-- .topbar -->
+            <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
+            <div class="container">
+                <nav class="main-navigation">
+                    <ul class="menu">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>OlxaWeb</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-money" aria-hidden="true"></i>Цены</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Магазин</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Портфолио</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Контакты</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
+                        </li>
+
+                    </ul>
+                    <!-- .menu -->
+                </nav>
+            </div><!-- .container -->
+ <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
+            <div class="social-bar mobile-socials">
+                <a href="#" class="sb-skype">
+                    <i class="fa fa-skype"></i>
+                </a>
+                <a href="#" class="sb-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="sb-twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+        </header><!-- .navbar -->
+      
+  <!-- -------------------------------------- модальное окно для входа и регистрации ---------------------------------------- -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-content text-center">
+                    <h4>Вход через аккаунт</h4>
+                    <div class="space-bottom-2x">
+                        <a href="#" class="btn google-login waves-effect waves-light">Google<i class="fa fa-google"></i></a>
+                        <a href="#" class="btn twitter-login waves-effect waves-light">Twitter<i class="fa fa-twitter"></i></a>
+                        <a href="#" class="btn facebook-login waves-effect waves-light">Facebook<i class="fa fa-facebook"></i></a>
+                    </div>
+                    <h4>Или введите email</h4>
+                    <form method="post">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                        <div class="form-group">
+                            <button type="submit" class="btn login-btn btn-default waves-effect waves-light">Вход<i class="icon-head"></i></button>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-sm text-semibold">New to Nucleus? <a href="#">Запишись</a></span>
+                        </div>
+                    </form><!-- <form> -->
+                </div><!-- .modal-content -->
+            </div><!-- .modal-dialog -->
+        </div><!-- .modal.fade -->
+
+
+
+        @RenderBody()
+
+        <!-- -----------------------------------------------Footer------------------------------------------------------------------ -->
+        <footer class="footer">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="tools">
+                        <div class="cell">
+                            <i><img src="img/footer/icons/help.png" alt="Email"></i>
+                            <span><a href="mailto:info@email.com">info@email.com</a></span>
+                        </div>
+                        <div class="cell">
+                            <i><img src="img/footer/icons/phone.png" alt="Phone"></i>
+                            <span><a href="#">+10 (8) 555 333</a></span>
+                        </div>
+                        <div class="cell">
+                            <i><img src="img/footer/icons/chat.png" alt="Chat"></i>
+                            <span><a href="#">Live Chat</a></span>
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        <div class="subscribe-form">
+                            <i><img src="img/footer/icons/envelope.png" alt="Subscribe"></i>
+                            <form action="//8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=011a3332a0" method="post" target="_blank" novalidate autocomplete="off">
+                                <label for="subscr_email" class="sr-only">Subscribe to latest news</label>
+                                <input type="email" class="form-control" id="subscr_email" placeholder="Your Email">
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;">
+                                    <input type="text" name="b_168a366a98d3248fbc35c0b67_011a3332a0" tabindex="-1" value="">
+                                </div>
+                                <button type="submit"><i class="icon-mail"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </div><!-- .top-footer -->
+
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_text">
+                                <a href="index.html" class="site-logo">
+                                    <img src="~/Content/img/logo.png" alt="OlxaWeb" />
+                                </a><!-- .site-logo -->
+                                <p>Left your phone on the train? Your photos, and videos are safe. Just sign in  from any device, and your files will be there waiting for you.</p>
+                            </section><!-- .widget.widget_text -->
+                        </div><!-- .col-md-3 -->
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="icon-ribbon"></i>
+                                    Nucleus
+                                </h3>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Domains</a></li>
+                                    <li><a href="home-hosting.html">Hosting</a></li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                        <div class="clearfix visible-sm"></div>
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="icon-cog"></i>
+                                    Support
+                                </h3>
+                                <ul>
+                                    <li><a href="help-general.html">Help Center</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contacts.html">Contacts</a></li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="icon-globe"></i>
+                                    Community
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Developers</a></li>
+                                    <li><a href="#">Referrals</a></li>
+                                    <li><a href="#">Forum</a></li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                    </div><!-- .row -->
+                    <div class="copyright">
+                        <div class="column">
+                            <p>&copy; Nucleus 2015. With <i class="fa fa-heart text-danger"></i> love.</p>
+                        </div><!-- .column -->
+                        <div class="column">
+                            <div class="cards">
+                                <img src="img/cards.png" alt="Credit Cards">
+                            </div>
+                        </div><!-- .column -->
+                    </div><!-- .copyright -->
+                </div><!-- .container -->
+            </div><!-- .bottom-footer -->
+        </footer><!-- .footer -->
+
+    </div><!-- .page-wrapper -->
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>
