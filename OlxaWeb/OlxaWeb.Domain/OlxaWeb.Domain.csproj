@@ -77,7 +77,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IOlxaWebRepository.cs" />
+    <Compile Include="Abstract\IBlogRepository.cs" />
+    <Compile Include="Concrete\EFBlogRepository.cs" />
+    <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />

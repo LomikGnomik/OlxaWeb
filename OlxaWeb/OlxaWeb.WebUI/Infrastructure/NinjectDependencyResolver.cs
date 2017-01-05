@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OlxaWeb.Domain.Abstract;
-
+using OlxaWeb.Domain.Concrete;
 
 namespace OlxaWeb.WebUI.Infrastructure
 {
@@ -31,7 +31,7 @@ namespace OlxaWeb.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            kernel.Bind<IOlxaWebRepository>().To<EFOlxaWebRepository>();
+            kernel.Bind<IBlogRepository>().To<EFBlogRepository>();
         }
     }
 

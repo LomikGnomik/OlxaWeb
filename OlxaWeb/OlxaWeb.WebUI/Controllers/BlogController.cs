@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OlxaWeb.Domain.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,16 @@ namespace OlxaWeb.WebUI.Controllers
 {
     public class BlogController : Controller
     {
-        // GET: Blog
-        public ActionResult Index()
+        private IBlogRepository repository;
+        public BlogController(IBlogRepository repo)
         {
-            return View();
+            repository = repo;
+        }
+
+        // Возвращает все посты
+        public ActionResult List()  
+        {
+            return View(repository.Posts);
         }
     }
 }
