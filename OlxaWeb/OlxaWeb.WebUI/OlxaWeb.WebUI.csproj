@@ -203,8 +203,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\logo.png" />
-    <Content Include="Content\Style.css" />
-    <Content Include="Content\styles.min.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font_aw\css\font-awesome.css" />
     <Content Include="fonts\font_aw\css\font-awesome.min.css" />
@@ -252,13 +251,39 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\scripts.js" />
+    <Content Include="Scripts\js\vendor\bootstrap.min.js" />
+    <Content Include="Scripts\js\vendor\detectizr.min.js" />
+    <Content Include="Scripts\js\vendor\gmap3.min.js" />
+    <Content Include="Scripts\js\vendor\icheck.min.js" />
+    <Content Include="Scripts\js\vendor\isotope.pkgd.min.js" />
+    <Content Include="Scripts\js\vendor\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\js\vendor\jquery.downCount.js" />
+    <Content Include="Scripts\js\vendor\jquery.easing.min.js" />
+    <Content Include="Scripts\js\vendor\jquery.parallax.min.js" />
+    <Content Include="Scripts\js\vendor\jquery.spincrement.js" />
+    <Content Include="Scripts\js\vendor\jquery.stellar.min.js" />
+    <Content Include="Scripts\js\vendor\magnific-popup.min.js" />
+    <Content Include="Scripts\js\vendor\modernizr.custom.js" />
+    <Content Include="Scripts\js\vendor\owl.carousel.min.js" />
+    <Content Include="Scripts\js\vendor\placeholder.js" />
+    <Content Include="Scripts\js\vendor\preloader.min.js" />
+    <Content Include="Scripts\js\vendor\scroll-effect.js" />
+    <Content Include="Scripts\js\vendor\scrollreveal.min.js" />
+    <Content Include="Scripts\js\vendor\smoothscroll.js" />
+    <Content Include="Scripts\js\vendor\velocity.min.js" />
+    <Content Include="Scripts\js\vendor\velocity.ui.min.js" />
+    <Content Include="Scripts\js\vendor\waves.min.js" />
+    <Content Include="Scripts\js\vendor\waypoints.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Script_ox.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -294,9 +319,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\js\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\Playfair_Display\" />
     <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
