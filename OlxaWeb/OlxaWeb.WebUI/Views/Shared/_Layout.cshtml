@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+ 
     <link href="~/fonts/font_aw/css/font-awesome.css" rel="stylesheet" />
-    <link href="~/Content/Style.css" rel="stylesheet" />
+
+    <link href="~/Content/styles.css" rel="stylesheet" />
    
 
 </head>
@@ -43,45 +43,48 @@
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
-            <div class="container">
-                <nav class="main-navigation">
-                    <ul class="menu">
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>OlxaWeb</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-money" aria-hidden="true"></i>Цены</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Магазин</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Портфолио</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Контакты</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
-                        </li>
+           
+                <div class="container">
+                    <nav class="main-navigation">
+                        <ul class="menu">
+                            <li class="menu-item-has-children current-menu-item">
+                                <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#"><i class="fa fa-money" aria-hidden="true"></i>Разработка</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
+                            </li>
 
-                    </ul>
-                    <!-- .menu -->
-                </nav>
-            </div><!-- .container -->
- <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
-            <div class="social-bar mobile-socials">
-                <a href="#" class="sb-skype">
-                    <i class="fa fa-skype"></i>
-                </a>
-                <a href="#" class="sb-facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="sb-twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </div>
-        </header><!-- .navbar -->
+                        </ul>
+                        <!-- .menu -->
+                    </nav>
+                </div><!-- .container -->
+                
+          
+                <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
+                <div class="social-bar mobile-socials">
+                    <a href="#" class="sb-skype">
+                        <i class="fa fa-skype"></i>
+                    </a>
+                    <a href="#" class="sb-facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="sb-twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+</header><!-- .navbar -->
       
   <!-- -------------------------------------- модальное окно для входа и регистрации ---------------------------------------- -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
@@ -216,8 +219,15 @@
 
     </div><!-- .page-wrapper -->
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    <script src="~/Scripts/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/js/vendor/preloader.min.js"></script>
+    <script src="~/Scripts/js/vendor/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/vendor/waves.min.js"></script>
+    <script src="~/Scripts/js/vendor/placeholder.js"></script>
+    <script src="~/Scripts/js/vendor/smoothscroll.js"></script>
+    <script src="~/Scripts/js/vendor/waypoints.min.js"></script>
+    <script src="~/Scripts/js/vendor/velocity.min.js"></script>
+    <script src="~/Scripts/js/scripts.js"></script>
+
 </body>
 </html>
