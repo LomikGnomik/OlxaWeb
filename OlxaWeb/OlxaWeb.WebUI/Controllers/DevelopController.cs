@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OlxaWeb.Domain.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,12 @@ namespace OlxaWeb.WebUI.Controllers
 {
     public class DevelopController : Controller
     {
+        private ITemplateRepository repository;
+
+        public DevelopController(ITemplateRepository repo)
+        {
+            repository = repo;
+        }
         // Выбор из трёх видов сайта: шаблонные,индивидуальные,эксклюзивные
         public ActionResult List()
         {
@@ -16,7 +23,7 @@ namespace OlxaWeb.WebUI.Controllers
         // Галлерея шаблонных сайтов
         public ActionResult Template()
         {
-            return View();
+            return View(repository.Templates);
         }
         // Страница про индивидуальные сайты 
         public ActionResult Individual()
