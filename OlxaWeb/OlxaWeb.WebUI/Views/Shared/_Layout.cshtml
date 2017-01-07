@@ -35,7 +35,7 @@
             <!-- --------------------------------------Toopbar  (Уплывающая шапка с лого) ---------------------------->
             <div class="topbar">
                 <div class="container">
-                    <a href="index.html" class="site-logo">
+                    <a href="~/Views/Home/Index.cshtml"class="site-logo">
                         <img src="~/Content/img/logo.png" alt="OlxaWeb" />
                     </a><!-- .site-logo -->
                     <!-- Mobile Menu Toggle -->
@@ -61,9 +61,16 @@
                     <ul class="menu">
                         <li class="menu-item-has-children current-menu-item">
                             <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
-                        </li>
                         <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-lemon-o fa-3x" aria-hidden="true"></i>Разработка</a>
+                            <a href="#"><i class="fa fa-lemon-o" aria-hidden="true"></i>Разработка</a>
+                            <div class="mega-menu">
+                                <ul>
+                                    <li>@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
+                                    <li>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
+                                    <li>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
+                                </ul>
+                            </div>
+                        </li>
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>

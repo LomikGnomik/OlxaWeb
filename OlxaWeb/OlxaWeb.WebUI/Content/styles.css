@@ -4926,7 +4926,7 @@ a {
   color: #000;
   font-weight: normal;
   text-decoration: none;
-  border-bottom: 1px dashed #2895f1;
+  border-bottom: 1px dashed #19c55e;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -5290,7 +5290,8 @@ p {
 }
 
 .text-sm {
-  font-size: 14px;
+  font-size: 16px;
+  color:#9d9d9d
 }
 
 .text-xs {
@@ -6913,7 +6914,7 @@ fieldset[disabled] a.btn {
 
 .btn-sm {
   height: 36px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 33px;
   padding: 0 20px;
 }
@@ -7064,31 +7065,31 @@ input[type="button"].btn-block {
 }
 
 .btn-3d.btn-default {
-  -webkit-box-shadow: 0px 4px 0px #0d71c5;
-  box-shadow: 0px 4px 0px #0d71c5;
+  -webkit-box-shadow: 0px 4px 0px #19c55e;
+  box-shadow: 0px 4px 0px #19c55e;
 }
 
 .btn-3d.btn-default:hover {
-  background-color: #1089ef;
+  background-color: #1bdb68;
 }
 
 .btn-3d.btn-default:active {
-  -webkit-box-shadow: 0px 0px 0px #0d71c5;
-  box-shadow: 0px 0px 0px #0d71c5;
+  -webkit-box-shadow: 0px 0px 0px #1bdb68;
+  box-shadow: 0px 0px 0px #1bdb68;
 }
 
 .btn-3d.btn-primary {
-  -webkit-box-shadow: 0px 4px 0px #139b4a;
-  box-shadow: 0px 4px 0px #139b4a;
+  -webkit-box-shadow: 0px 4px 0px #0e7cd8;
+  box-shadow: 0px 4px 0px #0e7cd8;
 }
 
 .btn-3d.btn-primary:hover {
-  background-color: #18c45d;
+  background-color: #2895f1;
 }
 
 .btn-3d.btn-primary:active {
-  -webkit-box-shadow: 0px 0px 0px #139b4a;
-  box-shadow: 0px 0px 0px #139b4a;
+  -webkit-box-shadow: 0px 0px 0px #0e7cd8;
+  box-shadow: 0px 0px 0px #0e7cd8;
 }
 
 .btn-3d.btn-info {
@@ -8641,22 +8642,20 @@ input[type="button"].btn-block {
 }
 
 .main-navigation .menu > li .sub-menu,
-.main-navigation .menu > li .mega-menu {
+.main-navigation .menu > li .mega-menu {  /* параметры блока выплывающего при наведении на пункт меню*/
   display: none;
   position: absolute;
   list-style: none;
-  width: 265px;
+  width: 300px;
   padding: 24px;
-  background-color: #2895f1;
+  background-color: #19c55e;
   text-align: left;
   left: 0;
   top: 100%;
   margin-top: -1px;
 }
 
-.main-navigation .menu > li .mega-menu {
-  width: 700px;
-}
+
 
 .main-navigation .menu > li .mega-menu:before, .main-navigation .menu > li .mega-menu:after {
   content: " ";
@@ -8667,9 +8666,9 @@ input[type="button"].btn-block {
   clear: both;
 }
 
-.main-navigation .menu > li .mega-menu > ul {
+.main-navigation .menu > li .mega-menu > ul {   /* параметры подменю выплывающего при наведении*/
   float: left;
-  width: 36%;
+  width: 100%;
   list-style: none;
   padding: 0 25px 0 0;
 }
@@ -8690,19 +8689,20 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.main-navigation .menu > li .mega-menu > ul > li > a,
+.main-navigation .menu > li .mega-menu > ul > li > a,       /*параметры ссылок в списках менюшек*/
 .main-navigation .menu > li .sub-menu > li > a {
   position: relative;
   font-size: 14px;
   color: #fff;
   font-weight: normal;
   padding: 0 12px;
-  border: 1px solid #1bdb68;
+  border: 1px solid #19c55e;
 }
 
 .main-navigation .menu > li .mega-menu > ul > li > a:hover,
 .main-navigation .menu > li .sub-menu > li > a:hover {
   background-color: #1bdb68;
+  box-shadow:2px;
 }
 
 .main-navigation .menu > li .mega-menu > ul > li.current-menu-item > a,
