@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Template";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Template. Галлерея шаблонных сайтов</h2>
+<!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
+<section class="page-title">
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="title">
+                    <h1>Portfolio</h1>
+                </div><!-- .title -->
+            </div><!-- .column -->
+            <div class="column">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="delimiter"><i class="icon-arrow-right"></i></span>
+                    <span>Portfolio</span>
+                </div><!-- .breadcrumbs -->
+            </div><!-- .column -->
+        </div>
+    </div>
+</section><!-- .page-title -->
+<!-- Content -->
+<section class="container">
+    <h2 class="block-title text-center">
+        Portfolio Standard
+        <small>Our latest works</small>
+    </h2>
+
+    <!-- Filters -->
+    <div class="text-center padding-top">
+        <ul class="nav-filters space-bottom-2x text-center">
+            <li class="active"><a href="#" data-filter="*">Show All</a></li>
+            <li><a href="#" data-filter=".apps">Apps</a></li>
+            <li><a href="#" data-filter=".identity">Identity Design</a></li>
+        </ul><!-- .nav-filters -->
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid isotope-grid col-3 filter-grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+
+        <!-- Portfolio Item -->
+        <div class="grid-item apps">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio"/> 
+                </div>
+                <h3 class="portfolio-title">Mobile App</h3>
+            </a>
+        </div><!-- .grid-item.apps -->
+        <!-- Portfolio Item -->
+        <div class="grid-item identity">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" /> 
+                </div>
+                <h3 class="portfolio-title">Identity Design</h3>
+            </a>
+        </div><!-- .grid-item.identity -->
+        <!-- Portfolio Item -->
+        <div class="grid-item identity">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" /> 
+                </div>
+                <h3 class="portfolio-title">Package Design</h3>
+            </a>
+        </div><!-- .grid-item.identity -->
+        <!-- Portfolio Item -->
+        <div class="grid-item apps">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" /> 
+                </div>
+                <h3 class="portfolio-title">App Prototype</h3>
+            </a>
+        </div><!-- .grid-item.apps -->
+        <!-- Portfolio Item -->
+        <div class="grid-item identity">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" /> 
+                </div>
+                <h3 class="portfolio-title">Stationery Design</h3>
+            </a>
+        </div><!-- .grid-item.identity -->
+        <!-- Portfolio Item -->
+        <div class="grid-item apps">
+            <a href="#" class="portfolio-item">
+                <div class="thumbnail waves-effect waves-light">
+                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" /> 
+                </div>
+                <h3 class="portfolio-title">Watch App</h3>
+            </a>
+        </div><!-- .grid-item.apps -->
+    </div><!-- .isotope-masonry-grid -->
+    <!-- Load More Button -->
+    <div class="text-center padding-top">
+        <a href="#" class="btn btn-default btn-ghost waves-effect">Load More</a>
+    </div>
+</section><!-- .container -->
+<!-- Scroll To Top Button -->
+<a href="#" class="scroll-to-top-btn">
+    <i class="icon-arrow-up"></i>
+</a><!-- .scroll-to-top-btn -->
+

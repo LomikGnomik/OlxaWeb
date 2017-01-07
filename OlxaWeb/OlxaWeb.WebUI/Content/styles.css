@@ -4926,7 +4926,7 @@ a {
   color: #000;
   font-weight: normal;
   text-decoration: none;
-  border-bottom: 1px dashed #2895f1;
+  border-bottom: 1px dashed #19c55e;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -5290,7 +5290,8 @@ p {
 }
 
 .text-sm {
-  font-size: 14px;
+  font-size: 16px;
+  color:#9d9d9d
 }
 
 .text-xs {
@@ -6679,11 +6680,11 @@ table > tbody + tbody {
   -webkit-transition: color 0.3s ease-out, background-color 0.3s ease-out;
   -o-transition: color 0.3s ease-out, background-color 0.3s ease-out;
   transition: color 0.3s ease-out, background-color 0.3s ease-out;
-  background-color: #2895f1;
+  background-color: #19c55e;
 }
 
 .btn:hover {
-  background-color: #0e7cd8;
+  background-color: #3aa063;
  font-weight:bold;
   color: #fff;
   text-decoration: none;
@@ -6738,35 +6739,35 @@ fieldset[disabled] a.btn {
 }
 
 .btn-default {
-  background-color: #2895f1;
-}
-
-.btn-default:hover {
-  background-color: #0e7cd8;
-}
-
-.btn-primary {
-  background-color: #1bdb68;
-}
-
-.btn-primary:hover {
-  background-color: #15ae52;
-}
-
-.btn-success {
   background-color: #19c55e;
 }
 
-.btn-success:hover {
-  background-color: #139848;
+.btn-default:hover {
+  background-color: #3aa063;
 }
 
-.btn-info {
+.btn-primary {
+  background-color: #2895f1;
+}
+
+.btn-primary:hover {
+  background-color: #55acee;
+}
+
+.btn-success {
   background-color: #62b7ff;
 }
 
+.btn-success:hover {
+  background-color: #2895f1;
+}
+
+.btn-info {
+  background-color: #19c55e;
+}
+
 .btn-info:hover {
-  background-color: #2fa0ff;
+  background-color: rgba(21, 174, 82, 0.89);
 }
 
 .btn-warning {
@@ -6913,7 +6914,7 @@ fieldset[disabled] a.btn {
 
 .btn-sm {
   height: 36px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 33px;
   padding: 0 20px;
 }
@@ -7064,31 +7065,31 @@ input[type="button"].btn-block {
 }
 
 .btn-3d.btn-default {
-  -webkit-box-shadow: 0px 4px 0px #0d71c5;
-  box-shadow: 0px 4px 0px #0d71c5;
+  -webkit-box-shadow: 0px 4px 0px #19c55e;
+  box-shadow: 0px 4px 0px #19c55e;
 }
 
 .btn-3d.btn-default:hover {
-  background-color: #1089ef;
+  background-color: #1bdb68;
 }
 
 .btn-3d.btn-default:active {
-  -webkit-box-shadow: 0px 0px 0px #0d71c5;
-  box-shadow: 0px 0px 0px #0d71c5;
+  -webkit-box-shadow: 0px 0px 0px #1bdb68;
+  box-shadow: 0px 0px 0px #1bdb68;
 }
 
 .btn-3d.btn-primary {
-  -webkit-box-shadow: 0px 4px 0px #139b4a;
-  box-shadow: 0px 4px 0px #139b4a;
+  -webkit-box-shadow: 0px 4px 0px #0e7cd8;
+  box-shadow: 0px 4px 0px #0e7cd8;
 }
 
 .btn-3d.btn-primary:hover {
-  background-color: #18c45d;
+  background-color: #2895f1;
 }
 
 .btn-3d.btn-primary:active {
-  -webkit-box-shadow: 0px 0px 0px #139b4a;
-  box-shadow: 0px 0px 0px #139b4a;
+  -webkit-box-shadow: 0px 0px 0px #0e7cd8;
+  box-shadow: 0px 0px 0px #0e7cd8;
 }
 
 .btn-3d.btn-info {
@@ -8438,10 +8439,10 @@ input[type="button"].btn-block {
 .navbar .toolbar .search-btn > i {
   width: 36px;
   height: 36px;
-  color: #2895f1;
+  color: #19c55e;
   text-align: center;
   line-height: 31px;
-  border: 1px solid #d9d9d9;
+  border: 0.5px solid #19c55e;
   padding-bottom: 0;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -8452,12 +8453,13 @@ input[type="button"].btn-block {
 .navbar .toolbar .cart-btn:hover,
 .navbar .toolbar .search-btn > i:hover {
   color: #fff;
-  background-color: #2895f1;
-  border-color: #2895f1;
+  background-color: #19c55e;
+  border-color: #19c55e;
 }
 
 .navbar .toolbar .search-btn {
   position: relative;
+  border-radius:15px;
 }
 
 .navbar .toolbar .search-btn .search-box {
@@ -8573,7 +8575,8 @@ input[type="button"].btn-block {
 
 .main-navigation .menu > li > a i { /* цвет картинок меню*/
   display: block;
-  font-size: 47px;
+  /*font-size: 40px;*/
+  font-weight:100;
   color: #19c55e;
   line-height: 1;
   margin-top: 7px;
@@ -8639,22 +8642,20 @@ input[type="button"].btn-block {
 }
 
 .main-navigation .menu > li .sub-menu,
-.main-navigation .menu > li .mega-menu {
+.main-navigation .menu > li .mega-menu {  /* параметры блока выплывающего при наведении на пункт меню*/
   display: none;
   position: absolute;
   list-style: none;
-  width: 265px;
+  width: 300px;
   padding: 24px;
-  background-color: #2895f1;
+  background-color: #19c55e;
   text-align: left;
   left: 0;
   top: 100%;
   margin-top: -1px;
 }
 
-.main-navigation .menu > li .mega-menu {
-  width: 700px;
-}
+
 
 .main-navigation .menu > li .mega-menu:before, .main-navigation .menu > li .mega-menu:after {
   content: " ";
@@ -8665,9 +8666,9 @@ input[type="button"].btn-block {
   clear: both;
 }
 
-.main-navigation .menu > li .mega-menu > ul {
+.main-navigation .menu > li .mega-menu > ul {   /* параметры подменю выплывающего при наведении*/
   float: left;
-  width: 36%;
+  width: 100%;
   list-style: none;
   padding: 0 25px 0 0;
 }
@@ -8688,19 +8689,20 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.main-navigation .menu > li .mega-menu > ul > li > a,
+.main-navigation .menu > li .mega-menu > ul > li > a,       /*параметры ссылок в списках менюшек*/
 .main-navigation .menu > li .sub-menu > li > a {
   position: relative;
   font-size: 14px;
   color: #fff;
   font-weight: normal;
   padding: 0 12px;
-  border: 1px solid #1bdb68;
+  border: 1px solid #19c55e;
 }
 
 .main-navigation .menu > li .mega-menu > ul > li > a:hover,
 .main-navigation .menu > li .sub-menu > li > a:hover {
   background-color: #1bdb68;
+  box-shadow:2px;
 }
 
 .main-navigation .menu > li .mega-menu > ul > li.current-menu-item > a,
@@ -9251,16 +9253,16 @@ input[type="button"].btn-block {
   text-align: right;
 }
 
-.page-title .title {
+.page-title .title {   /* Тег на страница (шапка отдельных страниц*/
   display: inline-block;
   position: relative;
   padding: 8px 36px 8px 14px;
-  background-color: #2895f1;
+  background-color: rgba(25, 197, 94, 0.49);
   overflow: hidden;
 }
 
 .page-title .title h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   color: #fff;
   margin-bottom: 0;
@@ -9291,10 +9293,9 @@ input[type="button"].btn-block {
 
 .page-title .breadcrumbs {
   display: inline-block;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #d9d9d9;  
   padding: 9px 24px 11px 24px;
 }
-
 .page-title .breadcrumbs > * {
   display: inline-block;
   vertical-align: middle;
@@ -9313,7 +9314,7 @@ input[type="button"].btn-block {
 }
 
 .page-title .breadcrumbs a:hover {
-  border-color: #2895f1;
+  border-color: #19c55e;
 }
 
 .page-title .breadcrumbs span {
