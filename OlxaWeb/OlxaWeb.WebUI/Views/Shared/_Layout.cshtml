@@ -4,19 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
- 
+
     <link href="~/fonts/font_aw/css/font-awesome.css" rel="stylesheet" />
 
     <link href="~/Content/styles.css" rel="stylesheet" />
-   
+
 
 </head>
 <body>
     <div id="preloader" data-spinner="spinner1" data-screenbg="#fff"></div>
 
     <!-- Page Wrapper -->
-    <div class="page-wrapper">      
-        
+    <div class="page-wrapper">
+        <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер-------------------------------><!-- Social Bar -->
+        <!-- Change modifier class to ".bar-fixed-left" to position social bar on the left side of the page. -->
+        <div class="social-bar bar-fixed-right">
+            <a href="#" class="sb-skype">
+                <i class="fa fa-skype"></i>
+            </a>
+            <a href="#" class="sb-facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="sb-twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </div><!-- .social-bar -->
         <!-- Navbar -->
         <!-- Add class ".navbar-sticky" to make navbar stuck when it hits the top of the page. Another modifier class is: "navbar-fullwidth" to stretch navbar and make it occupy 100% of the page width. The screen width at which navbar collapses can be controlled through the variable "$nav-collapse" in sass/variables.scss -->
         <header class="navbar navbar-sticky">
@@ -24,7 +36,7 @@
             <div class="topbar">
                 <div class="container">
                     <a href="index.html" class="site-logo">
-                        <img src="~/Content/img/logo.png" alt="OlxaWeb" /> 
+                        <img src="~/Content/img/logo.png" alt="OlxaWeb" />
                     </a><!-- .site-logo -->
                     <!-- Mobile Menu Toggle -->
                     <div class="nav-toggle"><span></span></div>
@@ -43,50 +55,49 @@
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
-           
-                <div class="container">
-                    <nav class="main-navigation">
-                        <ul class="menu">
-                            <li class="menu-item-has-children current-menu-item">
-                                <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#"><i class="fa fa-money" aria-hidden="true"></i>Разработка</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
-                            </li>
 
-                        </ul>
-                        <!-- .menu -->
-                    </nav>
-                </div><!-- .container -->
-                
-          
-                <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
-                <div class="social-bar mobile-socials">
-                    <a href="#" class="sb-skype">
-                        <i class="fa fa-skype"></i>
-                    </a>
-                    <a href="#" class="sb-facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="#" class="sb-twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </div>
-</header><!-- .navbar -->
-      
-  <!-- -------------------------------------- модальное окно для входа и регистрации ---------------------------------------- -->
+            <div class="container">
+                <nav class="main-navigation">
+                    <ul class="menu">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-lemon-o fa-3x" aria-hidden="true"></i>Разработка</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
+                        </li>
+
+                    </ul>
+                    <!-- .menu -->
+                </nav>
+            </div><!-- .container -->
+
+
+
+            <div class="social-bar mobile-socials">
+                <a href="#" class="sb-skype">
+                    <i class="fa fa-skype"></i>
+                </a>
+                <a href="#" class="sb-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="sb-twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+        </header><!-- .navbar -->
+        <!-- -------------------------------------- модальное окно для входа и регистрации ---------------------------------------- -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -112,10 +123,9 @@
             </div><!-- .modal-dialog -->
         </div><!-- .modal.fade -->
 
-
-
+    <div class="container">
         @RenderBody()
-
+    </div>
         <!-- -----------------------------------------------Footer------------------------------------------------------------------ -->
         <footer class="footer">
             <div class="top-footer">
@@ -208,8 +218,8 @@
                             <p>&copy; OlxaWeb 2016. With <i class="fa fa-heart text-danger"></i> love.</p>
                         </div><!-- .column -->
                         <div class="column">
-                            <div class="cards">                                
-                                <img src="~/Content/img/cards.png" alt="Credit Cards"/>
+                            <div class="cards">
+                                <img src="~/Content/img/cards.png" alt="Credit Cards" />
                             </div>
                         </div><!-- .column -->
                     </div><!-- .copyright -->
