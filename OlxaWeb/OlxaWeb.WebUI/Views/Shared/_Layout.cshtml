@@ -36,7 +36,7 @@
             <div class="topbar">
                 <div class="container">
                     <a href="~/Views/Home/Index.cshtml"class="site-logo">
-                        <img src="~/Content/img/logo.png" alt="OlxaWeb" />
+                        <img src="~/Content/img/logo.png" alt="OlxaWeb" />                
                     </a><!-- .site-logo -->
                     <!-- Mobile Menu Toggle -->
                     <div class="nav-toggle"><span></span></div>
@@ -190,12 +190,12 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-ribbon"></i>
-                                    Nucleus
+                                    Разработка
                                 </h3>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Domains</a></li>
-                                    <li><a href="home-hosting.html">Hosting</a></li>
+                                    <li>@Html.ActionLink("Готовые Решения", "Templates", "Develop")</li>
+                                    <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                                    <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
@@ -204,12 +204,12 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-cog"></i>
-                                    Support
+                                    Продвижение
                                 </h3>
                                 <ul>
-                                    <li><a href="help-general.html">Help Center</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
+                                    <li>@Html.ActionLink("Начальное","","")</li>
+                                    <li>@Html.ActionLink("Оптимальное", "", "")</li>
+                                    <li>@Html.ActionLink("Продвинутое", "", "")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
@@ -217,12 +217,12 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-globe"></i>
-                                    Community
+                                    OlxaWeb
                                 </h3>
                                 <ul>
-                                    <li><a href="#">Developers</a></li>
-                                    <li><a href="#">Referrals</a></li>
-                                    <li><a href="#">Forum</a></li>
+                                    <li>@Html.ActionLink("Контакты", "Contacts", "")</li>
+                                    <li>@Html.ActionLink("ЧаВо", "", "")</li>
+                                    <li>@Html.ActionLink("Блог", "", "")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
