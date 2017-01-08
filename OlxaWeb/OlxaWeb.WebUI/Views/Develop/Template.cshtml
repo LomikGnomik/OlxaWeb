@@ -5,24 +5,23 @@
     ViewBag.Title = "Template";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Template. Галлерея шаблонных сайтов</h2>
-
 <!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
 <section class="page-title">
     <div class="container">
         <div class="inner">
             <div class="column">
                 <div class="title">
-                    <h1>Portfolio</h1>
+                    <h1>Разработка</h1>
                 </div><!-- .title -->
             </div><!-- .column -->
             <div class="column">
-                <div class="breadcrumbs">
-                    <a href="index.html">Home</a>
-                    <span class="delimiter"><i class="icon-arrow-right"></i></span>
-                    <span>Portfolio</span>
-                </div><!-- .breadcrumbs -->
+                <div class="text-center padding-top">
+                    <ul class="nav-filters space-bottom-2x text-center">
+                        <li class="active"><a href="#">Готовые</a></li>
+                        <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                        <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
+                    </ul><!-- .nav-filters -->
+                </div>
             </div><!-- .column -->
         </div>
     </div>
