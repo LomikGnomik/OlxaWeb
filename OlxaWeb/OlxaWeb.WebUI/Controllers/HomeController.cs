@@ -20,10 +20,8 @@ namespace OlxaWeb.WebUI.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+        public ActionResult Contacts()
+        {        
             return View();
         }
     }
