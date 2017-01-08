@@ -154,3 +154,7 @@ C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\OlxaWeb.Domain.pdb
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.xml
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Common.xml
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Ninject.Web.Mvc.xml
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Castle.Core.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Moq.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Castle.Core.xml
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\Moq.xml

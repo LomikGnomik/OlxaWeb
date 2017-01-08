@@ -5,6 +5,6 @@ namespace OlxaWeb.Domain.Abstract
 {
    public interface ITemplateRepository
     {
-        IEnumerable<Template> Templates { get; }
+        IEnumerable<Temmplate> Temmplates { get; }
     }
 }

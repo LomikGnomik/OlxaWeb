@@ -85,7 +85,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />
-    <Compile Include="Entities\Template.cs" />
+    <Compile Include="Entities\Temmplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

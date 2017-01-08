@@ -23,7 +23,7 @@ namespace OlxaWeb.WebUI.Controllers
         // Галлерея шаблонных сайтов
         public ActionResult Template()
         {
-            return View(repository.Templates);
+            return View(repository.Temmplates);
         }
         // Страница про индивидуальные сайты 
         public ActionResult Individual()
