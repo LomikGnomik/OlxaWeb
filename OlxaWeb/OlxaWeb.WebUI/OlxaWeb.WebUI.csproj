@@ -197,6 +197,9 @@
     <Compile Include="Controllers\DevelopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Controllers\PriceController.cs" />
+    <Compile Include="Controllers\SEOController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -334,6 +337,12 @@
     <Content Include="Views\Develop\Individual.cshtml" />
     <Content Include="Views\Develop\Template.cshtml" />
     <Content Include="Views\Develop\List.cshtml" />
+    <Content Include="Views\Develop\Card.cshtml" />
+    <Content Include="Views\SEO\Index.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Develop\Index.cshtml" />
+    <Content Include="Views\Price\Index.cshtml" />
+    <Content Include="Views\Home\Contacts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

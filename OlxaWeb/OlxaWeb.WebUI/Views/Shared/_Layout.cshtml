@@ -59,10 +59,10 @@
             <div class="container">
                 <nav class="main-navigation">
                     <ul class="menu">
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-lemon-o" aria-hidden="true"></i>Разработка</a>
+                        <li class="menu-item-has-children @(ViewBag.Current=="About"?"current-menu-item":"")">
+                            <a href="~/Home/index"><i class="fa fa-leaf" aria-hidden="true"></i>О нас</a>
+                        <li class="menu-item-has-children @(ViewBag.Current=="Develop"?"current-menu-item":"")">
+                            <a href="~/Develop/index"><i class="fa fa-lemon-o" aria-hidden="true"></i>Разработка</a>
                             <div class="mega-menu">
                                 <ul>
                                     <li>@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
@@ -71,18 +71,25 @@
                                 </ul>
                             </div>
                         </li>
+
+                        <li class="menu-item-has-children @(ViewBag.Current=="SEO"?"current-menu-item":"")">
+                            <a href="~/SEO/index"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>
+                            <div class="mega-menu">
+                                <ul>
+                                    <li>@Html.ActionLink("Начальное", "index", "SEO") </li>
+                                    <li>@Html.ActionLink("Оптимальное", "", "SEO")</li>
+                                    <li>@Html.ActionLink("Продвинутое", "", "SEO")</li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" id="газин"><i class="fa fa-object-group" aria-hidden="true"></i>Продвижение</a>
+                        <li class="menu-item-has-children @(ViewBag.Current=="Portfolio"?"current-menu-item":"")">
+                            <a href="~/Portfolio/index"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
+                        <li class="menu-item-has-children @(ViewBag.Current=="Price"?"current-menu-item":"")">
+                            <a href="~/Price/index"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
+                        <li class="menu-item-has-children @(ViewBag.Current=="Contacts"?"current-menu-item":"")">
+                            <a href="~/Home/Contacts"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
                         </li>
 
                     </ul>
