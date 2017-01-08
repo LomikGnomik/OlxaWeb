@@ -20,7 +20,7 @@ namespace OlxaWeb.Domain.Concrete
         public DbSet<Post> Posts { get; set; }
         public DbSet<Category> Categoryes { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<Template> Templates { get; set; }
+        public DbSet<Temmplate> Temmplates { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)   // Для связи многие ко многим
         {

@@ -12,9 +12,9 @@ namespace OlxaWeb.Domain.Concrete
     {
         EFDbContext context = new EFDbContext();
 
-        public IEnumerable<Template> Templates
+        public IEnumerable<Temmplate> Temmplates
         {
-            get { return context.Templates; }
+            get { return context.Temmplates; }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OlxaWeb.Domain.Entities
 {
-   public class Template
+   public class Temmplate
     {
         public virtual int Id
         { get; set; }

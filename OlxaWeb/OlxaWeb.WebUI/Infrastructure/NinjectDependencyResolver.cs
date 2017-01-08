@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Moq;
 using OlxaWeb.Domain.Abstract;
 using OlxaWeb.Domain.Concrete;
+using OlxaWeb.Domain.Entities;
 
 namespace OlxaWeb.WebUI.Infrastructure
 {
@@ -35,8 +36,17 @@ namespace OlxaWeb.WebUI.Infrastructure
             kernel.Bind<IBlogRepository>().To<EFBlogRepository>();
 
             Mock<ITemplateRepository> mock = new Mock<ITemplateRepository>();
+            mock.Setup(m => m.Temmplates).Returns(new List<Temmplate> {
+            new Temmplate {Title="Строительный",Description="", Category="инет-магаз", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
+            new Temmplate {Title="Ресторанный",Description="", Category="инет-магаз", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2 },
+            new Temmplate {Title="Медицинский",Description="", Category="блог", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 },
+            new Temmplate {Title="Спортивный",Description="", Category="комерческий", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4 },
+            new Temmplate {Title="Магазин",Description="", Category="лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5 },
+            new Temmplate {Title="Лендинг",Description="", Category="лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6 }
+            });
 
-            kernel.Bind<ITemplateRepository>().To<EFTemplateRepository>();
+            kernel.Bind<ITemplateRepository>().ToConstant(mock.Object);
+            // kernel.Bind<ITemplateRepository>().To<EFTemplateRepository>();
         }
     }
 
