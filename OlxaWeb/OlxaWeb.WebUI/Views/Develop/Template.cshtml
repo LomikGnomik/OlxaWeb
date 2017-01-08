@@ -44,31 +44,23 @@
 
     <!-- Portfolio Grid -->
     <div class="grid isotope-grid col-3 filter-grid">
+
         <div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>
 
-        <!-- Portfolio Item -->
-        <div class="grid-item apps">
-            <a href="#" class="portfolio-item">
-                <div class="thumbnail waves-effect waves-light">
-                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio"/> 
-                </div>
-                <h3 class="portfolio-title">Mobile App</h3>
-            </a>
-        </div><!-- .grid-item.apps -->
-       @foreach (var Site in @Model)
-       {
+        @foreach (var Site in @Model)
+        {
             <!-- Portfolio Item -->
-        <div class="grid-item identity">
-            <a href="#" class="portfolio-item">
-                <div class="thumbnail waves-effect waves-light">
-                    <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
-                </div>
-                <h3 class="portfolio-title">Identity Design</h3>
-            </a>
-        </div><!-- .grid-item.identity -->
-       }
-       
+            <div class="grid-item identity">
+                <a href="#" class="portfolio-item">
+                    <div class="thumbnail waves-effect waves-light">
+                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
+                    </div>
+                    <h3 class="portfolio-title">@Site.Category</h3>
+                </a>
+            </div><!-- .grid-item.identity -->
+        }
+
     </div><!-- .isotope-masonry-grid -->
     <!-- Load More Button -->
     <div class="text-center padding-top">
