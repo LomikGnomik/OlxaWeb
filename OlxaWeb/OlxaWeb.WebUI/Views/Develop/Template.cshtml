@@ -48,18 +48,35 @@
 
         @foreach (var Site in @Model)
         {
-            <!-- Portfolio Item -->
-            <div class="grid-item identity">
-                <a href="~/Develop/Card/@Site.Id" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
-                    </div>
-                    <h3 class="portfolio-title">@Site.Category</h3>
-                </a>
-            </div><!-- .grid-item.identity -->
-        }
+            @*<div class="grid-item identity">
+                
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="http://keenthemes.com/assets/bootsnipp/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
+                            <div>
+                                <a href="#" class="btn">Zoom</a>
+                                <a href="#" class="btn">View</a>
+                            </div>
+                        </div>
+                        <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                        <div class="pi-price">$29.00</div>
+                        <a href="javascript:;" class="btn add2cart">Add to cart</a>
+                    </div>      
+        </div>*@
 
-    </div><!-- .isotope-masonry-grid -->
+                <!-- Portfolio Item -->
+                    <div class="grid-item identity">
+                        <a href="~/Develop/Card/@Site.Id" class="portfolio-item">
+                            <div class="thumbnail waves-effect waves-light">
+                                <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
+                            </div>
+                            <h3 class="portfolio-title">@Site.Category</h3>
+                        </a>
+                       
+                    </div><!-- .grid-item.identity -->
+                }
+
+            </div><!-- .isotope-masonry-grid -->
     <!-- Load More Button -->
     <div class="text-center padding-top">
         <a href="#" class="btn btn-primary btn-ghost waves-effect">Load More</a>
