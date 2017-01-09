@@ -10,15 +10,16 @@
         <div class="inner">
             <div class="column">
                 <div class="title">
-                    <h1>Contacts</h1>
+                    <h1>Разработка</h1>
                 </div><!-- .title -->
             </div><!-- .column -->
             <div class="column">
-                <div class="breadcrumbs">
-                    <a href="index.html">Home</a>
-                    <span class="delimiter"><i class="icon-arrow-right"></i></span>
-                    <span>Contacts</span>
-                </div><!-- .breadcrumbs -->
+                <ul class="nav-filters text-center">
+                    
+                    <li>@Html.ActionLink("Готовые решения", "Template", "Develop")</li>
+                    <li class="active"><a href="#">Индивидуальные</a></li>
+                    <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
+                </ul><!-- .nav-filters -->
             </div><!-- .column -->
         </div><!-- .inner -->
     </div><!-- .container -->
