@@ -45,9 +45,9 @@
     <!-- Page Wrapper -->
     <div class="page-wrapper">
 
+        <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
         <!-- Social Bar -->
-        <!-- Change modifier class to ".bar-fixed-left" to position social bar on the left side of the page. -->
-        <div class="social-bar bar-fixed-right">
+            <div class="social-bar bar-fixed-right">
             <a href="#" class="sb-skype">
                 <i class="fa fa-skype"></i>
             </a>
@@ -96,7 +96,7 @@
                     <div class="nav-toggle"><span></span></div>
                     <div class="toolbar">
                         <a href="#" class="text-sm" data-toggle="modal" data-target="#loginModal">Запишись</a>
-                        <a href="#"class="btn btn-sm btn-ghost btn-primary btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="icon-head"></i></a>
+                        <a href="#" class="btn btn-sm btn-ghost btn-primary btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="icon-head"></i></a>
                         <!-- <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a> -->
                         <div class="search-btn">
                             <i class="icon-search"></i>
@@ -165,7 +165,7 @@
                         <a href="#" class="btn btn-default btn-3d space-top-none space-bottom-none">Buy Now</a>
                     </div>
                 </div>
-                <img src="~/Content/img/1478172823164455436.png" alt="картинка"/>
+                <img src="~/Content/img/1478172823164455436.png" alt="картинка" />
                 <div class="padding-bottom-2x visible-xs"></div>
             </div><!-- .container -->
             <div class="angle"></div>
@@ -476,27 +476,27 @@
         <a href="#" class="scroll-to-top-btn">
             <i class="icon-arrow-up"></i>
         </a><!-- .scroll-to-top-btn -->
-        <!-- Footer -->
+        <!-- -----------------------------------------------Footer------------------------------------------------------------------ -->
         <footer class="footer">
             <div class="top-footer">
                 <div class="container">
                     <div class="tools">
                         <div class="cell">
-                            <i><img src="img/footer/icons/help.png" alt="Email"></i>
+                            <i><img src="~/Content/footer/help.png" alt="Email"></i>
                             <span><a href="mailto:info@email.com">info@email.com</a></span>
                         </div>
                         <div class="cell">
-                            <i><img src="img/footer/icons/phone.png" alt="Phone"></i>
+                            <i><img src="~/Content/footer/phone.png" alt="Phone"></i>
                             <span><a href="#">+10 (8) 555 333</a></span>
                         </div>
                         <div class="cell">
-                            <i><img src="img/footer/icons/chat.png" alt="Chat"></i>
+                            <i><img src="~/Content/footer/chat.png" alt="Chat"></i>
                             <span><a href="#">Live Chat</a></span>
                         </div>
                     </div>
                     <div class="subscribe">
                         <div class="subscribe-form">
-                            <i><img src="img/footer/icons/envelope.png" alt="Subscribe"></i>
+                            <i><img src="~/Content/footer/envelope.png" alt="Subscribe"></i>
                             <form action="//8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=011a3332a0" method="post" target="_blank" novalidate autocomplete="off">
                                 <label for="subscr_email" class="sr-only">Subscribe to latest news</label>
                                 <input type="email" class="form-control" id="subscr_email" placeholder="Your Email">
@@ -504,7 +504,7 @@
                                 <div style="position: absolute; left: -5000px;">
                                     <input type="text" name="b_168a366a98d3248fbc35c0b67_011a3332a0" tabindex="-1" value="">
                                 </div>
-                                <button type="submit"><i class="icon-mail"></i></button>
+                                <button type="submit"><i class="fa fa-lemon-o"></i></button>
                             </form>
                         </div>
                     </div>
@@ -517,7 +517,7 @@
                         <div class="col-md-3 col-sm-6">
                             <section class="widget widget_text">
                                 <a href="index.html" class="site-logo">
-                                    <img src="img/logo.png" alt="Nucleus">
+                                    <img src="~/Content/img/logo.png" alt="OlxaWeb" />
                                 </a><!-- .site-logo -->
                                 <p>Left your phone on the train? Your photos, and videos are safe. Just sign in  from any device, and your files will be there waiting for you.</p>
                             </section><!-- .widget.widget_text -->
@@ -526,12 +526,12 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-ribbon"></i>
-                                    Nucleus
+                                    Разработка
                                 </h3>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Domains</a></li>
-                                    <li><a href="home-hosting.html">Hosting</a></li>
+                                    <li>@Html.ActionLink("Готовые Решения", "Templates", "Develop")</li>
+                                    <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                                    <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
@@ -540,12 +540,12 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-cog"></i>
-                                    Support
+                                    Продвижение
                                 </h3>
                                 <ul>
-                                    <li><a href="help-general.html">Help Center</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
+                                    <li>@Html.ActionLink("Начальное", "", "")</li>
+                                    <li>@Html.ActionLink("Оптимальное", "", "")</li>
+                                    <li>@Html.ActionLink("Продвинутое", "", "")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
@@ -553,23 +553,23 @@
                             <section class="widget widget_pages">
                                 <h3 class="widget-title">
                                     <i class="icon-globe"></i>
-                                    Community
+                                    OlxaWeb
                                 </h3>
                                 <ul>
-                                    <li><a href="#">Developers</a></li>
-                                    <li><a href="#">Referrals</a></li>
-                                    <li><a href="#">Forum</a></li>
+                                    <li>@Html.ActionLink("Контакты", "Contacts", "")</li>
+                                    <li>@Html.ActionLink("ЧаВо", "", "")</li>
+                                    <li>@Html.ActionLink("Блог", "", "")</li>
                                 </ul>
                             </section><!-- .widget.widget_pages -->
                         </div><!-- .col-md-3 -->
                     </div><!-- .row -->
                     <div class="copyright">
                         <div class="column">
-                            <p>&copy; Nucleus 2015. Made by <a href="http://8guild.com/" target="_blank">8Guild</a> with <i class="fa fa-heart text-danger"></i> love.</p>
+                            <p>&copy; OlxaWeb 2016. With <i class="fa fa-heart text-danger"></i> love.</p>
                         </div><!-- .column -->
                         <div class="column">
                             <div class="cards">
-                                <img src="img/cards.png" alt="Credit Cards">
+                                <img src="~/Content/img/cards.png" alt="Credit Cards" />
                             </div>
                         </div><!-- .column -->
                     </div><!-- .copyright -->

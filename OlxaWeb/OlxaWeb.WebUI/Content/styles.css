@@ -7017,7 +7017,7 @@ input[type="button"].btn-block {
 }
 
 .scroll-to-top-btn i {
-  color: #19c55e;
+  color: #2895f1;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -8690,16 +8690,16 @@ input[type="button"].btn-block {
 .main-navigation .menu > li .mega-menu > ul > li > a,       /*параметры ссылок в списках менюшек*/
 .main-navigation .menu > li .sub-menu > li > a {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   font-weight: normal;
   padding: 0 12px;
-  border: 1px solid #19c55e;
+  border: 1px solid #2895f1;
 }
 
 .main-navigation .menu > li .mega-menu > ul > li > a:hover,
 .main-navigation .menu > li .sub-menu > li > a:hover {
-  background-color: #1bdb68;
+  background-color: #62b7ff;
   box-shadow:2px;
 }
 
@@ -8707,7 +8707,7 @@ input[type="button"].btn-block {
 .main-navigation .menu > li .mega-menu > ul > li.current_page_item > a,
 .main-navigation .menu > li .sub-menu > li.current-menu-item > a,
 .main-navigation .menu > li .sub-menu > li.current_page_item > a {
-  background-color: #1bdb68;
+  background-color: #62b7ff;
 }
 
 .main-navigation .menu > li:hover .sub-menu, .main-navigation .menu > li:hover .mega-menu {
@@ -14051,3 +14051,5 @@ body::before {
     display: block;
   }
 }
+
+
