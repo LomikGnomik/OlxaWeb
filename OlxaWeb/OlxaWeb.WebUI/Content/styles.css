@@ -3735,8 +3735,6 @@ th {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .container:before, .container:after {
@@ -8442,7 +8440,7 @@ input[type="button"].btn-block {
   color: #19c55e;
   text-align: center;
   line-height: 31px;
-  border: 0.5px solid #19c55e;
+  border: 1px solid #19c55e;
   padding-bottom: 0;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -11041,7 +11039,7 @@ a.image-box {
   top: 25%;
   left: 25px;
   padding: 24px;
-  background-color: #19c55e;
+  background-color: #2895f1;
 }
 
 .split-contacts .contact-details .cd-head {
