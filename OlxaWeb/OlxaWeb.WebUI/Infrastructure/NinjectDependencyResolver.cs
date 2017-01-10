@@ -37,12 +37,12 @@ namespace OlxaWeb.WebUI.Infrastructure
 
             Mock<ITemplateRepository> mock = new Mock<ITemplateRepository>();
             mock.Setup(m => m.Temmplates).Returns(new List<Temmplate> {
-            new Temmplate {Title="Строительный",Description="", Category="инет-магаз", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
-            new Temmplate {Title="Ресторанный",Description="", Category="инет-магаз", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2 },
-            new Temmplate {Title="Медицинский",Description="", Category="блог", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 },
-            new Temmplate {Title="Спортивный",Description="", Category="комерческий", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4 },
-            new Temmplate {Title="Магазин",Description="", Category="лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5 },
-            new Temmplate {Title="Лендинг",Description="", Category="лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6 }
+            new Temmplate {Title="Строительный",Description="", Category="lending", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
+            new Temmplate {Title="Ресторанный",Description="", Category="lending", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2 },
+            new Temmplate {Title="Медицинский",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 },
+            new Temmplate {Title="Спортивный",Description="", Category="comercy", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4 },
+            new Temmplate {Title="Магазин",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5 },
+            new Temmplate {Title="Лендинг",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6 }
             });
 
             kernel.Bind<ITemplateRepository>().ToConstant(mock.Object);

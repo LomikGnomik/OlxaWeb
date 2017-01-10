@@ -8668,7 +8668,7 @@ input[type="button"].btn-block {
   float: left;
   width: 100%;
   list-style: none;
-  padding: 0 25px 0 0;
+  padding: 0 0 0 0;
 }
 
 .main-navigation .menu > li .mega-menu .content {
