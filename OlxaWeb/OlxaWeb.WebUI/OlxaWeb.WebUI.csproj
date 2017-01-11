@@ -221,9 +221,11 @@
     <Content Include="Content\img\1478172823164455436.png" />
     <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\contacts-icon.png" />
+    <Content Include="Content\img\cta-bg.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
     <Content Include="Content\img\product-bg01.jpg" />
+    <Content Include="Content\img\eror.jpg" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font_aw\css\font-awesome.css" />
