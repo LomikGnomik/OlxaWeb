@@ -8668,7 +8668,7 @@ input[type="button"].btn-block {
   float: left;
   width: 100%;
   list-style: none;
-  padding: 0 25px 0 0;
+  padding: 0 0 0 0;
 }
 
 .main-navigation .menu > li .mega-menu .content {
@@ -14114,6 +14114,6 @@ body::before {
   cursor: default;
 }
 
-/*Стиль для оформления галлереи на странице develop/template (готовый сайты) */
+/*Стиль для оформления "этапы разработки" */
 
 
