@@ -193,6 +193,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DevelopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -352,9 +353,12 @@
     <Content Include="Views\Develop\Index.cshtml" />
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\admin\" />
     <Folder Include="fonts\Playfair_Display\" />
     <Folder Include="Views\Blog\" />
   </ItemGroup>

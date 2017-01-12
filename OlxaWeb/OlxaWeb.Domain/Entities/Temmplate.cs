@@ -31,5 +31,8 @@ namespace OlxaWeb.Domain.Entities
 
         public virtual string LinkPicture
         { get; set; }
+
+        public virtual bool Publish
+        { get; set; }
     }
 }
