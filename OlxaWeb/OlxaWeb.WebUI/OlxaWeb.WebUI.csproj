@@ -212,6 +212,30 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin\css\font-awesome.min.css" />
+    <Content Include="Content\admin\css\templatemo_main.css" />
+    <Content Include="Content\admin\font-awesome.min.css" />
+    <Content Include="Content\admin\jqvmap\data\jquery.vmap.sampledata.js" />
+    <Content Include="Content\admin\jqvmap\jquery.vmap.js" />
+    <Content Include="Content\admin\jqvmap\jquery.vmap.min.js" />
+    <Content Include="Content\admin\jqvmap\jquery.vmap.packed.js" />
+    <Content Include="Content\admin\jqvmap\jqvmap.css" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.africa.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Include="Content\admin\jqvmap\maps\continents\readme.txt" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.algeria.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.brazil.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.france.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="Content\admin\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="Content\admin\templatemo_main.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\footer\chat.png" />
@@ -280,6 +304,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsAdmin\Chart.min.js" />
+    <Content Include="Scripts\jsAdmin\jquery.min.js" />
+    <Content Include="Scripts\jsAdmin\templatemo_script.js" />
     <Content Include="Scripts\js\isotope.pkgd.min.js" />
     <Content Include="Scripts\js\scripts.js" />
     <Content Include="Scripts\js\vendor\bootstrap.min.js" />
@@ -358,7 +385,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\admin\" />
     <Folder Include="fonts\Playfair_Display\" />
     <Folder Include="Views\Blog\" />
   </ItemGroup>
