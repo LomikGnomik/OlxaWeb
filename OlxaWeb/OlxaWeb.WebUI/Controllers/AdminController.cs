@@ -1,4 +1,5 @@
 ﻿using OlxaWeb.Domain.Abstract;
+using OlxaWeb.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,12 @@ namespace OlxaWeb.WebUI.Controllers
         public ActionResult Templates()
         {
             return View(repository.Temmplates);
+        }
+        public ActionResult EditTemplates(int Id)
+        {
+            Temmplate site = repository.Temmplates
+                .FirstOrDefault(p => p.Id == Id);
+            return View(site);
         }
     }
 }

@@ -40,7 +40,7 @@
                         <i class="fa fa-database" aria-hidden="true"></i> Сайты <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#">Шаблонные</a></li>
+                        <li>@Html.ActionLink("Шаблонные","Templates","Admin")</li>
                         <li><a href="#">Индивидуальные</a></li>
                         <li><a href="#">Эксклюзивные</a></li>
                     </ul>
@@ -55,20 +55,8 @@
     </div>
         <div class="templatemo-content-wrapper">
             <div class="templatemo-content">
-                <div class="margin-bottom-30">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="nav nav-pills">
-                                <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
-                                <li class="active"><a href="#">Profile <span class="badge">126</span></a></li>
-                                <li class="active"><a href="#">Messages <span class="badge">14</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                @RenderBody()
                 </div>
-                </div>
-
-        @RenderBody();
         <footer class="templatemo-footer">
             <div class="templatemo-copyright">
                 <p>Copyright &copy; 2016 OlxaWeb</p>
