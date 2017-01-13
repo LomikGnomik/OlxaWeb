@@ -9847,6 +9847,15 @@ a.image-box {
   line-height: 0.6;
   margin: 15px auto 0 auto;
 }
+.fw-section-bg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .fw-section {
   position: relative;

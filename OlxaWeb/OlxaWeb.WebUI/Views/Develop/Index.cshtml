@@ -4,134 +4,131 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<!-- Pricings -->
-<section class="fw-section border-bottom padding-top-3x padding-bottom-2x">
-    <div class="container">
-        <h2 class="block-title text-center">
-            Different hosting platforms to suit every need!
-            <small>Each type of hosting service we provide is further optimized with unique performance tweaks!</small>
-        </h2>
-        <div class="row padding-top">
-            <!-- Plan -->
-            <div class="col-sm-4">
-                <div class="pricing-plan">
-                    <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <img src="img/features/03.png" alt="Pricing">
+<div class="container">
+    <!-- Pricings -->
+    <section class="fw-section border-bottom padding-top-3x padding-bottom-2x">
+        <div class="container">
+            <h2 class="block-title text-center">
+                Different hosting platforms to suit every need!
+                <small>Each type of hosting service we provide is further optimized with unique performance tweaks!</small>
+            </h2>
+            <div class="row padding-top">
+                <!-- Plan -->
+                <div class="col-sm-4">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <img src="img/features/03.png" alt="Pricing">
+                            </div>
+                            <h3 class="pricing-title">Готовые Решения</h3>
+                            <p>Покупай и пользуйся</p>
+                            <a href="~/Develop/Template" class="btn btn-default btn-icon-right waves-effect waves-light">
+                                Подробнее
+                                <i class="icon-arrow-right"></i>
+                            </a>
                         </div>
-                        <h3 class="pricing-title">Готовые Решения</h3>
-                        <p>Покупай и пользуйся</p>
-                        <a href="~/Develop/Template" class="btn btn-default btn-icon-right waves-effect waves-light">
-                            Подробнее
-                            <i class="icon-arrow-right"></i>
-                        </a>
+                        <ul>
+                            <li>Стоимость <strong>15 000</strong></li>
+                            <li>Срок <strong>3 дня</strong></li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>Стоимость <strong>15 000</strong></li>
-                        <li>Срок <strong>3 дня</strong></li>
-
-                    </ul>
+                </div>
+                <!-- Plan -->
+                <div class="col-sm-4">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <img src="img/features/01.png" alt="Pricing">
+                            </div>
+                            <h3 class="pricing-title">Индивидуальные</h3>
+                            <p>Создание сайта на CMS</p>
+                            <a href="~/Develop/Individual" class="btn btn-primary btn-icon-right waves-effect waves-light">
+                                Подробнее
+                                <i class="icon-arrow-right"></i>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>Стоимость <strong>от 40 000 руб</strong></li>
+                            <li>Срок <strong>от недели</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Plan -->
+                <div class="col-sm-4">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <img src="img/features/02.png" alt="Pricing">
+                            </div>
+                            <h3 class="pricing-title">Эксклюзивные</h3>
+                            <p>Создание сайта с нуля на ASP.NET MVC</p>
+                            <a href="~/Develop/Exclusive" class="btn btn-default btn-icon-right waves-effect waves-light">
+                                Подробнее
+                                <i class="icon-arrow-right"></i>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>Стоимость <strong>1 000 руб/час</strong></li>
+                            <li>Срок <strong>от месяца</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- .fw-section.border-bottom -->
+    <!-- Content -->
+    <h2 class="block-title">
+        <small>Наиболее частые вопросы</small>
+    </h2>
+    <div class="panel-group" id="accordion">
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Нахуя мне ваш асп всрался?
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Да что б ,ты мудила ёбанная, своё бабло лопатой грёб!
                 </div>
             </div>
-            <!-- Plan -->
-            <div class="col-sm-4">
-                <div class="pricing-plan">
-                    <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <img src="img/features/01.png" alt="Pricing">
-                        </div>
-                        <h3 class="pricing-title">Индивидуальные</h3>
-                        <p>Создание сайта на CMS</p>
-                        <a href="~/Develop/Individual" class="btn btn-primary btn-icon-right waves-effect waves-light">
-                            Подробнее
-                            <i class="icon-arrow-right"></i>
-                        </a>
-                    </div>
-                    <ul>
-                        <li>Стоимость <strong>от 40 000 руб</strong></li>
-                        <li>Срок <strong>от недели</strong></li>
-
-                    </ul>
+        </div><!-- .panel -->
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    Я дохуя умный и немогу понять схуяль ASP а не PHP ?
+                </a>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    Потому что блять!
+                    php это язык , а ASP - фрэймворк основанный на языке С#
                 </div>
             </div>
-            <!-- Plan -->
-            <div class="col-sm-4">
-                <div class="pricing-plan">
-                    <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <img src="img/features/02.png" alt="Pricing">
-                        </div>
-                        <h3 class="pricing-title">Эксклюзивные</h3>
-                        <p>Создание сайта с нуля на ASP.NET MVC</p>
-                        <a href="~/Develop/Exclusive" class="btn btn-default btn-icon-right waves-effect waves-light">
-                            Подробнее
-                            <i class="icon-arrow-right"></i>
-                        </a>
-                    </div>
-                    <ul>
-                        <li>Стоимость <strong>1 000 руб/час</strong></li>
-                        <li>Срок <strong>от месяца</strong></li>
-
-                    </ul>
+        </div><!-- .panel -->
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    How do I sync files between computers?
+                </a>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
                 </div>
             </div>
-        </div><!-- .row -->
-    </div><!-- .container -->
-</section><!-- .fw-section.border-bottom -->
-<!-- Content -->
-
-<h2 class="block-title">
-    <small>Наиболее частые вопросы</small>
-</h2>
-<div class="panel-group" id="accordion">
-    <div class="panel">
-        <div class="panel-heading">
-            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                Нахуя мне ваш асп всрался?
-            </a>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse">
-            <div class="panel-body">
-                Да что б ,ты мудила ёбанная, своё бабло лопатой грёб!
+        </div><!-- .panel -->
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                    How do I enable two-step verification on my account?
+                </a>
             </div>
-        </div>
-    </div><!-- .panel -->
-    <div class="panel">
-        <div class="panel-heading">
-            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                Я дохуя умный и немогу понять схуяль ASP а не PHP ?
-            </a>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
-            <div class="panel-body">
-                Потому что блять!
-                php это язык , а ASP - фрэймворк основанный на языке С#
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                </div>
             </div>
-        </div>
-    </div><!-- .panel -->
-    <div class="panel">
-        <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                How do I sync files between computers?
-            </a>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse in">
-            <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-            </div>
-        </div>
-    </div><!-- .panel -->
-    <div class="panel">
-        <div class="panel-heading">
-            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                How do I enable two-step verification on my account?
-            </a>
-        </div>
-        <div id="collapseFour" class="panel-collapse collapse">
-            <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-            </div>
-        </div>
-    </div><!-- .panel -->
-</div><!-- .panel-group -->
+        </div><!-- .panel -->
+    </div><!-- .panel-group -->
+</div>

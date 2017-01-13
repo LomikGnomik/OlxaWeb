@@ -5,159 +5,156 @@
     ViewBag.Title = "Индивидуальный сайт";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
- <!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
-<section class="page-title">
-    <div class="container">
-        <div class="inner">
-            <div class="column">
-                <div class="title">
-                    <h1>Разработка</h1>
-                </div><!-- .title -->
-            </div><!-- .column -->
-            <div class="column">
-                <ul class="menu-title text-center">
-                    
-                    <li>@Html.ActionLink("Готовые решения", "Template", "Develop")</li>
-                    <li class="active"><a href="#">Индивидуальные</a></li>
-                    <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
-                </ul><!-- .nav-filters -->
-            </div><!-- .column -->
-        </div><!-- .inner -->
-    </div><!-- .container -->
-</section><!-- .page-title -->
+<div class="container">
+    <!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
+    <section class="page-title">
+        <div class="container">
+            <div class="inner">
+                <div class="column">
+                    <div class="title">
+                        <h1>Разработка</h1>
+                    </div><!-- .title -->
+                </div><!-- .column -->
+                <div class="column">
+                    <ul class="menu-title text-center">
 
-<!-- Tabs -->
-<section class="container padding-bottom-3x">
-    <h2 class="block-title text-center">
-        Выбирайте свой проект
-        <small>Have a question? Send us a note using the form below.</small>
-    </h2>
-    <div class="tile-tabs padding-top padding-bottom">
+                        <li>@Html.ActionLink("Готовые решения", "Template", "Develop")</li>
+                        <li class="active"><a href="#">Индивидуальные</a></li>
+                        <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
+                    </ul><!-- .nav-filters -->
+                </div><!-- .column -->
+            </div><!-- .inner -->
+        </div><!-- .container -->
+    </section><!-- .page-title -->
+    <!-- Tabs -->
+    <section class="container padding-bottom-3x">
+        <h2 class="block-title text-center">
+            Выбирайте свой проект
+            <small>Have a question? Send us a note using the form below.</small>
+        </h2>
+        <div class="tile-tabs padding-top padding-bottom">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="#support" class="tab active" data-toggle="tab">
+                        <h3 class="tab-title">Лендинг</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#sales" class="tab" data-toggle="tab">
+                        <h3 class="tab-title">Блог</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#sales" class="tab" data-toggle="tab">
+                        <h3 class="tab-title">Сайт визитка</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#sales" class="tab" data-toggle="tab">
+                        <h3 class="tab-title">Корпоративный сайт</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#bug" class="tab" data-toggle="tab">
+                        <h3 class="tab-title">Магазин</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </a>
+                </div>
+            </div><!-- .row -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane transition fade scale in active" id="support">
+                    <h4>Leave a Ticket</h4>
+                    <form method="post" class="row" autocomplete="off">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Name*" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" placeholder="Email*" required>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="7" placeholder="Comment"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Leave a Ticket</button>
+                        </div>
+                    </form>
+                </div><!-- .tab-pane -->
+                <div role="tabpanel" class="tab-pane transition fade scale" id="sales">
+                    <h4>Ask Your Question</h4>
+                    <form method="post" class="row" autocomplete="off">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Name*" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" placeholder="Email*" required>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="7" placeholder="Question"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Ask Your Question</button>
+                        </div>
+                    </form>
+                </div><!-- .tab-pane -->
+                <div role="tabpanel" class="tab-pane transition fade scale" id="bug">
+                    <h4>Report Bug</h4>
+                    <form method="post" class="row" autocomplete="off">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Name*" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" placeholder="Email*" required>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="7" placeholder="Describe Bug"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Report Bug</button>
+                        </div>
+                    </form>
+                </div><!-- .tab-pane -->
+            </div><!-- .tab-content -->
+        </div><!-- .tile-tabs -->
+    </section><!-- .container -->
+    <!-- General Links -->
+    <section class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <a href="#support" class="tab active" data-toggle="tab">
-                    <h3 class="tab-title">Лендинг</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </a>
+            <div class="col-sm-3">
+                <h6 class="text-normal text-muted">Help &amp; support</h6>
+                <hr class="space-bottom">
+                <ul class="list-featured">
+                    <li><a href="mailto:info@email.com">info@email.com</a></li>
+                    <li class="text-semibold">+10 (080) 333 65</li>
+                </ul>
             </div>
-            <div class="col-sm-4">
-                <a href="#sales" class="tab" data-toggle="tab">
-                    <h3 class="tab-title">Блог</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </a>
+            <div class="col-sm-3">
+                <h6 class="text-normal text-muted">Press inquiries</h6>
+                <hr class="space-bottom">
+                <ul class="list-featured">
+                    <li><a href="mailto:press@email.com">press@email.com</a></li>
+                    <li class="text-semibold">+10 (090) 896 38</li>
+                </ul>
             </div>
-            <div class="col-sm-4">
-                <a href="#sales" class="tab" data-toggle="tab">
-                    <h3 class="tab-title">Сайт визитка</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </a>
+            <div class="col-sm-3">
+                <h6 class="text-normal text-muted">Brand guidelines</h6>
+                <hr class="space-bottom">
+                <ul class="list-featured">
+                    <li><a href="#">Download files</a></li>
+                </ul>
             </div>
-            <div class="col-sm-4">
-                <a href="#sales" class="tab" data-toggle="tab">
-                    <h3 class="tab-title">Корпоративный сайт</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="#bug" class="tab" data-toggle="tab">
-                    <h3 class="tab-title">Магазин</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </a>
+            <div class="col-sm-3">
+                <h6 class="text-normal text-muted">Partnership</h6>
+                <hr class="space-bottom">
+                <ul class="list-featured">
+                    <li><a href="mailto:info@email.com">info@email.com</a></li>
+                </ul>
             </div>
         </div><!-- .row -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane transition fade scale in active" id="support">
-                <h4>Leave a Ticket</h4>
-                <form method="post" class="row" autocomplete="off">
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder="Name*" required>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="email" class="form-control" placeholder="Email*" required>
-                    </div>
-                    <div class="col-sm-12">
-                        <textarea class="form-control" rows="7" placeholder="Comment"></textarea>
-                    </div>
-                    <div class="col-sm-12">
-                        <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Leave a Ticket</button>
-                    </div>
-                </form>
-            </div><!-- .tab-pane -->
-            <div role="tabpanel" class="tab-pane transition fade scale" id="sales">
-                <h4>Ask Your Question</h4>
-                <form method="post" class="row" autocomplete="off">
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder="Name*" required>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="email" class="form-control" placeholder="Email*" required>
-                    </div>
-                    <div class="col-sm-12">
-                        <textarea class="form-control" rows="7" placeholder="Question"></textarea>
-                    </div>
-                    <div class="col-sm-12">
-                        <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Ask Your Question</button>
-                    </div>
-                </form>
-            </div><!-- .tab-pane -->
-            <div role="tabpanel" class="tab-pane transition fade scale" id="bug">
-                <h4>Report Bug</h4>
-                <form method="post" class="row" autocomplete="off">
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder="Name*" required>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="email" class="form-control" placeholder="Email*" required>
-                    </div>
-                    <div class="col-sm-12">
-                        <textarea class="form-control" rows="7" placeholder="Describe Bug"></textarea>
-                    </div>
-                    <div class="col-sm-12">
-                        <button type="submit" class="btn btn-primary btn-block space-top-none space-bottom-none">Report Bug</button>
-                    </div>
-                </form>
-            </div><!-- .tab-pane -->
-        </div><!-- .tab-content -->
-    </div><!-- .tile-tabs -->
-</section><!-- .container -->
-<!-- General Links -->
-<section class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <h6 class="text-normal text-muted">Help &amp; support</h6>
-            <hr class="space-bottom">
-            <ul class="list-featured">
-                <li><a href="mailto:info@email.com">info@email.com</a></li>
-                <li class="text-semibold">+10 (080) 333 65</li>
-            </ul>
-        </div>
-        <div class="col-sm-3">
-            <h6 class="text-normal text-muted">Press inquiries</h6>
-            <hr class="space-bottom">
-            <ul class="list-featured">
-                <li><a href="mailto:press@email.com">press@email.com</a></li>
-                <li class="text-semibold">+10 (090) 896 38</li>
-            </ul>
-        </div>
-        <div class="col-sm-3">
-            <h6 class="text-normal text-muted">Brand guidelines</h6>
-            <hr class="space-bottom">
-            <ul class="list-featured">
-                <li><a href="#">Download files</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-3">
-            <h6 class="text-normal text-muted">Partnership</h6>
-            <hr class="space-bottom">
-            <ul class="list-featured">
-                <li><a href="mailto:info@email.com">info@email.com</a></li>
-            </ul>
-        </div>
-    </div><!-- .row -->
-</section><!-- .container -->
-<!-- Scroll To Top Button -->
-<a href="#" class="scroll-to-top-btn">
-    <i class="fa fa-lemon-o"></i>
-</a><!-- .scroll-to-top-btn -->
+    </section><!-- .container -->
 
+</div>
 
