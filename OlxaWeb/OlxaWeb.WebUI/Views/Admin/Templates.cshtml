@@ -1,0 +1,76 @@
+﻿@model IEnumerable<OlxaWeb.Domain.Entities.Temmplate>
+
+@{
+    ViewBag.Title = "Templates";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Templates</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTemplates")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkDemo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publish)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkDemo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publish)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditTemplates", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsTemplates", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteTemplates", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

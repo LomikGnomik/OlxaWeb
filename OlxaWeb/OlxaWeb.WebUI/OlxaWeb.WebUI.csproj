@@ -382,6 +382,8 @@
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Templates.cshtml" />
+    <Content Include="Views\Admin\EditTemplates.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
