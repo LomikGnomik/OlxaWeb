@@ -5,32 +5,31 @@
     ViewBag.Title = "Эксклюзивный";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<section class="page-title">
-    <div class="container">
-        <div class="inner">
-            <div class="column">
-                <div class="title">
-                    <h1>Разработка</h1>
-                </div><!-- .title -->
-            </div><!-- .column -->
-            <div class="column">
-                <ul class="menu-title text-center">  
-                    <li>@Html.ActionLink("Готовые решения", "Template", "Develop")</li>       
-                    <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>                 
-                    <li class="active"><a href="#">Эксклюзивные</a></li>
-                </ul><!-- .nav-filters -->
-            </div><!-- .column -->
+<div class="container">
+    <section class="page-title">
+        <div class="container">
+            <div class="inner">
+                <div class="column">
+                    <div class="title">
+                        <h1>Разработка</h1>
+                    </div><!-- .title -->
+                </div><!-- .column -->
+                <div class="column">
+                    <ul class="menu-title text-center">
+                        <li>@Html.ActionLink("Готовые решения", "Template", "Develop")</li>
+                        <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                        <li class="active"><a href="#">Эксклюзивные</a></li>
+                    </ul><!-- .nav-filters -->
+                </div><!-- .column -->
+            </div>
         </div>
-    </div>
-</section><!-- .page-title -->
-<section class="container padding-bottom-3x">
-    <h2 class="block-title text-center">
-        "Эксклюзивные Сайты"
-        <small>наиболее затратный, но самый уникальный вариант</small>
-    </h2>
+    </section><!-- .page-title -->
+    <section class="container padding-bottom-3x">
+        <h2 class="block-title text-center">
+            "Эксклюзивные Сайты"
+            <small>наиболее затратный, но самый уникальный вариант</small>
+        </h2>
 
 
-
-
-</section>
+    </section>
+</div>
