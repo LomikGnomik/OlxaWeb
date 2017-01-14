@@ -20,7 +20,7 @@ namespace OlxaWeb.WebUI.Controllers
             return View();
         }
 
-        public ActionResult Contacts()
+        public ActionResult MySite()
         {        
             return View();
         }

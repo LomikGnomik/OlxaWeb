@@ -15,12 +15,8 @@ namespace OlxaWeb.WebUI.Controllers
         {
             repository = repo;
         }
-        public ActionResult Index()
-        {
-            return View();
-        }
         // Выбор из трёх видов сайта: шаблонные,индивидуальные,эксклюзивные
-        public ActionResult List()
+        public ActionResult Index()
         {
             return View();
         }
