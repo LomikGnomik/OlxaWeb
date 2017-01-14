@@ -373,17 +373,18 @@
     <Content Include="Views\Develop\Exclusive.cshtml" />
     <Content Include="Views\Develop\Individual.cshtml" />
     <Content Include="Views\Develop\Template.cshtml" />
-    <Content Include="Views\Develop\List.cshtml" />
     <Content Include="Views\Develop\Card.cshtml" />
     <Content Include="Views\SEO\Index.cshtml" />
     <Content Include="Views\Portfolio\Index.cshtml" />
     <Content Include="Views\Develop\Index.cshtml" />
     <Content Include="Views\Price\Index.cshtml" />
-    <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\Home\MySite.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Templates.cshtml" />
     <Content Include="Views\Admin\EditTemplates.cshtml" />
+    <Content Include="Views\Develop\_PartialInformationDevelop.cshtml" />
+    <Content Include="Views\SEO\_PartialInformationSEO.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
