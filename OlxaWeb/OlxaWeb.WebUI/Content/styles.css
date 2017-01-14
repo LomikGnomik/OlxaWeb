@@ -11124,6 +11124,8 @@ a.image-box {
   display: block;
   text-decoration: none;
   border: none;
+ background-color:rgba(190, 192, 198, 0.16);
+ 
 }
 
 .portfolio-item .portfolio-title {
@@ -14165,4 +14167,44 @@ margin-bottom:60px;
   text-transform: none;
   opacity:0.6;
   margin-bottom:15px;
+}
+
+/* шаблонны сайты оформление */
+td.btn{
+    float:right;
+    border-color:#19c55e;
+    color:#327e4c;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;    
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;   
+    padding: 0 25px;
+    margin: 10px 0;
+    margin-right: 10px;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+}
+table-title{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0;
+    border:none;  
+}
+table.table-title{
+    border:0px;
+    border-spacing:0px;
+}
+.border-bottom-none{
+    border-bottom:none;
+}
+.portfolio-bold{
+    font-weight:bold;
 }

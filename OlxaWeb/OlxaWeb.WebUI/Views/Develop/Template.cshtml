@@ -53,11 +53,16 @@
             {
                 <!-- Portfolio Item -->
                 <div class="grid-item @Site.Category">
-                    <a href="~/Develop/Card/@Site.Id" class="portfolio-item">
+                    <a href="~/Develop/Card/@Site.Id" class="portfolio-item portfolio-bold">
                         <div class="thumbnail waves-effect waves-light">
                             <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
                         </div>
-                        <h3 class="portfolio-title">@Site.Category</h3>
+                        <table class="table-title">
+                            <tr>
+                                <td class="border-bottom-none"> @Site.Category </td>
+                                <td class="btn btn-ghost">12 000 <i class="fa fa-rub text-lg" aria-hidden="true"></i></td>
+                            </tr>
+                        </table>
                     </a>
                 </div><!-- .grid-item.identity -->
             }
