@@ -6683,8 +6683,7 @@ table > tbody + tbody {
 
 .btn:hover {
   background-color: #3aa063;
- font-weight:bold;
-  color: #fff;
+   color: #fff;
   text-decoration: none;
   outline: none;
 }
@@ -9848,13 +9847,13 @@ a.image-box {
   margin: 15px auto 0 auto;
 }
 .fw-section-bg {
-  position: relative;
-  z-index: 1;
-  display: block;
-  background-color: #fff;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: block;
+    background-image: url('img/cta-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fw-section {
@@ -14125,3 +14124,45 @@ body::before {
 
 /*Стиль для оформления "этапы разработки" */
 
+.nav-pills{
+    background-color:rgba(255,255,255,0);
+   
+}
+.nav-pills > li{
+    background-color:rgba(255,255,255,0);
+}
+.nav-pills > li > a{
+    color:white;
+    border:0px;
+    text-decoration:none;
+    opacity:0.6;
+    font-size:17px;
+}
+.nav-pills > li.active >a{
+    color:white;
+    opacity:0.9;
+}
+.nav-pills > li.active >a:hover{
+    color:white;
+}
+.tab-content-bg {
+color:white;
+opacity:0.6;
+margin-bottom:60px;
+}
+.text-center-bg{
+ text-align: center;
+ color:white;
+}
+.tab-content-nop{
+    padding-top:0px;
+    opacity:0.6;
+}
+.no-bottom{  
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  opacity:0.6;
+  margin-bottom:15px;
+}
