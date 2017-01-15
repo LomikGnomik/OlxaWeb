@@ -198,6 +198,7 @@
     <Compile Include="Controllers\DevelopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyWebSiteController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
     <Compile Include="Controllers\SEOController.cs" />
@@ -247,6 +248,12 @@
     <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\contacts-icon.png" />
     <Content Include="Content\img\cta-bg.jpg" />
+    <Content Include="Content\img\Home\app-bg01.jpg" />
+    <Content Include="Content\img\Home\devices02.jpg" />
+    <Content Include="Content\img\Home\feature01.png" />
+    <Content Include="Content\img\Home\feature02.png" />
+    <Content Include="Content\img\Home\ipad.png" />
+    <Content Include="Content\img\Home\iphone.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
     <Content Include="Content\img\product-bg01.jpg" />
@@ -385,6 +392,12 @@
     <Content Include="Views\Admin\EditTemplates.cshtml" />
     <Content Include="Views\Develop\_PartialInformationDevelop.cshtml" />
     <Content Include="Views\SEO\_PartialInformationSEO.cshtml" />
+    <Content Include="Views\Home\_PartialIndexDevelop.cshtml" />
+    <Content Include="Views\Home\_PartialIndexSEO.cshtml" />
+    <Content Include="Views\Home\_PartialIndexAbout.cshtml" />
+    <Content Include="Views\Home\_PartialIndexContact.cshtml" />
+    <Content Include="Views\Home\_PartialIndexMobile.cshtml" />
+    <Content Include="Views\MyWebSite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
