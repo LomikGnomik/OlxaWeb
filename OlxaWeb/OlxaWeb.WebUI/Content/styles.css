@@ -10780,7 +10780,7 @@ a.image-box {
   transition: all 0.3s;
 }
 
-.tile-tabs .tab:before {
+/*.tile-tabs .tab:before {
   position: absolute;
   display: block;
   content: "";
@@ -10797,7 +10797,19 @@ a.image-box {
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}*/
+.tile-tabs .tab:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
+
 
 .tile-tabs .tab .tab-title {
   font-size: 16px;
@@ -14208,3 +14220,85 @@ table.table-title{
 .portfolio-bold{
     font-weight:bold;
 }
+
+.btn-ghost-sm{
+  background-color: transparent;
+  color: #19c55e;
+  border-color: #19c55e;
+  height: 30px;
+  line-height:23px;
+  width:30px;
+  font-size:13px;
+
+}
+.btn-ghost-sm:hover {
+  color: #fff;
+  background-color: #19c55e;
+}
+
+.portfolio-item > .thumbnail > .btn-ghost-sm{
+position: absolute;
+    z-index: 5;
+    width: 40%;
+    font-size: 16px;
+    text-align:center;
+    padding:0px 5px ;
+    font-weight:normal;
+    color: #fff;
+    top: 50%;
+    left: 5%;
+    margin-top: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.btn-ghost-sm1{
+  background-color: transparent;
+  color: #19c55e;
+  border-color: #19c55e;
+  height: 30px;
+  line-height:23px;
+  width:30px;
+  font-size:13px;
+
+}
+.btn-ghost-sm1:hover {
+  color: #fff;
+  background-color: #19c55e;
+}
+
+.portfolio-item > .thumbnail > .btn-ghost-sm1{
+position: absolute;
+    z-index: 5;
+    width: 40%;
+    font-size: 16px;
+    text-align:center;
+    padding:0px 5px ;
+    font-weight:normal;
+    color: #fff;
+    top: 50%;
+    left: 55%;
+    margin-top: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+}
+/* индивидуальные сайты*/
+.col-sm-4 a.tab:hover {
+    background-color: #19c55e;
+    color:white;
+} 
+
+ 
