@@ -19,10 +19,11 @@ namespace OlxaWeb.WebUI.Controllers
 
             return View();
         }
-
+        
         public ActionResult MySite()
         {        
-            return View();
+         //будет проверка на авторизированность.
+            return View("~/Views/MyWebSite/Index.cshtml");
         }
     }
 }
