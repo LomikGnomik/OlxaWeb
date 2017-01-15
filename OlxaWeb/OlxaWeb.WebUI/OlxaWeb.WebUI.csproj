@@ -404,6 +404,10 @@
     <Content Include="Views\Home\_PartialIndexContact.cshtml" />
     <Content Include="Views\Home\_PartialIndexMobile.cshtml" />
     <Content Include="Views\MyWebSite\Index.cshtml" />
+    <Content Include="Views\MyWebSite\DevTemplate.cshtml" />
+    <Content Include="Views\MyWebSite\DevIndividual.cshtml" />
+    <Content Include="Views\MyWebSite\DevExclusive.cshtml" />
+    <Content Include="Views\MyWebSite\_PartialStep1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

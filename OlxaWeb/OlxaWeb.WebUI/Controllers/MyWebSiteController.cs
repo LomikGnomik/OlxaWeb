@@ -13,5 +13,17 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View();
         }
+        public ActionResult DevTemplate()
+        {
+            return View();
+        }
+        public ActionResult DevIndividual()
+        {
+            return View();
+        }
+        public ActionResult DevExclusive()
+        {
+            return View();
+        }
     }
 }
