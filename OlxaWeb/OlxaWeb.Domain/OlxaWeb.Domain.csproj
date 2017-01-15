@@ -79,13 +79,16 @@
   <ItemGroup>
     <Compile Include="Abstract\IBlogRepository.cs" />
     <Compile Include="Abstract\ITemplateRepository.cs" />
+    <Compile Include="Abstract\IWebSiteRepository.cs" />
     <Compile Include="Concrete\EFBlogRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFTemplateRepository.cs" />
+    <Compile Include="Concrete\EFWebSiteRepository.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Entities\Temmplate.cs" />
+    <Compile Include="Entities\WebSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

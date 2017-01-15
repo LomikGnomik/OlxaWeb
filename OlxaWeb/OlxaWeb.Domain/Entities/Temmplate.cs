@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OlxaWeb.Domain.Entities
 {
-   public class Temmplate
+   public class Temmplate               //Таблица где хранятся шаблонные сайты
     {
         public virtual int Id
         { get; set; }

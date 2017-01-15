@@ -407,7 +407,18 @@
     <Content Include="Views\MyWebSite\DevTemplate.cshtml" />
     <Content Include="Views\MyWebSite\DevIndividual.cshtml" />
     <Content Include="Views\MyWebSite\DevExclusive.cshtml" />
-    <Content Include="Views\MyWebSite\_PartialStep1.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_TemplateStep_1.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_TemplateStep_2.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_TemplateStep_3.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_TemplateStep_4.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_IndividualStep_1.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_IndividualStep_2.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_IndividualStep_3.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_IndividualStep_4.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_1.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_2.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_3.cshtml" />
+    <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
