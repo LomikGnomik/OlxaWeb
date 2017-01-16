@@ -14308,7 +14308,7 @@ position: absolute;
     background: #fff;
 }
 
-    .wizard .nav-tabs {
+ .wizard .nav-tabs {
         position: relative;
         margin: 40px auto;
         margin-bottom: 0;
@@ -14323,7 +14323,7 @@ position: absolute;
     height: 2px;
     background: #e0e0e0;
     position: absolute;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -14466,7 +14466,13 @@ span.round-tab:hover {
     outline: 0;
     font-weight: normal;
 }
-
+.nav-step {
+  display: inline;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  border: none;
+}
 
 /* according menu */
 #accordion-container {
@@ -14560,3 +14566,13 @@ span.round-tab:hover {
         left: 35%;
     }
 }
+
+/* для этапов разработки переделка стилей сайта*/
+.nav-tabs-step > li.active .step {
+  z-index: 0;
+}
+
+.nav-tabs-step > li {
+  z-index: 0;
+}
+
