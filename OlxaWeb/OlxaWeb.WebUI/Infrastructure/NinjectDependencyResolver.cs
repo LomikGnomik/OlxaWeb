@@ -44,9 +44,11 @@ namespace OlxaWeb.WebUI.Infrastructure
             new Temmplate {Title="Магазин",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5 },
             new Temmplate {Title="Лендинг",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6 }
             });
-
             kernel.Bind<ITemplateRepository>().ToConstant(mock.Object);
             // kernel.Bind<ITemplateRepository>().To<EFTemplateRepository>();
+
+
+            kernel.Bind<IWebSiteRepository>().To<EFWebSiteRepository>();
         }
     }
 
