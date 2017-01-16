@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Current = "Contact";
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-title">
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="title">
+                    <h1>Контакты</h1>
+                </div><!-- .title -->
+            </div><!-- .column -->
+            <div class="column">
+                <ul class="menu-title text-center">
+                    <li class="active"><a href="#">Контакты</a></li>
+                    <li>@Html.ActionLink("Наш Блог", "Blog", "Home")</li>
+                </ul><!-- .nav-filters -->
+            </div><!-- .column -->
+        </div>
+    </div>
+</section><!-- .page-title -->
+<div class="container">
+    @Html.Partial("_PartialIndexContact")
+</div>

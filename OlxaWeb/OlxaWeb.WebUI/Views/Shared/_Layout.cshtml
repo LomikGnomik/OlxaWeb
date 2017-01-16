@@ -33,7 +33,7 @@
         <!-- Navbar -->
         <!-- Add class ".navbar-sticky" to make navbar stuck when it hits the top of the page. Another modifier class is: "navbar-fullwidth" to stretch navbar and make it occupy 100% of the page width. The screen width at which navbar collapses can be controlled through the variable "$nav-collapse" in sass/variables.scss -->
         <header class="navbar navbar-sticky">
-            <!-- --------------------------------------Toopbar  (Уплывающая шапка с лого) ---------------------------->
+            <!-- --------------------------------------Topbar  (Уплывающая шапка с лого) ---------------------------->
             <div class="topbar">
                 <div class="container">
                     <a href="~/Views/Home/Index.cshtml" class="site-logo">
@@ -41,18 +41,11 @@
                     </a><!-- .site-logo -->
                     <!-- Mobile Menu Toggle -->
                     <div class="nav-toggle"><span></span></div>
-                    <div class="toolbar">
+                    @*<div class="toolbar">
                         <a href="#" class="text-sm" data-toggle="modal" data-target="#loginModal">Запишись</a>
                         <a href="#" class="btn btn-sm btn-ghost btn-primary btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="fa fa-lemon-o" aria-hidden="true"></i></a>
-                        <!-- <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a> -->
-                        @*<div class="search-btn">
-                                <i class="icon-search"></i>
-                                <form method="post" class="search-box">
-                                    <input type="text" class="form-control input-sm" placeholder="Поиск">
-                                    <button type="submit"><i class="icon-search"></i></button>
-                                </form>
-                            </div>*@<!-- .search-btn -->
-                    </div><!-- .toolbar -->
+                         <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a>
+                    </div>*@<!-- .toolbar -->
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
@@ -87,18 +80,20 @@
                             <a href="~/Portfolio/index"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Наши работы</a>
                         </li>
                         <li class="menu-item-has-children @(ViewBag.Current=="Price"?"current-menu-item":"")">
-                            <a href="~/Price/index"><i class="fa fa-fax" aria-hidden="true"></i>Цены</a>
+                            <a href="~/Price/index"><i class="fa fa-rub" aria-hidden="true"></i>Услуги и цены</a>
                         </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
+                        <li class="menu-item-has-children @(ViewBag.Current=="Contact"?"current-menu-item":"")">
+                            <a href="~/Home/Contact"><i class="fa fa-power-off" aria-hidden="true"></i>Контакты</a>
+                        </li>
+
+                        @*<li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
                             <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
-                        </li>
+                        </li>*@
 
                     </ul>
                     <!-- .menu -->
                 </nav>
             </div><!-- .container -->
-
-
 
             <div class="social-bar mobile-socials">
                 <a href="#" class="sb-skype">
@@ -224,7 +219,7 @@
                                     <ul>
                                         <li>@Html.ActionLink("Контакты", "Contacts", "")</li>
                                         <li>@Html.ActionLink("ЧаВо", "", "")</li>
-                                        <li>@Html.ActionLink("Блог", "", "")</li>
+                                        <li>@Html.ActionLink("Блог", "Blog", "Home")</li>
                                     </ul>
                                 </section><!-- .widget.widget_pages -->
                             </div><!-- .col-md-3 -->

@@ -12,18 +12,18 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-        
         public ActionResult MySite()
         {        
          //будет проверка на авторизированность.
             return View("~/Views/MyWebSite/Index.cshtml");
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult Blog()
+        {
+            return View();
         }
     }
 }
