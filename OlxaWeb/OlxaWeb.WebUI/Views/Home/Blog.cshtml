@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewBag.Current = "Contact";
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-title">
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="title">
+                    <h1>Наш Блог</h1>
+                </div><!-- .title -->
+            </div><!-- .column -->
+            <div class="column">
+                <ul class="menu-title text-center">
+                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                    <li class="active"><a href="#">Наш Блог</a></li>
+                </ul><!-- .nav-filters -->
+            </div><!-- .column -->
+        </div>
+    </div>
+</section><!-- .page-title -->
+<!-- Container -->
+<div class="container">
+    <div class="row">
+
+        <!-- Content -->
+        <div class="col-lg-9 col-md-8">
+
+            <!-- Post -->
+            <article class="post-item">
+                <a href="post-right-sidebar.html" class="post-thumb waves-effect">
+                    <img src="img/blog/post01.jpg" alt="Post01">
+                </a><!-- .post-thumb -->
+                <div class="post-body">
+                    <div class="post-meta">
+                        <div class="column">
+                            <span>
+                                <i class="icon-head"></i>
+                                <a href="#">Bedismo</a>
+                            </span>
+                            <span>in</span>
+                            <span>
+                                <i class="icon-ribbon"></i>
+                                <a href="#">Support</a>
+                            </span>
+                            <span class="post-comments">
+                                <i class="icon-speech-bubble"></i>
+                                <a href="#">12</a>
+                            </span>
+                        </div>
+                        <div class="column"><span>24.12.2015</span></div>
+                    </div><!-- .post-meta -->
+                    <a href="post-right-sidebar.html" class="post-title">
+                        <h3>Reading Design &amp; Typing Art</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
+                    <a href="post-right-sidebar.html">Read More</a>
+                </div><!-- .post-body -->
+            </article><!-- .post-item -->
+            <!-- Post -->
+            <article class="post-item">
+                <div class="post-body">
+                    <div class="post-meta">
+                        <div class="column">
+                            <span class="post-format"></span>
+                            <span>
+                                <i class="icon-head"></i>
+                                <a href="#">Bedismo</a>
+                            </span>
+                            <span>in</span>
+                            <span>
+                                <i class="icon-ribbon"></i>
+                                <a href="#">History</a>
+                            </span>
+                            <span class="post-comments">
+                                <i class="icon-speech-bubble"></i>
+                                <a href="#">9</a>
+                            </span>
+                        </div>
+                        <div class="column"><span>16.11.2015</span></div>
+                    </div><!-- .post-meta -->
+                    <a href="post-right-sidebar.html" class="post-title">
+                        <h3>Planets &amp; Kaleidoscopes</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
+                    <a href="post-right-sidebar.html">Read More</a>
+                </div><!-- .post-body -->
+            </article><!-- .post-item -->
+            <!-- Post -->
+            <article class="post-item format-gallery">
+                <a href="post-right-sidebar.html" class="post-thumb waves-effect">
+                    <img src="img/blog/post03.jpg" alt="Post03">
+                </a><!-- .post-thumb -->
+                <div class="post-body">
+                    <div class="post-meta">
+                        <div class="column">
+                            <span class="post-format"></span>
+                            <span>
+                                <i class="icon-head"></i>
+                                <a href="#">Dencik</a>
+                            </span>
+                            <span>in</span>
+                            <span>
+                                <i class="icon-ribbon"></i>
+                                <a href="#">History</a>
+                            </span>
+                            <span class="post-comments">
+                                <i class="icon-speech-bubble"></i>
+                                <a href="#">23</a>
+                            </span>
+                        </div>
+                        <div class="column"><span>25.11.2015</span></div>
+                    </div><!-- .post-meta -->
+                    <a href="post-right-sidebar.html" class="post-title">
+                        <h3>History &amp; Physics</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
+                    <a href="post-right-sidebar.html">Read More</a>
+                </div><!-- .post-body -->
+            </article><!-- .post-item -->
+            <!-- Pagination -->
+            <section class="pagination space-top-2x">
+                <div class="nav-links">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <span class="current">3</span>
+                    <a href="#">4</a>
+                    <span>...</span>
+                    <a href="#">12</a>
+                </div>
+            </section><!-- .pagination -->
+        </div><!-- .col-lg-9.col-md-8 -->
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4">
+            <div class="space-top-2x visible-sm visible-xs"></div>
+            <aside class="sidebar">
+                <section class="widget widget_search">
+                    <form method="post" class="search-box">
+                        <input type="text" class="form-control" placeholder="Search Blog">
+                        <button type="submit"><i class="icon-search"></i></button>
+                    </form>
+                </section>
+                <section class="widget widget_categories">
+                    <h3 class="widget-title">
+                        <i class="icon-ribbon"></i>
+                        Categories
+                    </h3>
+                    <ul>
+                        <li><a href="#">Support<span>3</span></a></li>
+                        <li><a href="#">Design<span>4</span></a></li>
+                        <li><a href="#">Hosting<span>11</span></a></li>
+                        <li><a href="#">Development<span>6</span></a></li>
+                    </ul>
+                </section><!-- .widget.widget_categories -->
+                <section class="widget widget_recent_posts">
+                    <h3 class="widget-title">
+                        <i class="icon-paper"></i>
+                        Recent Blog Posts
+                    </h3>
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post01.jpg" alt="Post01"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Fast and Easy Prototyping App</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post02.jpg" alt="Post02"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Resize Your Server in a Single Click</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post03.jpg" alt="Post03"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Advanced Mobile App Development</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                </section><!-- .widget.widget_recent_posts -->
+                <section class="widget widget_tag_cloud">
+                    <h3 class="widget-title">
+                        <i class="icon-tag"></i>
+                        Featured Tags
+                    </h3>
+                    <a href="#">Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">Hosting</a>
+                    <a href="#">Domains</a>
+                </section><!-- .widget.widget_tag_cloud -->
+            </aside><!-- .sidebar -->
+        </div><!-- .col-lg-3.col-md-4 -->
+    </div><!-- .row -->
+</div><!-- .container -->

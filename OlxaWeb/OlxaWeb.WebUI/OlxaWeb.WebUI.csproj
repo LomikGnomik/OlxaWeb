@@ -257,8 +257,11 @@
     <Content Include="Content\img\Home\16.png" />
     <Content Include="Content\img\Home\17.png" />
     <Content Include="Content\img\Home\20.png" />
+    <Content Include="Content\img\Home\AboutPic.jpg" />
+    <Content Include="Content\img\Home\AboutPic.png" />
     <Content Include="Content\img\Home\angle.png" />
     <Content Include="Content\img\Home\app-bg01.jpg" />
+    <Content Include="Content\img\Home\d2.gif" />
     <Content Include="Content\img\Home\devices02.jpg" />
     <Content Include="Content\img\Home\feature01.png" />
     <Content Include="Content\img\Home\feature02.png" />
@@ -366,7 +369,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -413,10 +415,6 @@
     <Content Include="Views\MyWebSite\DevTemplate.cshtml" />
     <Content Include="Views\MyWebSite\DevIndividual.cshtml" />
     <Content Include="Views\MyWebSite\DevExclusive.cshtml" />
-    <Content Include="Views\MyWebSite\_Partial_TemplateStep_1.cshtml" />
-    <Content Include="Views\MyWebSite\_Partial_TemplateStep_2.cshtml" />
-    <Content Include="Views\MyWebSite\_Partial_TemplateStep_3.cshtml" />
-    <Content Include="Views\MyWebSite\_Partial_TemplateStep_4.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_IndividualStep_1.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_IndividualStep_2.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_IndividualStep_3.cshtml" />
@@ -425,6 +423,8 @@
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_2.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_3.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_4.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
