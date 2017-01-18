@@ -13,16 +13,46 @@ namespace OlxaWeb.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+
+
+
+            //
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
+                name: null,
+                url: "Page{page}",
+                defaults: new { controller = "Blog", action = "Index"});
 
             routes.MapRoute(
                 name: "Develop",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Develop", action = "Index", id = UrlParameter.Optional });
-          
+
+            //новые
+
+
+     
+
+            routes.MapRoute(
+                name: null,
+                url: "Page{page}",
+                defaults: new { controller = "Blog", action = "Index", category = (string)null },
+                constraints: new { page = @"\d+" }
+            );
+
+            routes.MapRoute(null,
+                "{category}",
+                new { controller = "Blog", action = "Index", page = 1 }
+            );
+
+            routes.MapRoute(null,
+                "{category}/Page{page}",
+                new { controller = "Blog", action = "Index" },
+                new { page = @"\d+" }
+            );
+
+            routes.MapRoute(null, "{controller}/{action}");
+
         }
     }
 }

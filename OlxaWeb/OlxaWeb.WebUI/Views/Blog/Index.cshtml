@@ -1,5 +1,5 @@
-﻿@using OlxaWeb.Domain.Entities
-@model IEnumerable<Post>
+﻿
+@model OlxaWeb.WebUI.Models.BlogViewModels
 @{ 
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
@@ -8,7 +8,7 @@
    <!-- Content -->
 <div class="col-lg-9 col-md-8">
 
-    @foreach (var post in Model) {
+    @foreach (var post in Model.Posts ) {
     <article class="post-item">
         <a href="post-right-sidebar.html" class="post-thumb waves-effect">
             <img src="img/blog/post01.jpg" alt="Post01">
@@ -36,7 +36,7 @@
                 <h3>@post.Title</h3>
             </a>
             <p>@post.ShortDescription</p>
-            @Html.ActionLink("Подробнее","Post","Blog",new {id=@post.Id},null)
+            @Html.ActionLink("Подробнее","Post","Blog",new {id=post.Id },null)
         </div><!-- .post-body -->
     </article><!-- .post-item -->
     }
