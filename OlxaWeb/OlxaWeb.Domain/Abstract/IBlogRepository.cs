@@ -10,7 +10,6 @@ namespace OlxaWeb.Domain.Abstract
    public interface IBlogRepository
     {
         IEnumerable<Post> Posts { get; }
-        IEnumerable<Category> Categoryes { get; }
         IEnumerable<Tag> Tags { get; }
     }
 }

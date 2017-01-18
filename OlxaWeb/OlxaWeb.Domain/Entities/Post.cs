@@ -29,14 +29,16 @@ namespace OlxaWeb.Domain.Entities
         public virtual bool Published
         { get; set; }
 
+        public virtual string Category
+        { get; set; }
+
         public virtual DateTime PostedOn
         { get; set; }
 
         public virtual DateTime? Modified
         { get; set; }
 
-        public virtual Category Category
-        { get; set; }
+        
 
         public virtual IList<Tag> Tags
         { get; set; }

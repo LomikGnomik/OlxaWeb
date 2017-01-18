@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+<ul>
+    @foreach (var link in Model)
+    {
+        <li>
+            @Html.RouteLink(link, new
+       {
+           controller = "Blog",
+           action = "List",
+           category = "link",
+           page = 1
+       })
+        </li>
+    }
+    <li><a href="#">Design<span>4</span></a></li>
+    <li><a href="#">Hosting<span>11</span></a></li>
+    <li><a href="#">Development<span>6</span></a></li>
+</ul>
