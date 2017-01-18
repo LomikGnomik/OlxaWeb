@@ -84,7 +84,6 @@
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFTemplateRepository.cs" />
     <Compile Include="Concrete\EFWebSiteRepository.cs" />
-    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Entities\Temmplate.cs" />

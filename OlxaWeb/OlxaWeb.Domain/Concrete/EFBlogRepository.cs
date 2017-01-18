@@ -16,10 +16,6 @@ namespace OlxaWeb.Domain.Concrete
         {
             get { return context.Posts; }
         }
-        public IEnumerable<Category> Categoryes
-        {
-            get { return context.Categoryes; }
-        }
         public IEnumerable<Tag> Tags
         {
             get { return context.Tags; }

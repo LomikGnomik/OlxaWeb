@@ -429,13 +429,15 @@
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_3.cshtml" />
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_4.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Home\Brigade.cshtml" />
+    <Content Include="Views\Blog\Menu.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Shared\_LayoutBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="fonts\Playfair_Display\" />
-    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

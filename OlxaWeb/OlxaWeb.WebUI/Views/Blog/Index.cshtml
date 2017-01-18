@@ -1,0 +1,54 @@
+﻿@using OlxaWeb.Domain.Entities
+@model IEnumerable<Post>
+@{ 
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+
+
+   <!-- Content -->
+<div class="col-lg-9 col-md-8">
+
+    @foreach (var post in Model) {
+    <article class="post-item">
+        <a href="post-right-sidebar.html" class="post-thumb waves-effect">
+            <img src="img/blog/post01.jpg" alt="Post01">
+        </a><!-- .post-thumb -->
+        <div class="post-body">
+            <div class="post-meta">
+                <div class="column">
+                    <span>
+                        <i class="icon-head"></i>
+                        <a href="#">Bedismo</a>
+                    </span>
+                    <span>in</span>
+                    <span>
+                        <i class="icon-ribbon"></i>
+                        <a href="#">Support</a>
+                    </span>
+                    <span class="post-comments">
+                        <i class="icon-speech-bubble"></i>
+                        <a href="#">12</a>
+                    </span>
+                </div>
+                <div class="column"><span>24.12.2015</span></div>
+            </div><!-- .post-meta -->
+            <a href="post-right-sidebar.html" class="post-title">
+                <h3>@post.Title</h3>
+            </a>
+            <p>@post.ShortDescription</p>
+            @Html.ActionLink("Подробнее","Post","Blog",new {id=@post.Id},null)
+        </div><!-- .post-body -->
+    </article><!-- .post-item -->
+    }
+    <!-- Pagination -->
+    <section class="pagination space-top-2x">
+        <div class="nav-links">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <span class="current">3</span>
+            <a href="#">4</a>
+            <span>...</span>
+            <a href="#">12</a>
+        </div>
+    </section><!-- .pagination -->
+</div><!-- .col-lg-9.col-md-8 -->

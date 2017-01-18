@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Current = "Contact";
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-title">
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="title">
+                    <h1>Наш Блог</h1>
+                </div><!-- .title -->
+            </div><!-- .column -->
+            <div class="column">
+                <ul class="menu-title text-center">
+                    <li>@Html.ActionLink("Наша команда", "Brigade", "Home")</li>
+                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                    <li class="active"><a href="#">Наш Блог</a></li>
+                </ul><!-- .nav-filters -->
+            </div><!-- .column -->
+        </div>
+    </div>
+</section><!-- .page-title -->
+<!-- Container -->
+<div class="container">
+    <div class="row">
+
+
+
+
+    @RenderBody()
+
+
+
+
+    
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4">
+            <div class="space-top-2x visible-sm visible-xs"></div>
+            <aside class="sidebar">
+                <section class="widget widget_search">
+                    <form method="post" class="search-box">
+                        <input type="text" class="form-control" placeholder="Поиск по блогу">
+                        <button type="submit"><i class="icon-search"></i></button>
+                    </form>
+                </section>
+                <section class="widget widget_categories">
+                    <h3 class="widget-title">
+                        <i class="icon-ribbon"></i>
+                        Категории
+                    </h3>
+
+                    @Html.Action("Menu", "Blog")
+
+                </section><!-- .widget.widget_categories -->
+                <section class="widget widget_recent_posts">
+                    <h3 class="widget-title">
+                        <i class="icon-paper"></i>
+                        Recent Blog Posts
+                    </h3>
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post01.jpg" alt="Post01"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Fast and Easy Prototyping App</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post02.jpg" alt="Post02"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Resize Your Server in a Single Click</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                    <div class="item">
+                        <div class="thumb">
+                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post03.jpg" alt="Post03"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="post-right-sidebar.html">Advanced Mobile App Development</a></h4>
+                        </div>
+                    </div><!-- .item -->
+                </section><!-- .widget.widget_recent_posts -->
+                <section class="widget widget_tag_cloud">
+                    <h3 class="widget-title">
+                        <i class="icon-tag"></i>
+                        Featured Tags
+                    </h3>
+                    <a href="#">Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">Hosting</a>
+                    <a href="#">Domains</a>
+                </section><!-- .widget.widget_tag_cloud -->
+            </aside><!-- .sidebar -->
+        </div><!-- .col-lg-3.col-md-4 -->
+    </div><!-- .row -->
+</div><!-- .container -->
