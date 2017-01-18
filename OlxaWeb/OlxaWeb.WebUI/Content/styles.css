@@ -8427,6 +8427,10 @@ input[type="button"].btn-block {
 .navbar .toolbar a {
   padding-bottom: 2px;
 }
+.navbar .toolbar p {
+    margin:0 0 -30px;
+    color:#7a7777;
+}
 
 .navbar .toolbar a:focus {
   outline: none;
@@ -10780,7 +10784,7 @@ a.image-box {
   transition: all 0.3s;
 }
 
-/*.tile-tabs .tab:before {
+.tile-tabs .tab:before {
   position: absolute;
   display: block;
   content: "";
@@ -10797,19 +10801,7 @@ a.image-box {
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}*/
-.tile-tabs .tab:before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
-
 
 .tile-tabs .tab .tab-title {
   font-size: 16px;
@@ -14296,10 +14288,7 @@ position: absolute;
     transition: all 0.35s;
 }
 /* индивидуальные сайты*/
-.col-sm-4 a.tab:hover {
-    background-color: #19c55e;
-    color:white;
-} 
+
 
  /*---------------этапы разработки в личном кабинете---------------------*/
 
