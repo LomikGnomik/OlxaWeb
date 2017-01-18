@@ -265,10 +265,14 @@
     <Content Include="Content\img\Home\devices02.jpg" />
     <Content Include="Content\img\Home\feature01.png" />
     <Content Include="Content\img\Home\feature02.png" />
-    <Content Include="Content\img\Home\funding-progress-bg.jpg" />
+    <Content Include="Content\img\Home\google-logo.jpg" />
     <Content Include="Content\img\Home\ipad.png" />
+    <Content Include="Content\img\Home\ipad_adaptiv.jpg" />
+    <Content Include="Content\img\Home\ipad_Speed.gif" />
     <Content Include="Content\img\Home\iphone.png" />
+    <Content Include="Content\img\Home\iphone_adaptiv.jpg" />
     <Content Include="Content\img\Home\seo-cta-bg.png" />
+    <Content Include="Content\img\Home\yandex.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
     <Content Include="Content\img\product-bg01.jpg" />
@@ -425,6 +429,7 @@
     <Content Include="Views\MyWebSite\_Partial_ExclusiveStep_4.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\Brigade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
