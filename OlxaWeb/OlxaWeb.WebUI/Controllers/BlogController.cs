@@ -1,4 +1,5 @@
 ﻿using OlxaWeb.Domain.Abstract;
+using OlxaWeb.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,10 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View(repository.Posts);
         }
-        public ActionResult Post()
+        public ActionResult Post(int id)
         {
-            return View();
+            Post post = repository.Posts.FirstOrDefault(m => m.Id == id);
+            return View(post);
         }
 
         public PartialViewResult Menu()

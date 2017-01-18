@@ -1,4 +1,5 @@
-﻿ 
+﻿@using OlxaWeb.Domain.Entities
+@model IEnumerable<Post>
 @{ 
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
@@ -7,7 +8,7 @@
    <!-- Content -->
 <div class="col-lg-9 col-md-8">
 
-    <!-- Post -->
+    @foreach (var post in Model) {
     <article class="post-item">
         <a href="post-right-sidebar.html" class="post-thumb waves-effect">
             <img src="img/blog/post01.jpg" alt="Post01">
@@ -32,73 +33,13 @@
                 <div class="column"><span>24.12.2015</span></div>
             </div><!-- .post-meta -->
             <a href="post-right-sidebar.html" class="post-title">
-                <h3>Reading Design &amp; Typing Art</h3>
+                <h3>@post.Title</h3>
             </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
-            <a href="post-right-sidebar.html">Read More</a>
+            <p>@post.ShortDescription</p>
+            @Html.ActionLink("Подробнее","Post","Blog",new {id=@post.Id},null)
         </div><!-- .post-body -->
     </article><!-- .post-item -->
-    <!-- Post -->
-    <article class="post-item">
-        <div class="post-body">
-            <div class="post-meta">
-                <div class="column">
-                    <span class="post-format"></span>
-                    <span>
-                        <i class="icon-head"></i>
-                        <a href="#">Bedismo</a>
-                    </span>
-                    <span>in</span>
-                    <span>
-                        <i class="icon-ribbon"></i>
-                        <a href="#">History</a>
-                    </span>
-                    <span class="post-comments">
-                        <i class="icon-speech-bubble"></i>
-                        <a href="#">9</a>
-                    </span>
-                </div>
-                <div class="column"><span>16.11.2015</span></div>
-            </div><!-- .post-meta -->
-            <a href="post-right-sidebar.html" class="post-title">
-                <h3>Planets &amp; Kaleidoscopes</h3>
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
-            <a href="post-right-sidebar.html">Read More</a>
-        </div><!-- .post-body -->
-    </article><!-- .post-item -->
-    <!-- Post -->
-    <article class="post-item format-gallery">
-        <a href="post-right-sidebar.html" class="post-thumb waves-effect">
-            <img src="img/blog/post03.jpg" alt="Post03">
-        </a><!-- .post-thumb -->
-        <div class="post-body">
-            <div class="post-meta">
-                <div class="column">
-                    <span class="post-format"></span>
-                    <span>
-                        <i class="icon-head"></i>
-                        <a href="#">Dencik</a>
-                    </span>
-                    <span>in</span>
-                    <span>
-                        <i class="icon-ribbon"></i>
-                        <a href="#">History</a>
-                    </span>
-                    <span class="post-comments">
-                        <i class="icon-speech-bubble"></i>
-                        <a href="#">23</a>
-                    </span>
-                </div>
-                <div class="column"><span>25.11.2015</span></div>
-            </div><!-- .post-meta -->
-            <a href="post-right-sidebar.html" class="post-title">
-                <h3>History &amp; Physics</h3>
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...</p>
-            <a href="post-right-sidebar.html">Read More</a>
-        </div><!-- .post-body -->
-    </article><!-- .post-item -->
+    }
     <!-- Pagination -->
     <section class="pagination space-top-2x">
         <div class="nav-links">

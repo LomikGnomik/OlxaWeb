@@ -1,4 +1,5 @@
-﻿
+﻿@using OlxaWeb.Domain.Entities
+@model Post
 @{
     ViewBag.Current = "Contact";
     ViewBag.Title = "Post";
@@ -7,7 +8,7 @@
 
   <!-- Content -->
 <div class="col-lg-9 col-md-8">
-    <h1>How to Build a Network Without Touching Anything</h1>
+    <h1>@Model.Title</h1>
     <div class="post-meta">
         <div class="column">
             <span>
