@@ -285,6 +285,9 @@
     <Content Include="fonts\font_aw\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\font_aw\HELP-US-OUT.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\my-icons\font\flaticon.css" />
+    <Content Include="fonts\my-icons\font\flaticon.html" />
+    <Content Include="fonts\my-icons\font\Flaticon.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -322,6 +325,11 @@
     <Content Include="fonts\font_aw\scss\_screen-reader.scss" />
     <Content Include="fonts\font_aw\scss\_stacked.scss" />
     <Content Include="fonts\font_aw\scss\_variables.scss" />
+    <Content Include="fonts\my-icons\font\Flaticon.eot" />
+    <Content Include="fonts\my-icons\font\Flaticon.ttf" />
+    <Content Include="fonts\my-icons\font\Flaticon.woff" />
+    <Content Include="fonts\my-icons\font\_flaticon.scss" />
+    <Content Include="fonts\my-icons\license\license.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
