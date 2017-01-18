@@ -1,0 +1,117 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 18/01/2017 18:00
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-application:before { content: "\f100"; }
+.flaticon-arrows:before { content: "\f101"; }
+.flaticon-arrows-1:before { content: "\f102"; }
+.flaticon-arrows-2:before { content: "\f103"; }
+.flaticon-arrows-3:before { content: "\f104"; }
+.flaticon-art:before { content: "\f105"; }
+.flaticon-business:before { content: "\f106"; }
+.flaticon-business-1:before { content: "\f107"; }
+.flaticon-business-10:before { content: "\f108"; }
+.flaticon-business-2:before { content: "\f109"; }
+.flaticon-business-3:before { content: "\f10a"; }
+.flaticon-business-4:before { content: "\f10b"; }
+.flaticon-business-5:before { content: "\f10c"; }
+.flaticon-business-6:before { content: "\f10d"; }
+.flaticon-business-7:before { content: "\f10e"; }
+.flaticon-business-8:before { content: "\f10f"; }
+.flaticon-business-9:before { content: "\f110"; }
+.flaticon-calendar:before { content: "\f111"; }
+.flaticon-coins:before { content: "\f112"; }
+.flaticon-computer:before { content: "\f113"; }
+.flaticon-download:before { content: "\f114"; }
+.flaticon-labels:before { content: "\f115"; }
+.flaticon-line:before { content: "\f116"; }
+.flaticon-man:before { content: "\f117"; }
+.flaticon-man-1:before { content: "\f118"; }
+.flaticon-man-2:before { content: "\f119"; }
+.flaticon-money:before { content: "\f11a"; }
+.flaticon-money-1:before { content: "\f11b"; }
+.flaticon-monitor:before { content: "\f11c"; }
+.flaticon-people:before { content: "\f11d"; }
+.flaticon-people-1:before { content: "\f11e"; }
+.flaticon-people-2:before { content: "\f11f"; }
+.flaticon-phone:before { content: "\f120"; }
+.flaticon-phone-contact:before { content: "\f121"; }
+.flaticon-ruble:before { content: "\f122"; }
+.flaticon-stopwatch:before { content: "\f123"; }
+.flaticon-suitcase:before { content: "\f124"; }
+.flaticon-tag:before { content: "\f125"; }
+.flaticon-work:before { content: "\f126"; }
+    
+    $font-Flaticon-application: "\f100";
+    $font-Flaticon-arrows: "\f101";
+    $font-Flaticon-arrows-1: "\f102";
+    $font-Flaticon-arrows-2: "\f103";
+    $font-Flaticon-arrows-3: "\f104";
+    $font-Flaticon-art: "\f105";
+    $font-Flaticon-business: "\f106";
+    $font-Flaticon-business-1: "\f107";
+    $font-Flaticon-business-10: "\f108";
+    $font-Flaticon-business-2: "\f109";
+    $font-Flaticon-business-3: "\f10a";
+    $font-Flaticon-business-4: "\f10b";
+    $font-Flaticon-business-5: "\f10c";
+    $font-Flaticon-business-6: "\f10d";
+    $font-Flaticon-business-7: "\f10e";
+    $font-Flaticon-business-8: "\f10f";
+    $font-Flaticon-business-9: "\f110";
+    $font-Flaticon-calendar: "\f111";
+    $font-Flaticon-coins: "\f112";
+    $font-Flaticon-computer: "\f113";
+    $font-Flaticon-download: "\f114";
+    $font-Flaticon-labels: "\f115";
+    $font-Flaticon-line: "\f116";
+    $font-Flaticon-man: "\f117";
+    $font-Flaticon-man-1: "\f118";
+    $font-Flaticon-man-2: "\f119";
+    $font-Flaticon-money: "\f11a";
+    $font-Flaticon-money-1: "\f11b";
+    $font-Flaticon-monitor: "\f11c";
+    $font-Flaticon-people: "\f11d";
+    $font-Flaticon-people-1: "\f11e";
+    $font-Flaticon-people-2: "\f11f";
+    $font-Flaticon-phone: "\f120";
+    $font-Flaticon-phone-contact: "\f121";
+    $font-Flaticon-ruble: "\f122";
+    $font-Flaticon-stopwatch: "\f123";
+    $font-Flaticon-suitcase: "\f124";
+    $font-Flaticon-tag: "\f125";
+    $font-Flaticon-work: "\f126";
