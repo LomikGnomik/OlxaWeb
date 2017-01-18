@@ -16,9 +16,22 @@ namespace OlxaWeb.WebUI.Controllers
         }
 
         // Возвращает все посты
-        public ActionResult List()  
+        public ActionResult Index()  
         {
             return View(repository.Posts);
+        }
+        public ActionResult Post()
+        {
+            return View();
+        }
+
+        public PartialViewResult Menu()
+        {
+            IEnumerable<string> categories = repository.Posts
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+            return PartialView(categories);
         }
     }
 }

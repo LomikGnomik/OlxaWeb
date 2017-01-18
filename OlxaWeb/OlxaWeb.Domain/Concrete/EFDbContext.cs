@@ -18,7 +18,6 @@ namespace OlxaWeb.Domain.Concrete
              new DropCreateDatabaseIfModelChanges<EFDbContext>());
         }
         public DbSet<Post> Posts { get; set; }
-        public DbSet<Category> Categoryes { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Temmplate> Temmplates { get; set; }
         public DbSet<WebSite> WebSites { get; set; }

@@ -21,10 +21,6 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View();
         }
-        public ActionResult Blog()
-        {
-            return View();
-        }
         public ActionResult Brigade()
         {
             return View();
