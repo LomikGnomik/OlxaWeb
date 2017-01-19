@@ -23,7 +23,7 @@
                     <span>in</span>
                     <span>
                         <i class="icon-ribbon"></i>
-                        <a href="#">Support</a>
+                        <a href="#">@post.Category</a>
                     </span>
                     <span class="post-comments">
                         <i class="icon-speech-bubble"></i>
@@ -43,12 +43,13 @@
     <!-- Pagination -->
     <section class="pagination space-top-2x">
         <div class="nav-links">
-            <a href="#">1</a>
+            @Html.PageLinks(Model.PagingInfo, x=>Url.Action("Index",new { page=x}))
+            @*<a href="#">1</a>
             <a href="#">2</a>
             <span class="current">3</span>
             <a href="#">4</a>
             <span>...</span>
-            <a href="#">12</a>
+            <a href="#">12</a>*@
         </div>
     </section><!-- .pagination -->
 </div><!-- .col-lg-9.col-md-8 -->

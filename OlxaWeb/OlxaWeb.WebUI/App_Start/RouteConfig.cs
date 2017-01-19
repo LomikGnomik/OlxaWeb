@@ -18,20 +18,19 @@ namespace OlxaWeb.WebUI
 
 
             //
-            routes.MapRoute(
-                name: null,
-                url: "Page{page}",
-                defaults: new { controller = "Blog", action = "Index"});
+            //routes.MapRoute(
+            //    name: null,
+            //    url: "Page{page}",
+            //    defaults: new { controller = "Blog", action = "Index"});
+
+
 
             routes.MapRoute(
                 name: "Develop",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Develop", action = "Index", id = UrlParameter.Optional });
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
             //новые
-
-
-     
 
             routes.MapRoute(
                 name: null,

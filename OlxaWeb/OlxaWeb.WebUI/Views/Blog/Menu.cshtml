@@ -1,13 +1,16 @@
 ﻿@model IEnumerable<string>
+
 <ul>
+    <li  @(ViewBag.SelectedCategory==null ? "class=active" : "")>@Html.ActionLink("Все посты", "Index", "Blog", null)</li>
+
     @foreach (var link in Model)
     {
-        <li>
+        <li @(ViewBag.SelectedCategory==@link ? "class=active" : "")>
             @Html.RouteLink(link, new
        {
            controller = "Blog",
            action = "Index",
-           category = "link",
+           category = @link,
            page = 1
        })
         </li>
