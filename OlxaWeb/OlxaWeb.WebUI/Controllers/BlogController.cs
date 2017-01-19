@@ -13,41 +13,32 @@ namespace OlxaWeb.WebUI.Controllers
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 5 ; //количество постов на странице
+        public int PageSize = 5; //количество постов на странице
 
         public BlogController(IBlogRepository repo)
         {
             repository = repo;
         }
 
-        //[HttpGet]
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-        // Возвращает все посты
-
-      
         public ActionResult Index(string category, int page = 1)
         {
-           BlogViewModels viewModel= new BlogViewModels {
-               Posts=repository.Posts
-                   .Where(p => category == null || p.Category == category)
-                   .OrderBy(p => p.Id)
-                   .Skip((page - 1) * PageSize)
-                   .Take(PageSize),
-                   PagingInfo = new PagingInfo {
-                       CurrentPage = page,
-                       ItemsPerPage = PageSize,
-                       TotalItems = category == null ?
-                   repository.Posts.Count() :
-                   repository.Posts.Where(e=>e.Category == category).Count()
-                   },
-                CurrentCategory=category
-                };
+            BlogViewModels viewModel = new BlogViewModels {
+                Posts = repository.Posts
+                    .Where(p => category == null || p.Category == category)
+                    .OrderBy(p => p.Id)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
+                PagingInfo = new PagingInfo {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = category == null ?
+                    repository.Posts.Count() :
+                    repository.Posts.Where(e => e.Category == category).Count()
+                },
+                CurrentCategory = category
+            };
             return View(viewModel);
         }
-
 
         public ActionResult Post(int id)
         {
@@ -55,7 +46,7 @@ namespace OlxaWeb.WebUI.Controllers
             return View(post);
         }
 
-        public PartialViewResult Menu(string category=null)
+        public PartialViewResult Menu(string category = null)
         {
             ViewBag.SelectedCategory = category;
             IEnumerable<string> categories = repository.Posts
@@ -63,6 +54,29 @@ namespace OlxaWeb.WebUI.Controllers
                 .Distinct()
                 .OrderBy(x => x);
             return PartialView(categories);
+        }
+
+        public ViewResult EditPost(int Id)
+        {
+            Post post = repository.Posts
+                .FirstOrDefault(p => p.Id == Id);
+            return View(post);
+        }
+        [HttpPost]
+        public ActionResult EditPost(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                repository.SavePost(post);
+                TempData["message"] = string.Format("{0} has been saved", post.Title);
+                return RedirectToAction("Index");
+            }
+            else //Если что то пошло не так
+                {
+                 return View(post);
+                }
+            
+            
         }
     }
 }
