@@ -7343,7 +7343,7 @@ a.image-box {
   transition: all 0.3s;
 }
 
-.tile-tabs .tab:before {
+.tile-tabs .tab:before { /* пипиндр при выборе окна в контактах*/
   position: absolute;
   display: block;
   content: "";
@@ -7361,7 +7361,24 @@ a.image-box {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-
+.title-tabs-contat .tab:before {
+ position: absolute;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0px;
+  left: 50%;
+  margin-left: 0px;
+  border-width: 0px 0px 0;
+  border-top-color: #19c55e;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
 .tile-tabs .tab .tab-title {
   font-size: 16px;
   font-weight: 600;
