@@ -13,26 +13,26 @@ namespace OlxaWeb.WebUI.Controllers
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 1;
+        public int PageSize = 5 ; //количество постов на странице
 
         public BlogController(IBlogRepository repo)
         {
             repository = repo;
         }
 
-        [HttpGet]
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
         // Возвращает все посты
 
-        [HttpPost]
+      
         public ActionResult Index(string category, int page = 1)
         {
            BlogViewModels viewModel= new BlogViewModels {
                Posts=repository.Posts
-                   .Where(p => p.Category == null || p.Category == category)
+                   .Where(p => category == null || p.Category == category)
                    .OrderBy(p => p.Id)
                    .Skip((page - 1) * PageSize)
                    .Take(PageSize),
@@ -55,8 +55,9 @@ namespace OlxaWeb.WebUI.Controllers
             return View(post);
         }
 
-        public PartialViewResult Menu()
+        public PartialViewResult Menu(string category=null)
         {
+            ViewBag.SelectedCategory = category;
             IEnumerable<string> categories = repository.Posts
                 .Select(x => x.Category)
                 .Distinct()

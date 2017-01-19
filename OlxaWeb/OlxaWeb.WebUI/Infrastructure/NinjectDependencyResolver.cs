@@ -48,6 +48,7 @@ namespace OlxaWeb.WebUI.Infrastructure
             Mock<IBlogRepository> mockblog = new Mock<IBlogRepository>();
             mockblog.Setup(m => m.Posts).Returns(new List<Post> {
             new Post {Id=1,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="SEO",PostedOn=DateTime.Today, Modified=DateTime.Now },
+            new Post {Id=1,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="SEO",PostedOn=DateTime.Today, Modified=DateTime.Now },
             new Post {Id=2,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now },
             new Post {Id=3,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="О всяком",PostedOn=DateTime.Today, Modified=DateTime.Now },
             new Post {Id=4,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Ляля",PostedOn=DateTime.Today, Modified=DateTime.Now },
