@@ -43,6 +43,12 @@
                     <h3 class="widget-title">
                         <i class="icon-ribbon"></i>
                         Категории
+
+                        <div class="social-bar" style="float:right">
+                            <a href="~/Blog/CreatePost" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Создать новый пост">
+                                <i class="fa fa-pencil-square text-danger"></i>
+                            </a>
+                        </div>
                     </h3>
 
                     @Html.Action("Menu", "Blog")
@@ -51,7 +57,7 @@
                 <section class="widget widget_recent_posts">
                     <h3 class="widget-title">
                         <i class="icon-paper"></i>
-                        Recent Blog Posts
+                        Последние посты
                     </h3>
                     <div class="item">
                         <div class="thumb">
