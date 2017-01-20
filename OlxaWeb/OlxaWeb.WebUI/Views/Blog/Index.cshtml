@@ -11,7 +11,7 @@
     @foreach (var post in Model.Posts ) {
     <article class="post-item">
         <a href="post-right-sidebar.html" class="post-thumb waves-effect">
-            <img src="img/blog/post01.jpg" alt="Post01">
+            <img src=@post.UrlSlug alt="Post01">
         </a><!-- .post-thumb -->
         <div class="post-body">
             <div class="post-meta">
@@ -20,7 +20,7 @@
                         <i class="icon-head"></i>
                         <a href="#">Bedismo</a>
                     </span>
-                    <span>in</span>
+                    <span>в</span>
                     <span>
                         <i class="icon-ribbon"></i>
                         <a href="#">@post.Category</a>

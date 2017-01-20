@@ -16,6 +16,8 @@ namespace OlxaWeb.Domain.Concrete
         {
             get { return context.Posts; }
         }
+
+        //Save Post
         public void SavePost(Post post)
         {
             if (post.Id == 0)
@@ -40,6 +42,18 @@ namespace OlxaWeb.Domain.Concrete
             }
             context.SaveChanges();
         }
+        //Delete Post
+        public Post DeletePost(int Id)
+        {
+            Post dbEntry = context.Posts.Find(Id);
+            if (dbEntry != null)
+            {
+                context.Posts.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
+        // TAG
         public IEnumerable<Tag> Tags
         {
             get { return context.Tags; }

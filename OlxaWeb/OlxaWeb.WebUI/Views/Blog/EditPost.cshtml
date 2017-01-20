@@ -2,8 +2,63 @@
 
 @{
     ViewBag.Title = "EditPost";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
+<script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
 
-<h2>EditPost</h2>
+@using (Html.BeginForm("EditPost", "Blog"))
+{
+      <!-- Content -->
+    <div class="col-lg-9 col-md-8">
+        <h3>@Html.EditorFor(model => model.Title)</h3>
+        <div class="post-meta">
+            <div class="column">
+                <span>
+                    <i class="icon-head"></i>
+                    <a href="#">Bedismo</a>
+                </span>
+                <span>в</span>
+                <span>
+                    <i class="icon-ribbon"></i>
+                   @Html.EditorFor(model => model.Category)
+                </span>
+            </div>
+            <div class="column"><span>@Model.Modified</span></div>
+        </div><!-- .post-meta -->
+
+        <textarea name="editor1" id="editor1" rows="10" cols="80">
+            @Model.Description
+        </textarea>
+        <script>
+                CKEDITOR.replace( 'editor1' );
+        </script>
+
+        <div class="post-tools space-top-2x">
+            <div class="column">
+                <div class="tags-links">
+                    <a href="#">Design</a>
+                    <a href="#">Development</a>
+                    <a href="#">Hosting</a>
+                    <a href="#">Domains</a>
+                </div>
+            </div><!-- .column -->
+            <div class="column">
+                <div class="social-bar">
+                    <a href="~/Blog/EditPost/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                        <i class="fa fa-check-square text-danger"></i>
+                    </a>
+                @* Сохранить и отправить *@
+                <input type="submit" value="Save" class="sb-facebook" />
+
+                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div><!-- .social-bar -->
+            </div><!-- .column -->
+        </div><!-- .post-tools -->
+    </div><!-- .col-lg-9.col-md-8 -->
+}
 
