@@ -11,6 +11,9 @@ namespace OlxaWeb.Domain.Abstract
     {
         IEnumerable<Post> Posts { get; }
         void SavePost(Post post);
+        Post DeletePost(int Id);
+
+
         IEnumerable<Tag> Tags { get; }
     }
 }

@@ -75,8 +75,10 @@ namespace OlxaWeb.WebUI.Controllers
                 {
                  return View(post);
                 }
-            
-            
+        }
+        public ViewResult CreatePost()
+        {
+            return View("EditPost", new Post());
         }
     }
 }
