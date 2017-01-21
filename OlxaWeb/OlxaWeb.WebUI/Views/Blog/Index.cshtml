@@ -11,34 +11,44 @@
     @foreach (var post in Model.Posts ) {
     <article class="post-item">
         <a href="post-right-sidebar.html" class="post-thumb waves-effect">
-            <img src="\Content\img\@post.UrlSlug" alt="Post01">
+            <img src=~/Content/img/BlogPicture/@post.UrlSlug alt="Тут должна быть картинка">
+   
         </a><!-- .post-thumb -->
         <div class="post-body">
             <div class="post-meta">
                 <div class="column">
                     <span>
                         <i class="icon-head"></i>
-                        <a href="#">Bedismo</a>
+                      Категория :
                     </span>
-                    <span>в</span>
                     <span>
                         <i class="icon-ribbon"></i>
                         <a href="#">@post.Category</a>
                     </span>
-                    <span class="post-comments">
-                        <i class="icon-speech-bubble"></i>
-                        <a href="#">12</a>
-                    </span>
                 </div>
-                <div class="column"><span>24.12.2015</span></div>
+                <div class="column"><span>@post.PostedOn</span></div>
             </div><!-- .post-meta -->
-            <a href="post-right-sidebar.html" class="post-title">
+            <a href="Blog/Post/@post.Id" class="post-title">
                 <h3>@post.Title</h3>
             </a>
             <p>@post.ShortDescription</p>
             @Html.ActionLink("Подробнее","Post","Blog",new {id=post.Id },null)
         </div><!-- .post-body -->
+        <div class="column">
+            <div class="social-bar">
+                <a href="~/Blog/EditPost/@post.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                    <i class="fa fa-check-square text-danger"></i>
+                </a>
+                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div><!-- .social-bar -->
+        </div><!-- .column -->
     </article><!-- .post-item -->
+  
     }
     <!-- Pagination -->
     <section class="pagination space-top-2x">

@@ -636,6 +636,9 @@
     <Content Include="Content\footer\phone.png" />
     <Content Include="Content\img\05.jpg" />
     <Content Include="Content\img\1478172823164455436.png" />
+    <Content Include="Content\img\BlogPicture\1478172823164455436.png" />
+    <Content Include="Content\img\BlogPicture\HiRes-Blank-Faces.jpg" />
+    <Content Include="Content\img\BlogPicture\image.jpg" />
     <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\contacts-icon.png" />
     <Content Include="Content\img\cta-bg.jpg" />
