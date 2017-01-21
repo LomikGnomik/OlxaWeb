@@ -20,7 +20,7 @@ namespace OlxaWeb.Domain.Entities
         public virtual string Description
         { get; set; }
 
-        public virtual int Price
+        public virtual decimal Price
         { get; set; }
 
         public virtual string Category

@@ -33,6 +33,7 @@ namespace OlxaWeb.WebUI.Infrastructure
 
         private void AddBindings()
         {
+            // Шаблонные
             Mock<ITemplateRepository> mock = new Mock<ITemplateRepository>();
             mock.Setup(m => m.Temmplates).Returns(new List<Temmplate> {
             new Temmplate {Title="Строительный",Description="", Category="lending", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
@@ -44,7 +45,7 @@ namespace OlxaWeb.WebUI.Infrastructure
             });
             kernel.Bind<ITemplateRepository>().ToConstant(mock.Object);
 
-
+            // Блог
             Mock<IBlogRepository> mockblog = new Mock<IBlogRepository>();
             mockblog.Setup(m => m.Posts).Returns(new List<Post> {
             new Post {Id=1,Title="Лучшие Landing Page — подборка лучших интерактивных Landing Page",ShortDescription="",Description="Если при прочтении книги Вам тяжело представить что там происходит, тогда данный сайт для Вас 🙂 . Потому что здесь Вы можете сразу и читать и видеть сюжет, потому что на фоне происходит то, что написано текстом. То есть по мере прокрутки страницы и чтения текста меняется и фон сайта.Интересная задумка. Кто знает, может в ближайшее время такие истории начнут появляться в больших масштабах. Конечно, есть плюсы и минусы у данного подхода, но то что это креативно сделано — нет претензий.",Meta="",UrlSlug="HiRes-Blank-Faces.jpg",Published=true,Category="SEO",PostedOn=DateTime.Today, Modified=DateTime.Now },
@@ -56,7 +57,21 @@ namespace OlxaWeb.WebUI.Infrastructure
             });
             kernel.Bind<IBlogRepository>().ToConstant(mockblog.Object);
 
-            // kernel.Bind<ITemplateRepository>().To<EFTemplateRepository>();
+            // Портфолио
+            Mock<IPortfolioRepository> mockportfolio = new Mock<IPortfolioRepository>();
+            mockportfolio.Setup(m => m.Portfolios).Returns(new List<Portfolio> {
+            new Portfolio {Id=1, Category="lan", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
+            new Portfolio { Id = 2, Category = "lan", Day = 20, Description = "", Name = "", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
+            new Portfolio { Id = 3, Category = "corp", Day = 20, Description = "", Name = "", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
+            new Portfolio {Id=4, Category="mag", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
+            new Portfolio {Id=5, Category="lux", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
+            new Portfolio {Id=6, Category="lux", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""}
+            });
+            kernel.Bind<IPortfolioRepository>().ToConstant(mockportfolio.Object);
+
+
+            //kernel.Bind<IPortfolioRepository>().To<EFPortfolioRepository>();
+            //kernel.Bind<ITemplateRepository>().To<EFTemplateRepository>();
             //kernel.Bind<IBlogRepository>().To<EFBlogRepository>();
             kernel.Bind<IWebSiteRepository>().To<EFWebSiteRepository>();
         }

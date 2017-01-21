@@ -1,4 +1,5 @@
-﻿
+﻿@using OlxaWeb.Domain.Entities
+@model IEnumerable<Portfolio>
 @{
     ViewBag.Current = "Portfolio";
     ViewBag.Title = "Index";
@@ -17,9 +18,11 @@
         <!-- Filters -->
         <div class="text-center padding-top">
             <ul class="nav-filters space-bottom-2x text-center">
-                <li class="active"><a href="#" data-filter="*">Show All</a></li>
-                <li><a href="#" data-filter=".apps">Apps</a></li>
-                <li><a href="#" data-filter=".identity">Identity Design</a></li>
+                <li class="active"><a href="#" data-filter="*">Все</a></li>
+                <li><a href="#" data-filter=".lan">Лэндинг</a></li>
+                <li><a href="#" data-filter=".corp">Корпоративный</a></li>
+                <li><a href="#" data-filter=".mag">Магазин</a></li>
+                <li><a href="#" data-filter=".lux">Эксклюзив</a></li>
             </ul><!-- .nav-filters -->
         </div>
 
@@ -28,60 +31,20 @@
             <div class="grid-sizer"></div>
             <div class="gutter-sizer"></div>
 
-            <!-- Portfolio Item -->
-            <div class="grid-item apps">
+          @foreach (var site in Model )
+          {
+                <!-- Portfolio Item -->
+            <div class="grid-item @site.Category">
                 <a href="#" class="portfolio-item">
                     <div class="thumbnail waves-effect waves-light">
                         <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">Mobile App</h3>
+                        <h3 class="portfolio-title">@site.Name</h3>
                     </div>
                 </a>
-            </div><!-- .grid-item.apps -->
-            <!-- Portfolio Item -->
-            <div class="grid-item identity">
-                <a href="#" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">Identity Design</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item.identity -->
-            <!-- Portfolio Item -->
-            <div class="grid-item identity">
-                <a href="#" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">Package Design</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item.identity -->
-            <!-- Portfolio Item -->
-            <div class="grid-item apps">
-                <a href="#" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">App Prototype</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item.apps -->
-            <!-- Portfolio Item -->
-            <div class="grid-item identity">
-                <a href="#" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">Stationery Design</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item.identity -->
-            <!-- Portfolio Item -->
-            <div class="grid-item apps">
-                <a href="#" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">Watch App</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item.apps -->
+            </div><!-- .grid-item. -->
+          }
+
+
         </div><!-- .isotope-masonry-grid -->
         <!-- Load More Button -->
         <div class="text-center padding-top">
