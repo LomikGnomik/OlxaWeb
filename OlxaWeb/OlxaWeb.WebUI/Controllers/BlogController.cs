@@ -63,10 +63,21 @@ namespace OlxaWeb.WebUI.Controllers
             return View(post);
         }
         [HttpPost]
-        public ActionResult EditPost(Post post)
+        public ActionResult EditPost(HttpPostedFileBase picture, Post post)
         {
+            if (picture != null)
+            {
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(picture.FileName);
+                //пишем  имя картинки в бд
+                post.UrlSlug = fileName;
+                // сохраняем файл в папку img/BlogPicture/ в проекте
+                picture.SaveAs(Server.MapPath("~/Content/img/BlogPicture/" + fileName));
+            }
+
             if (ModelState.IsValid)
             {
+                
                 repository.SavePost(post);
                 TempData["message"] = string.Format("{0} has been saved", post.Title);
                 return RedirectToAction("Index");

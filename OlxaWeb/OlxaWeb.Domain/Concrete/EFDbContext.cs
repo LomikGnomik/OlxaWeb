@@ -21,6 +21,7 @@ namespace OlxaWeb.Domain.Concrete
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Temmplate> Temmplates { get; set; }
         public DbSet<WebSite> WebSites { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)   // Для связи многие ко многим
         {
