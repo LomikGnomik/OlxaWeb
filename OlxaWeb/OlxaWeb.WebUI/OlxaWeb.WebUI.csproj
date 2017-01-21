@@ -852,9 +852,12 @@
     <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Shared\_LayoutBlog.cshtml" />
     <Content Include="Views\Blog\EditPost.cshtml" />
+    <Content Include="Views\Portfolio\Site.cshtml" />
+    <Content Include="Views\Portfolio\EditSite.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\PorfolioPicture\" />
     <Folder Include="fonts\Playfair_Display\" />
   </ItemGroup>
   <ItemGroup>

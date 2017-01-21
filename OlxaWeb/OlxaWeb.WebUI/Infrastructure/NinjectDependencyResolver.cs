@@ -60,12 +60,12 @@ namespace OlxaWeb.WebUI.Infrastructure
             // Портфолио
             Mock<IPortfolioRepository> mockportfolio = new Mock<IPortfolioRepository>();
             mockportfolio.Setup(m => m.Portfolios).Returns(new List<Portfolio> {
-            new Portfolio {Id=1, Category="lan", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
-            new Portfolio { Id = 2, Category = "lan", Day = 20, Description = "", Name = "", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
-            new Portfolio { Id = 3, Category = "corp", Day = 20, Description = "", Name = "", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
+            new Portfolio {Id=1, Category="lan", Day=20, Description="", Name="OlxaWeb.ru", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
+            new Portfolio { Id = 2, Category = "lan", Day = 20, Description = "", Name = "DedPixto", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
+            new Portfolio { Id = 3, Category = "corp", Day = 20, Description = "", Name = "Какашка", PictureMobile = "", PicturePC = "", Price = 1000, Publish = true, URL = "" },
             new Portfolio {Id=4, Category="mag", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
-            new Portfolio {Id=5, Category="lux", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
-            new Portfolio {Id=6, Category="lux", Day=20, Description="", Name="", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""}
+            new Portfolio {Id=5, Category="lux", Day=20, Description="", Name="Сайт рецептов", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""},
+            new Portfolio {Id=6, Category="lux", Day=20, Description="", Name="Супер-пупер сайт", PictureMobile="", PicturePC="", Price=1000, Publish=true, URL=""}
             });
             kernel.Bind<IPortfolioRepository>().ToConstant(mockportfolio.Object);
 
