@@ -15,6 +15,13 @@
         </h2>
         <!-- Filters -->
         <div class="text-center padding-top">
+            <div class="column">
+                <div class="social-bar" style="float:left">
+                    <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
+                        <i class="fa fa-plus text-danger"></i>
+                    </a>
+                </div>
+            </div>
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
                 <li><a href="#" data-filter=".lan">Лэндинг</a></li>
@@ -32,6 +39,23 @@
           {
                 <!-- Portfolio Item -->
             <div class="grid-item @site.Category">
+                <div class="column">
+                    <div class="social-bar" style="float:right">
+                        <a href="Site/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                            <i class="fa fa-window-close text-danger"></i>
+                        </a>
+
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
+                            <i class="fa fa-minus-square" style="color:#808080"></i>
+                        </a>
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
+                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                        </a>
+                    </div>
+                </div>
                 <a href="Site/@site.Id" class="portfolio-item">
                     <div class="thumbnail waves-effect waves-light">
                         <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
