@@ -74,7 +74,6 @@ namespace OlxaWeb.WebUI.Controllers
                 // сохраняем файл в папку img/BlogPicture/ в проекте
                 picture.SaveAs(Server.MapPath("~/Content/img/BlogPicture/" + fileName));
             }
-
             if (ModelState.IsValid)
             {
                 

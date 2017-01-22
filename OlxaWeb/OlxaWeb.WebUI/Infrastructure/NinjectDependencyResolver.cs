@@ -36,10 +36,10 @@ namespace OlxaWeb.WebUI.Infrastructure
             // Шаблонные
             Mock<ITemplateRepository> mock = new Mock<ITemplateRepository>();
             mock.Setup(m => m.Temmplates).Returns(new List<Temmplate> {
-            new Temmplate {Title="Строительный",Description="", Category="lending", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
-            new Temmplate {Title="Ресторанный",Description="", Category="lending", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2 },
-            new Temmplate {Title="Медицинский",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 },
-            new Temmplate {Title="Спортивный",Description="", Category="comercy", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4 },
+            new Temmplate {Title="Строительный",Description="", Category="Интернет-магазин", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=1 },
+            new Temmplate {Title="Ресторанный",Description="", Category="Интернет-магазин", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2 },
+            new Temmplate {Title="Медицинский",Description="", Category="Лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 },
+            new Temmplate {Title="Спортивный",Description="", Category="Корпаративный", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4 },
             new Temmplate {Title="Магазин",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5 },
             new Temmplate {Title="Лендинг",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6 }
             });

@@ -4,6 +4,10 @@
     ViewBag.Title = "EditPost";
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
+
+
+
+
 <script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
 
 
@@ -12,9 +16,6 @@
 
 @using (Html.BeginForm("EditPost", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-
-
-
         <!-- Content -->
     <div class="col-lg-9 col-md-8">
         <h3>@Html.EditorFor(model => model.Title)</h3>
@@ -39,23 +40,19 @@
         <div class="image-carousel space-bottom-2x">
             <img id="output" src="~/Content/img/BlogPicture/@Model.UrlSlug" alt="Нет картинки" />
         </div>
-
         <script>
             var loadFile = function (event) {
                 var output = document.getElementById('output');
                 output.src = URL.createObjectURL(event.target.files[0]);
             };
         </script>
-
         @*Конец загрузки картинки*@
-
-        <textarea name="editor1" id="editor1" rows="10" cols="80">
-            @Model.Description
+        <textarea name="Description" id="editor1" rows="10" cols="80">
+           @Model.Description
         </textarea>
         <script>
             CKEDITOR.replace('editor1');
         </script>
-
         <div class="post-tools space-top-2x">
             <div class="column">
                 <div class="tags-links">

@@ -34,12 +34,13 @@
         </h2>
 
         <!-- Filters -->
+        @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
         <div class="text-center padding-top">
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
-                <li><a href="#" data-filter=".magazin">Интернет-магазин</a></li>
-                <li><a href="#" data-filter=".comercy">Корпаративный</a></li>
-                <li><a href="#" data-filter=".lending">Лендинг</a></li>
+                <li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
+                <li><a href="#" data-filter=".Корпаративный">Корпаративный</a></li>
+                <li><a href="#" data-filter=".Лендинг">Лендинг</a></li>
             </ul><!-- .nav-filters -->
         </div>
 
@@ -53,6 +54,14 @@
             {
                 <!-- Portfolio Item -->
                 <div class="grid-item @Site.Category">
+
+                    <a href="~/Develop/EditCard/@Site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="~/Develop/DeleteCard/@Site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
                     <div class="portfolio-item">
                         <div class="thumbnail waves-effect waves-light">
                             <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
