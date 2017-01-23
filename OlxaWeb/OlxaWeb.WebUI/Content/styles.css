@@ -1568,7 +1568,7 @@ kbd {
 }
 
 .space-top {
-  margin-top: 24px !important;
+  margin-top: 20px !important;
 }
 
 .space-top-2x {
@@ -1617,7 +1617,7 @@ kbd {
 
 @media screen and (max-width: 768px) {
   .space-top {
-    margin-top: 16px !important;
+    margin-top: 4px !important;
   }
   .space-top-2x {
     margin-top: 36px !important;
@@ -9430,11 +9430,11 @@ a.image-box {
 }
 
 .owl-carousel .owl-controls .owl-nav .owl-prev:before {
-  content: "\e094";
+  content: "\f10b";
 }
 
 .owl-carousel .owl-controls .owl-nav .owl-next:before {
-  content: "\e095";
+  content: "\f109";
 }
 
 .owl-carousel .owl-controls .owl-dots {
@@ -11181,5 +11181,21 @@ span.round-tab:hover {
   border-color: #1bdb68;
   color:#666;
 }
+ .border-price{
+  background-color: transparent;
+  color: #19c55e;
+  border:2px solid #19c55e;
+  height: 48px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0px 25px;
+  margin: 0;
+  margin-right: 10px;
+  float:left;
+}
+ .btn-border-price{
+     margin:0px;     
+ }
 
 
