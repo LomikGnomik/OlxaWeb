@@ -50,7 +50,15 @@
                 <h2 class="shop-title">
                     @Html.EditorFor(m => m.Title)
                 </h2>
-            @Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")
+
+                <select id="Category" name="Category">
+                    <option value="">Категории:</option>
+                    @foreach (var category in ViewBag.Filter)
+                {
+                        <option>@category</option>
+                    }
+                </select>
+            @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
                 <p class="text-gray">
                     <textarea name="Description" id="editor1" rows="10" cols="80">
                         @Model.Description

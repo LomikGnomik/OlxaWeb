@@ -24,10 +24,10 @@
             </div>
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
-                <li><a href="#" data-filter=".lan">Лэндинг</a></li>
-                <li><a href="#" data-filter=".corp">Корпоративный</a></li>
-                <li><a href="#" data-filter=".mag">Магазин</a></li>
-                <li><a href="#" data-filter=".lux">Эксклюзив</a></li>
+            @foreach (var filter in ViewBag.Filter)
+            {
+                <li><a href="#" data-filter=".@filter">@filter</a></li>
+            }
             </ul><!-- .nav-filters -->
         </div>
         <!-- Portfolio Grid -->
