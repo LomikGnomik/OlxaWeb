@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace OlxaWeb.Domain.Entities
 {
@@ -13,10 +14,10 @@ namespace OlxaWeb.Domain.Entities
 
         public virtual string Title
         { get; set; }
-
+        [AllowHtml]
         public virtual string ShortDescription
         { get; set; }
-
+        [AllowHtml]  //для безопасности от скриптов
         public virtual string Description
         { get; set; }
 

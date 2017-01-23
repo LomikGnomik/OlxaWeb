@@ -59,5 +59,18 @@ namespace OlxaWeb.WebUI.Controllers
                 return View(portfolio);
             }
         }
+        public ActionResult DeletePortfolio(int Id)
+        {
+            Portfolio deletedPortfolio = repository.DeletePortfolio(Id);
+            if (deletedPortfolio != null)
+            {
+                TempData["message"] = string.Format("{0} был удалён", deletedPortfolio.Name);
+            }
+            return RedirectToAction("Index");
+        }
+        public ViewResult CreatePortfolio()
+        {
+            return View("EditSite", new Portfolio());
+        }
     }
 }

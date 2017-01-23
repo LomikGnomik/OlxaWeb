@@ -1,9 +1,89 @@
 ﻿@model OlxaWeb.Domain.Entities.Portfolio
 
 @{
-    ViewBag.Title = "EditSite";
+    ViewBag.Current = "Portfolio";
+    ViewBag.Title = "Site";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>EditSite portfolio</h2>
+<!-- Page Title -->
+<!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
+<section class="page-title">
+    <div class="container">
+        <div class="inner">
+            <div class="column">
+                <div class="title">
+                    <h1>Single Product</h1>
+                </div><!-- .title -->
+            </div><!-- .column -->
+            <div class="column">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="delimiter"><i class="icon-arrow-right"></i></span>
+                    <span>Single Product</span>
+                </div><!-- .breadcrumbs -->
+            </div><!-- .column -->
+        </div>
+    </div>
+</section><!-- .page-title -->
+<!-- Single Product -->
+<section class="page-title"></section><!-- .page-title -->
+<section class="shop-single container">
+    <div class="row">
+        <div class="col-lg-5 col-md-6 space-bottom-2x">
+            <!-- Shop Image Carousel -->
+            <!-- Data API:
+              data-loop="true/false" enable/disable looping
+              data-autoplay="true/false" enable/disable carousel autoplay
+              data-interval="3000" autoplay interval timeout in miliseconds
+              data-autoheight="true/false" enable/disable autoheight with transition
+              Simply add necessary data attribute to the ".image-carousel" with appropriate value to adjust carousel functionality.
+             -->
+            <div class="image-carousel">
+                <div class="inner">
+                    <img src="img/shop/gallery/01.jpg" alt="Image">
+                    <img src="img/shop/gallery/02.jpg" alt="Image">
+                    <img src="img/shop/gallery/03.jpg" alt="Image">
+                </div>
+            </div><!-- .image-carousel -->
+        </div><!-- .col-lg-5.col-md-6 -->
+        <div class="col-lg-7 col-md-6 space-bottom-2x">
+            <h2 class="shop-title"><a href="#">@Model.Name</a></h2>
+            <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <div class="shop-tools">
+                <div class="count">
+                    <span class="label">Qty: </span>
+                    <div class="count-input">
+                        <a class="incr-btn" data-action="decrease" href="#">–</a>
+                        <input class="quantity" type="text" value="2">
+                        <a class="incr-btn" data-action="increase" href="#">+</a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-icon-right waves-effect waves-light">
+                    Add To Cart
+                    <i class="icon-bag"></i>
+                </a>
+                <span class="text-lg">$344.99</span>
+            </div>
+            <div class="post-tools space-top">
+                <div class="column">
+                    <div class="social-bar">
+                        <a href="EditSite/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                            <i class="fa fa-window-close text-danger"></i>
+                        </a>
 
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
+                            <i class="fa fa-minus-square" style="color:#808080"></i>
+                        </a>
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
+                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                        </a>
+                    </div><!-- .social-bar -->
+                </div><!-- .column -->
+            </div>
+        </div><!-- .col-lg-7.col-md-6 -->
+    </div><!-- .row -->
+</section><!-- .shop-single -->

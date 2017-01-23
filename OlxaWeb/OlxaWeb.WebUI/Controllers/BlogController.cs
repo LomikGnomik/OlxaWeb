@@ -62,7 +62,9 @@ namespace OlxaWeb.WebUI.Controllers
                 .FirstOrDefault(p => p.Id == Id);
             return View(post);
         }
+
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult EditPost(HttpPostedFileBase picture, Post post)
         {
             if (picture != null)
@@ -89,6 +91,16 @@ namespace OlxaWeb.WebUI.Controllers
         public ViewResult CreatePost()
         {
             return View("EditPost", new Post());
+        }
+        [HttpPost]
+        public ActionResult DeleteBlog(int Id)
+        {
+            Post deletedPost = repository.DeletePost(Id);
+            if (deletedPost != null)
+            {
+                TempData["message"] = string.Format("{0} был удалён", deletedPost.Title);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

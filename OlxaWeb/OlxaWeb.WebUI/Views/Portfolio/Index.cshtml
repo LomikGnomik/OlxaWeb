@@ -17,7 +17,7 @@
         <div class="text-center padding-top">
             <div class="column">
                 <div class="social-bar" style="float:left">
-                    <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
+                    <a href="~/Portfolio/CreatePortfolio" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
                         <i class="fa fa-plus text-danger"></i>
                     </a>
                 </div>
@@ -41,19 +41,24 @@
             <div class="grid-item @site.Category">
                 <div class="column">
                     <div class="social-bar" style="float:right">
-                        <a href="Site/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                        <a href="~/Portfolio/EditSite/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
                             <i class="fa fa-edit"></i>
                         </a>
-                        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                        <a href="~/Portfolio/DeletePortfolio/@site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
                             <i class="fa fa-window-close text-danger"></i>
                         </a>
-
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                            <i class="fa fa-minus-square" style="color:#808080"></i>
-                        </a>
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
+                        @if (site.Publish == true)
+                        {
+                            <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
+                                <i class="fa fa-minus-square" style="color:#808080"></i>
+                            </a>
+                        }
+                        else
+                        {
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
                             <i class="fa fa-plus-square" style="color:#00ff21"></i>
                         </a>
+                        }
                     </div>
                 </div>
                 <a href="Site/@site.Id" class="portfolio-item">
