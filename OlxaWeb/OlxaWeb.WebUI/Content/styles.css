@@ -11177,8 +11177,9 @@ span.round-tab:hover {
 .table-hover > tbody > tr.green:hover,
 .table-hover > tbody > tr.green:hover,
 .table-hover > tbody > tr.green:hover > td {
-  background-color: rgba(27, 219, 104, 0.80);
+  background-color: rgba(25, 197, 94, 0.54);
   border-color: #1bdb68;
+  color:#666;
 }
 
 

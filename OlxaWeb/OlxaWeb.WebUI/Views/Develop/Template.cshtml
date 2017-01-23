@@ -44,9 +44,16 @@
             </div>
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
-                <li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
+            @foreach (var category in ViewBag.Filter)
+            {
+                <li><a href="#" data-filter=".@category">@category</a></li>
+            }
+
+
+
+                @*<li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
                 <li><a href="#" data-filter=".Корпаративный">Корпаративный</a></li>
-                <li><a href="#" data-filter=".Лендинг">Лендинг</a></li>
+                <li><a href="#" data-filter=".Лендинг">Лендинг</a></li>*@
             </ul><!-- .nav-filters --> 
                 </div>
                 <!-- Portfolio Grid -->

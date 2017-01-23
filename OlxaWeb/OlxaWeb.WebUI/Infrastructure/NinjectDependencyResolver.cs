@@ -40,7 +40,7 @@ namespace OlxaWeb.WebUI.Infrastructure
             new Temmplate {Title="Ресторанный",Description="", Category="Интернет-магазин", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=2,Publish=true },
             new Temmplate {Title="Медицинский",Description="", Category="Лендинг", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=3 ,Publish=false},
             new Temmplate {Title="Спортивный",Description="", Category="Корпаративный", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=4,Publish=true },
-            new Temmplate {Title="Магазин",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5, Publish=false },
+            new Temmplate {Title="Магазин",Description="", Category="капуста", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=5, Publish=false },
             new Temmplate {Title="Лендинг",Description="", Category="magazin", ShortDescription="", LinkDemo="", LinkPicture="", Price=100500 , Id=6,Publish=true }
             });
             kernel.Bind<ITemplateRepository>().ToConstant(mock.Object);
