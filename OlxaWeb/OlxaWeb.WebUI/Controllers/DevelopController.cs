@@ -30,6 +30,12 @@ namespace OlxaWeb.WebUI.Controllers
         // Галлерея шаблонных сайтов
         public ActionResult Template()
         {
+            IEnumerable<string> categories = repository.Temmplates
+               .Select(x => x.Category)
+               .Distinct()
+               .OrderBy(x => x);
+            ViewBag.Filter = categories;
+
             return View(repository.Temmplates);
         }
         public ViewResult EditCard(int Id)
