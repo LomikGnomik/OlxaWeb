@@ -40,6 +40,16 @@ namespace OlxaWeb.WebUI.Controllers
         }
         public ViewResult EditCard(int Id)
         {
+            // Категории в выпадающем списке при добавлении в базу данных
+            IEnumerable<string> categories = new string[] {
+                "Сайт-Визитка",
+                "Корпоративный",
+                "Интернет-магазин",
+                "Информационный",
+                "Landing page",
+                };
+            ViewBag.Filter = categories;
+
             Temmplate temmplate = repository.Temmplates
                 .FirstOrDefault(p => p.Id == Id);
             return View(temmplate);

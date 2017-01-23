@@ -20,6 +20,12 @@ namespace OlxaWeb.WebUI.Controllers
         // GET: Portfolio
         public ActionResult Index()
         {
+            IEnumerable<string> categories = repository.Portfolios
+        .Select(x => x.Category)
+        .Distinct()
+        .OrderBy(x => x);
+            ViewBag.Filter = categories;
+
             return View(repository.Portfolios);
         }
 
@@ -30,6 +36,16 @@ namespace OlxaWeb.WebUI.Controllers
         }
         public ViewResult EditSite(int Id)
         {
+            // Категории в выпадающем списке при добавлении в базу данных
+            IEnumerable<string> categories = new string[] {
+                "Сайт-Визитка",
+                "Корпоративный",
+                "Интернет-магазин",
+                "Информационный",
+                "Landing page",
+                "Эксклюзивный"};
+            ViewBag.Filter = categories;
+
             Portfolio portfolio = repository.Portfolios
                 .FirstOrDefault(p => p.Id == Id);
             return View(portfolio);
