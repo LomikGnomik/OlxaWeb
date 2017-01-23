@@ -32,13 +32,12 @@
             Готовые Сайты Для Вашего Бизнеса
             <small> Наиболее Быстрое и Простое Решение</small>
         </h2>
-
         <!-- Filters -->
         @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
         <div class="text-center padding-top">
             <div class="column">
                 <div class="social-bar" style="float:left">
-                    <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
+                    <a href="~/Develop/CreateTemplate/" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
                         <i class="fa fa-plus text-danger"></i>
                     </a>
                 </div>
@@ -48,13 +47,10 @@
                 <li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
                 <li><a href="#" data-filter=".Корпаративный">Корпаративный</a></li>
                 <li><a href="#" data-filter=".Лендинг">Лендинг</a></li>
-            </ul><!-- .nav-filters -->
-           
+            </ul><!-- .nav-filters --> 
                 </div>
-
                 <!-- Portfolio Grid -->
                 <div class="grid isotope-grid col-3 filter-grid">
-
                     <div class="grid-sizer"></div>
                     <div class="gutter-sizer"></div>
 
@@ -67,16 +63,21 @@
                                     <a href="~/Develop/EditCard/@Site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="~/Develop/DeleteCard/@Site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                                    <a href="~/Develop/DeleteTemplate/@Site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
                                         <i class="fa fa-window-close text-danger"></i>
                                     </a>
-
-                                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                                        <i class="fa fa-minus-square" style="color:#808080"></i>
-                                    </a>
-                                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
-                                        <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                                    </a>
+@if (Site.Publish == true)
+{
+    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Скрыть с публикации">
+        <i class="fa fa-minus-square" style="color:#808080"></i>
+    </a>
+}
+else
+{
+    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
+        <i class="fa fa-plus-square" style="color:#00ff21"></i>
+    </a>
+}
                                 </div>
                             </div>
                             <div class="portfolio-item">

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace OlxaWeb.Domain.Entities
 {
@@ -28,7 +29,7 @@ namespace OlxaWeb.Domain.Entities
 
         public virtual string PictureMobile //скрин с мобилы
         { get; set; }
-
+        [AllowHtml]
         public virtual string Description
         { get; set; }
 

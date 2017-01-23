@@ -48,7 +48,7 @@
         </script>
         @*Конец загрузки картинки*@
         <textarea name="Description" id="editor1" rows="10" cols="80">
-           @Model.Description
+            @Html.Raw(Model.Description)
         </textarea>
         <script>
             CKEDITOR.replace('editor1');

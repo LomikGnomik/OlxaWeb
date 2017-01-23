@@ -32,16 +32,6 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View(repository.Temmplates);
         }
-       public enum Category
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
         public ViewResult EditCard(int Id)
         {
             Temmplate temmplate = repository.Temmplates
@@ -73,10 +63,19 @@ namespace OlxaWeb.WebUI.Controllers
                 return View(temmplate);
             }
         }
-
-
-
-
+        public ViewResult CreateTemplate()
+        {
+            return View("EditCard", new Temmplate());
+        }
+        public ActionResult DeleteTemplate(int Id)
+        {
+            Temmplate deletedTemplate = repository.DeleteTemplate(Id);
+            if (deletedTemplate != null)
+            {
+                TempData["message"] = string.Format("{0} был удалён", deletedTemplate.Title);
+            }
+            return RedirectToAction("Index");
+        }
         // Страница про индивидуальные сайты 
         public ActionResult Individual()
         {
