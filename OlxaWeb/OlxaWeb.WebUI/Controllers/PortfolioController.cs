@@ -20,6 +20,12 @@ namespace OlxaWeb.WebUI.Controllers
         // GET: Portfolio
         public ActionResult Index()
         {
+            IEnumerable<string> categories = repository.Portfolios
+              .Select(x => x.Category)
+              .Distinct()
+              .OrderBy(x => x);
+            ViewBag.Filter = categories;
+
             return View(repository.Portfolios);
         }
 

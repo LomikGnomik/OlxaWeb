@@ -72,6 +72,8 @@
                         <a href="#">Wearables</a>
                     </div>
                 </div><!-- .column -->
+                @if (User.IsInRole("Admin"))
+                {
                 <div class="column">
                     <div class="social-bar">
                         <a href="EditSite/@Model.Id"class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
@@ -89,6 +91,7 @@
                         </a>
                     </div><!-- .social-bar -->
                 </div><!-- .column -->
+                }
             </div>
         </div><!-- .col-lg-7.col-md-6 -->
     </div><!-- .row -->
@@ -162,3 +165,5 @@
         </div><!-- .col-sm-6 -->
     </div><!-- .row -->
 </section><!-- .shop-single -->
+@section Scripts {
+}

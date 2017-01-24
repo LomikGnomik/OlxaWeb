@@ -43,12 +43,14 @@
                     <h3 class="widget-title">
                         <i class="icon-ribbon"></i>
                         Категории
-
+@if (User.IsInRole("Admin"))
+{
                         <div class="social-bar" style="float:right">
                             <a href="~/Blog/CreatePost" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Создать новый пост">
                                 <i class="fa fa-pencil-square text-danger"></i>
                             </a>
                         </div>
+}
                     </h3>
 
                     @Html.Action("Menu", "Blog")
@@ -98,3 +100,9 @@
         </div><!-- .col-lg-3.col-md-4 -->
     </div><!-- .row -->
 </div><!-- .container -->
+
+
+
+@section Scripts {
+@RenderSection("Scripts")
+}

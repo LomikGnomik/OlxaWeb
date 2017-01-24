@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
 
-  <!-- Content -->
+<!-- Content -->
 <div class="col-lg-9 col-md-8">
     <h3>@Model.Title</h3>
     <div class="post-meta">
@@ -23,7 +23,7 @@
         </div>
         <div class="column"><span>@Model.Modified</span></div>
     </div><!-- .post-meta -->
-  
+
 
     <div class="image-carousel space-bottom-2x">
         <img src="~/Content/img/BlogPicture/@Model.UrlSlug" alt="Тут должна быть картинка">
@@ -41,22 +41,27 @@
                 <a href="#">Domains</a>
             </div>
         </div><!-- .column -->
-        <div class="column">
-            <div class="social-bar">
-                <a href="~/Blog/EditPost/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                    <i class="fa fa-edit"></i>
-                </a>
-                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
-                    <i class="fa fa-window-close text-danger"></i>
-                </a>               
-                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                    <i class="fa fa-minus-square" style="color:#808080"></i>
-                </a>
-                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
-                    <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                </a>
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="column">
+                <div class="social-bar">
+                    <a href="~/Blog/EditPost/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                        <i class="fa fa-window-close text-danger"></i>
+                    </a>
+                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
+                        <i class="fa fa-minus-square" style="color:#808080"></i>
+                    </a>
+                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
+                        <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                    </a>
 
-            </div><!-- .social-bar -->
-        </div><!-- .column -->
-    </div><!-- .post-tools -->
-</div><!-- .col-lg-9.col-md-8 -->
+                </div><!-- .social-bar -->
+            </div>
+        }<!-- .column -->
+        </div><!-- .post-tools -->
+    </div><!-- .col-lg-9.col-md-8 -->
+    @section Scripts {
+    }
