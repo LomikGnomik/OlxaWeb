@@ -35,25 +35,22 @@
         <!-- Filters -->
         @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
         <div class="text-center padding-top">
-            <div class="column">
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="column">
                 <div class="social-bar" style="float:left">
                     <a href="~/Develop/CreateTemplate/" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
                         <i class="fa fa-plus text-danger"></i>
                     </a>
                 </div>
             </div>
+            }
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
                 @foreach (var category in ViewBag.Filter)
             {
                     <li><a href="#" data-filter=".@category">@category</a></li>
                 }
-
-
-
-                @*<li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
-                    <li><a href="#" data-filter=".Корпаративный">Корпаративный</a></li>
-                    <li><a href="#" data-filter=".Лендинг">Лендинг</a></li>*@
             </ul><!-- .nav-filters -->
         </div>
         <!-- Portfolio Grid -->
@@ -65,7 +62,7 @@
             {
                 <!-- Portfolio Item -->
                 <div class="grid-item @Site.Category">
-            if(@User.Identity.IsAuthenticated){
+           @if(User.IsInRole("Admin")){
                     <div class="column">
                         <div class="social-bar" style="float:right">
                             <a href="~/Develop/EditCard/@Site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">

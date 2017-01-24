@@ -15,19 +15,22 @@
         </h2>
         <!-- Filters -->
         <div class="text-center padding-top">
-            <div class="column">
-                <div class="social-bar" style="float:left">
-                    <a href="~/Portfolio/CreatePortfolio" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
-                        <i class="fa fa-plus text-danger"></i>
-                    </a>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="column">
+                    <div class="social-bar" style="float:left">
+                        <a href="~/Portfolio/CreatePortfolio" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Добавить">
+                            <i class="fa fa-plus text-danger"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            }
             <ul class="nav-filters space-bottom-2x text-center">
                 <li class="active"><a href="#" data-filter="*">Все</a></li>
-            @foreach (var filter in ViewBag.Filter)
+                @foreach (var filter in ViewBag.Filter)
             {
-                <li><a href="#" data-filter=".@filter">@filter</a></li>
-            }
+                    <li><a href="#" data-filter=".@filter">@filter</a></li>
+                }
             </ul><!-- .nav-filters -->
         </div>
         <!-- Portfolio Grid -->
@@ -35,43 +38,46 @@
             <div class="grid-sizer"></div>
             <div class="gutter-sizer"></div>
 
-          @foreach (var site in Model )
-          {
+            @foreach (var site in Model)
+            {
                 <!-- Portfolio Item -->
-            <div class="grid-item @site.Category">
-                <div class="column">
-                    <div class="social-bar" style="float:right">
-                        <a href="~/Portfolio/EditSite/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                        <a href="~/Portfolio/DeletePortfolio/@site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
-                            <i class="fa fa-window-close text-danger"></i>
-                        </a>
-                        @if (site.Publish == true)
-                        {
-                            <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
-                                <i class="fa fa-minus-square" style="color:#808080"></i>
+                <div class="grid-item @site.Category">
+@if (User.IsInRole("Admin"))
+{
+                    <div class="column">
+                        <div class="social-bar" style="float:right">
+                            <a href="~/Portfolio/EditSite/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                                <i class="fa fa-edit"></i>
                             </a>
-                        }
-                        else
-                        {
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
-                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                        </a>
-                        }
+                            <a href="~/Portfolio/DeletePortfolio/@site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                                <i class="fa fa-window-close text-danger"></i>
+                            </a>
+                            @if (site.Publish == true)
+                            {
+                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
+                                    <i class="fa fa-minus-square" style="color:#808080"></i>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
+                                    <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                                </a>
+                            }
+                        </div>
                     </div>
-                </div>
-                <a href="Site/@site.Id" class="portfolio-item">
-                    <div class="thumbnail waves-effect waves-light">
-                        <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
-                        <h3 class="portfolio-title">@site.Name</h3>
-                    </div>
-                </a>
-            </div><!-- .grid-item. -->
-          }
+}
+                    <a href="Site/@site.Id" class="portfolio-item">
+                        <div class="thumbnail waves-effect waves-light">
+                            <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
+                            <h3 class="portfolio-title">@site.Name</h3>
+                        </div>
+                    </a>
+                </div><!-- .grid-item. -->
+            }
         </div><!-- .isotope-masonry-grid -->
     </section><!-- .container -->
-    </div>
+</div>
 
 @section Scripts {
 }

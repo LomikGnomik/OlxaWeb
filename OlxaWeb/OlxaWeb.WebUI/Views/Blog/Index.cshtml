@@ -1,68 +1,77 @@
 ﻿
 @model OlxaWeb.WebUI.Models.BlogViewModels
-@{ 
+@{
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
 
 
-   <!-- Content -->
+<!-- Content -->
 <div class="col-lg-9 col-md-8">
 
-    @foreach (var post in Model.Posts ) {
-    <article class="post-item">
-        <a href="post-right-sidebar.html" class="post-thumb waves-effect">
-            <img src=~/Content/img/BlogPicture/@post.UrlSlug alt="Тут должна быть картинка">
-   
-        </a><!-- .post-thumb -->
-        <div class="post-body">
-            <div class="post-meta">
+    @foreach (var post in Model.Posts)
+    {
+        <article class="post-item">
+            <a href="post-right-sidebar.html" class="post-thumb waves-effect">
+                <img src=~/Content/img/BlogPicture/@post.UrlSlug alt="Тут должна быть картинка">
+
+            </a><!-- .post-thumb -->
+            <div class="post-body">
+                <div class="post-meta">
+                    <div class="column">
+                        <span>
+                            <i class="icon-head"></i>
+                            Категория :
+                        </span>
+                        <span>
+                            <i class="icon-ribbon"></i>
+                            <a href="#">@post.Category</a>
+                        </span>
+                    </div>
+                    <div class="column"><span>@post.PostedOn</span></div>
+                </div><!-- .post-meta -->
+                <a href="Blog/Post/@post.Id" class="post-title">
+                    <h3>@post.Title</h3>
+                </a>
+                <p>@post.ShortDescription</p>
+                @Html.ActionLink("Подробнее", "Post", "Blog", new { id = post.Id }, null)
+            </div><!-- .post-body -->
+            @if (User.IsInRole("Admin"))
+            {
                 <div class="column">
-                    <span>
-                        <i class="icon-head"></i>
-                      Категория :
-                    </span>
-                    <span>
-                        <i class="icon-ribbon"></i>
-                        <a href="#">@post.Category</a>
-                    </span>
+                    <div class="social-bar">
+                        <a href="~/Blog/EditPost/@post.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                            <i class="fa fa-window-close text-danger"></i>
+                        </a>
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
+                            <i class="fa fa-minus-square" style="color:#808080"></i>
+                        </a>
+                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
+                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                        </a>
+                    </div><!-- .social-bar -->
                 </div>
-                <div class="column"><span>@post.PostedOn</span></div>
-            </div><!-- .post-meta -->
-            <a href="Blog/Post/@post.Id" class="post-title">
-                <h3>@post.Title</h3>
-            </a>
-            <p>@post.ShortDescription</p>
-            @Html.ActionLink("Подробнее","Post","Blog",new {id=post.Id },null)
-        </div><!-- .post-body -->
-        <div class="column">
-            <div class="social-bar">
-                <a href="~/Blog/EditPost/@post.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                    <i class="fa fa-edit"></i>
-                </a>
-                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить" >
-                    <i class="fa fa-window-close text-danger"></i>
-                </a>
-                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                    <i class="fa fa-minus-square" style="color:#808080"></i>
-                </a>
-                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
-                    <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                </a>
-            </div><!-- .social-bar -->
-        </div><!-- .column -->
-    </article><!-- .post-item -->
-  
+            }<!-- .column -->
+        </article><!-- .post-item -->
+
     }
     <!-- Pagination -->
     <section class="pagination space-top-2x">
         <div class="nav-links">
-            @Html.PageLinks(Model.PagingInfo, x=>Url.Action("Index",new { page=x}))
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
             @*<a href="#">1</a>
-            <a href="#">2</a>
-            <span class="current">3</span>
-            <a href="#">4</a>
-            <span>...</span>
-            <a href="#">12</a>*@
+                <a href="#">2</a>
+                <span class="current">3</span>
+                <a href="#">4</a>
+                <span>...</span>
+                <a href="#">12</a>*@<a href="#"></a>
+            <a href="#"></a>
+            <span class="current"></span>
+            <a href="#"></a>
+            <span></span>
+            <a href="#"></a>
         </div>
     </section><!-- .pagination -->
 </div><!-- .col-lg-9.col-md-8 -->
