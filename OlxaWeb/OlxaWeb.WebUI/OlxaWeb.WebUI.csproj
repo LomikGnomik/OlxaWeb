@@ -196,6 +196,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DevelopController.cs" />
+    <Compile Include="Controllers\EMAIL_SMS_sendController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyWebSiteController.cs" />
@@ -860,6 +861,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\img\PorfolioPicture\" />
     <Folder Include="fonts\Playfair_Display\" />
+    <Folder Include="Views\EMAIL_SMS_send\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
