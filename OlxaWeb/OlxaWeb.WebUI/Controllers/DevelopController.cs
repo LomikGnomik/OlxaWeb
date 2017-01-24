@@ -38,6 +38,8 @@ namespace OlxaWeb.WebUI.Controllers
 
             return View(repository.Temmplates);
         }
+
+        [Authorize(Roles = "Admin")]
         public ViewResult EditCard(int Id)
         {
             // Категории в выпадающем списке при добавлении в базу данных
@@ -55,6 +57,7 @@ namespace OlxaWeb.WebUI.Controllers
             return View(temmplate);
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditCard(HttpPostedFileBase picture, Temmplate temmplate)
         {
             if (picture != null)
