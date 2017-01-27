@@ -22,9 +22,9 @@ namespace OlxaWeb.WebUI.HtmlHelpers
                 {
                     tag.AddCssClass("selected");
                     tag.AddCssClass("btn-default");
-                    tag.AddCssClass("Color: White");
+                   
                 }
-             //   tag.AddCssClass("btn btn-default");
+               // tag.AddCssClass("btn btn-default");
                 result.Append(tag.ToString());
             }
             return MvcHtmlString.Create(result.ToString());

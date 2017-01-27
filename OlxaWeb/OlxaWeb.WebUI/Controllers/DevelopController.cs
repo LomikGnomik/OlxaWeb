@@ -22,6 +22,7 @@ namespace OlxaWeb.WebUI.Controllers
             return View();
         }
         // Продающая страница конкретного шаблонного сайта
+
         public ActionResult Card(int id)
         {
             Temmplate site = repository.Temmplates.FirstOrDefault(m => m.Id == id);
@@ -30,13 +31,32 @@ namespace OlxaWeb.WebUI.Controllers
         // Галлерея шаблонных сайтов
         public ActionResult Template()
         {
-            IEnumerable<string> categories = repository.Temmplates
+            if (User.IsInRole("Admin"))
+            {
+                // Для Админа (показывает неопубликованные сайты) 
+                IEnumerable<string> categories = repository.Temmplates
                .Select(x => x.Category)
                .Distinct()
                .OrderBy(x => x);
             ViewBag.Filter = categories;
 
             return View(repository.Temmplates);
+            }
+            else
+            {    // Для гостей (не показывает неопубликованные сайты) 
+                IEnumerable<string> categories = repository.Temmplates
+               .Where(p=>p.Publish==true)
+               .Select(x => x.Category)
+               .Distinct()
+               .OrderBy(x => x);
+                ViewBag.Filter = categories;
+
+                IEnumerable<Temmplate> templat = repository.Temmplates
+                    .Where(t => t.Publish == true)
+                    .OrderBy(x=>x.Id);
+
+                return View(templat);
+            }
         }
 
         [Authorize(Roles = "Admin")]
