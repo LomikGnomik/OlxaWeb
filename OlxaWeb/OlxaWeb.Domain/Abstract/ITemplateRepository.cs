@@ -8,5 +8,6 @@ namespace OlxaWeb.Domain.Abstract
         IEnumerable<Temmplate> Temmplates { get; }
         void SaveTemplate(Temmplate Template);
         Temmplate DeleteTemplate(int Id);
+        Temmplate PublishTemplate(int Id);
     }
 }

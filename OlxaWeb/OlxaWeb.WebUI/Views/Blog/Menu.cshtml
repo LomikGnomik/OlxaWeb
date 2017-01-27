@@ -1,36 +1,37 @@
 ﻿@model IEnumerable<string>
 
-<ul>
-    <li @(ViewBag.SelectedCategory == null ? "class=active" : "")>@Html.ActionLink("Все посты", "Index", "Blog", null)</li>
-
-    @foreach (string link in Model)
-    {
-     
-        <li @(ViewBag.SelectedCategory == @link ? "class=active" : "")>
-
-@foreach (var pcs in ViewBag.pcsInCategory)
-{
-    if (@link == pcs.Key)
-    {
-        string a = @link + "<span>" + @pcs.Value + "</span>";
-
-        @Html.RouteLink(a, new
+<section class="widget widget_categories">
+    <h3 class="widget-title">
+        <i class="icon-ribbon"></i>
+        Категории
+        @if (User.IsInRole("Admin"))
         {
-            controller = "Blog",
-            action = "Index",
-            category = @link,
-            page = 1
-        });
-    }
-};
+            <div class="social-bar" style="float:right">
+                <a href="~/Blog/CreatePost" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Создать новый пост">
+                    <i class="fa fa-pencil-square text-danger"></i>
+                </a>
+            </div>
+        }
+    </h3>
+    <ul>
+        <li @(ViewBag.SelectedCategory == null ? "class=active" : "")>@Html.ActionLink("Все посты", "Index", "Blog", null)</li>
 
-}
-        </li>
-
+        @foreach (var link in Model)
+        {
+            <li @(ViewBag.SelectedCategory == @link ? "class=active" : "")>
+                <a href="~/Blog?category=@link&page=1">@link<span>@ViewBag.pcsInCategory[link]</span></a>
+                @*@Html.RouteLink(a, new
+                                   {
+                                       controller = "Blog",
+                                       action = "Index",
+                                       category = @link,
+                                       page = 1
+                                   });
+                    http://localhost:23453/Blog?category=SEO&page=1
+                *@
+            </li>
+        }
+    </ul>
+</section>
+    @section Scripts {
     }
-    <li><a href="#">Design<span>4</span></a></li>
-    <li><a href="#">Hosting<span>11</span></a></li>
-    <li><a href="#">Development<span>6</span></a></li>
-</ul>
-@section Scripts {
-}

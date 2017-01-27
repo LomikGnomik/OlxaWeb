@@ -10,7 +10,7 @@
     @foreach (var post in Model.Posts)
     {
         <article class="post-item">
-            <a href="~/Blod/Post/@post.Id" class="post-thumb waves-effect">
+            <a href="~/Blog/Post/@post.Id" class="post-thumb waves-effect">
                 <img src=~/Content/img/BlogPicture/@post.UrlSlug alt="Здесь была картинка.А где?">
             </a><!-- .post-thumb -->
             <div class="post-body">
@@ -55,8 +55,6 @@
                         <i class="fa fa-plus-square" style="color:#00ff21"></i>
                     </a>
                    }
-                      
-
                     </div><!-- .social-bar -->
                 </div>
             }<!-- .column -->

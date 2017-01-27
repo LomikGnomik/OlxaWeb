@@ -25,8 +25,22 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ActionResult Card(int id)
         {
-            Temmplate site = repository.Temmplates.FirstOrDefault(m => m.Id == id);
-            return View(site);
+            Temmplate site=new Temmplate();
+            if (User.IsInRole("Admin"))
+            {
+                site = repository.Temmplates.FirstOrDefault(m => m.Id == id);
+            }
+            else
+            {
+                site = repository.Temmplates.FirstOrDefault(m => m.Id == id & m.Publish == true);
+            }
+            if (site == null)
+            {
+               return Redirect("~/Develop/Template");
+            }
+            else {
+                return View(site);
+            }
         }
         // Галлерея шаблонных сайтов
         public ActionResult Template()
@@ -89,10 +103,8 @@ namespace OlxaWeb.WebUI.Controllers
                 // сохраняем файл в папку img/BlogPicture/ в проекте
                 picture.SaveAs(Server.MapPath("~/Content/img/TemplatePicture/" + fileName));
             }
-
             if (ModelState.IsValid)
             {
-
                 repository.SaveTemplate(temmplate);
                 TempData["message"] = string.Format("{0} has been saved", temmplate.Title);
                 return RedirectToAction("Template");
@@ -114,6 +126,12 @@ namespace OlxaWeb.WebUI.Controllers
                 TempData["message"] = string.Format("{0} был удалён", deletedTemplate.Title);
             }
             return RedirectToAction("Index");
+        }
+        public RedirectResult PublishTemplate(int Id)
+        {
+            Temmplate PublishTemplate = repository.PublishTemplate(Id);
+
+            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
         // Страница про индивидуальные сайты 
         public ActionResult Individual()

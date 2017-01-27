@@ -39,7 +39,9 @@ namespace OlxaWeb.Domain.Entities
         public virtual DateTime? Modified
         { get; set; }
 
-        
+        public virtual int Counter //счётчик просмотров
+        { get; set; }
+
 
         public virtual IList<Tag> Tags
         { get; set; }

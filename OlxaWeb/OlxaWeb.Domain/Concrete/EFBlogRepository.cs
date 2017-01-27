@@ -38,6 +38,7 @@ namespace OlxaWeb.Domain.Concrete
                     dbEntry.ShortDescription = post.ShortDescription;
                     dbEntry.Title = post.Title;
                     dbEntry.UrlSlug = post.UrlSlug;
+                    dbEntry.Counter = post.Counter;
                 }
             }
             context.SaveChanges();

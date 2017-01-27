@@ -51,7 +51,7 @@
                 </div>
             </div><!-- .col-lg-5.col-md-6 -->
             <div class="col-lg-7 col-md-6 space-bottom-2x">
-                <h2 class="shop-title"><a href="#">Pebble Time Classic</a></h2>
+                <h2 class="shop-title"><a href="#">@Model.Title</a></h2>
                 <p class="text-gray">Duis aute irure dolor in reprehenderit tempor incididunt ut labore et dolore magna aliqua. aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fufugiat nulla pariatur</p>
                 <div class="post-tools space-top">
                     <div class="shop-tools">
@@ -75,13 +75,13 @@
                                 </a>
                                 @if (Model.Publish == true)
                                 {
-                                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Скрыть с публикации">
+                                    <a href="~/Develop/PublishTemplate/@Model.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Скрыть с публикации">
                                         <i class="fa fa-minus-square" style="color:#808080"></i>
                                     </a>
                                 }
                                 else
                                 {
-                                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
+                                    <a href="~/Develop/PublishTemplate/@Model.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
                                         <i class="fa fa-plus-square" style="color:#00ff21"></i>
                                     </a>
                                 }
