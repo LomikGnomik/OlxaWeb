@@ -23,23 +23,13 @@ namespace OlxaWeb.WebUI.Controllers
             if (User.IsInRole("Admin"))
             {
                 // //Запрос для Админа ( показывает неопубликованное портфолио)
-                IEnumerable<string> categories = repository.Portfolios
-                .Select(x => x.Category)
-                .Distinct()
-                .OrderBy(x => x);
-                ViewBag.Filter = categories;
+                ViewBag.Filter = CategoryFilter();
 
                 return View(repository.Portfolios);
             }
             else   //Запрос для гостей (не показывает неопубликованное портфолио)
             {
-                IEnumerable<string> categories = repository.Portfolios
-                .Where(p => p.Publish == true)
-                .Select(x => x.Category)
-                .Distinct()
-                .OrderBy(x => x);
-                ViewBag.Filter = categories;
-
+                ViewBag.Filter = CategoryFilter();
                 IEnumerable<Portfolio> portfolio = repository.Portfolios
                   .Where(p => p.Publish == true)
                   .OrderBy(p => p.Id);
@@ -48,11 +38,47 @@ namespace OlxaWeb.WebUI.Controllers
             }
         }
 
-        public ActionResult Site(int Id)
+        public  ActionResult Site(int Id)
         {
-            Portfolio site = repository.Portfolios.FirstOrDefault(m => m.Id == Id);
-            return View(site);
+            Portfolio site = new Portfolio();
+            if (User.IsInRole("Admin"))
+            {
+                site = repository.Portfolios.FirstOrDefault(m => m.Id == Id);
+            }
+            else
+            {
+                site = repository.Portfolios.FirstOrDefault(m => m.Id == Id & m.Publish == true);
+            }
+            if (site == null)
+            {
+                return Redirect("~/Portfolio/Index");
+            }
+            else
+            {
+                return View(site);
+            }
         }
+        private IEnumerable<string> CategoryFilter()
+        {
+            IEnumerable<string> categories;
+            if (User.IsInRole("Admin"))
+            {
+             categories = repository.Portfolios
+            .Select(x => x.Category)
+             .Distinct()
+             .OrderBy(x => x);
+            }
+            else {
+              categories = repository.Portfolios
+             .Where(p => p.Publish == true)
+             .Select(x => x.Category)
+             .Distinct()
+             .OrderBy(x => x);
+            }
+           
+            return (categories);
+        }
+
         public ViewResult EditSite(int Id)
         {
             IEnumerable<string> categories = new string[] {

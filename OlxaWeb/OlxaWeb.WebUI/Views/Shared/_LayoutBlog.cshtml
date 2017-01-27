@@ -39,53 +39,10 @@
                         <button type="submit"><i class="icon-search"></i></button>
                     </form>
                 </section>
-                <section class="widget widget_categories">
-                    <h3 class="widget-title">
-                        <i class="icon-ribbon"></i>
-                        Категории
-@if (User.IsInRole("Admin"))
-{
-                        <div class="social-bar" style="float:right">
-                            <a href="~/Blog/CreatePost" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Создать новый пост">
-                                <i class="fa fa-pencil-square text-danger"></i>
-                            </a>
-                        </div>
-}
-                    </h3>
 
-                    @Html.Action("Menu", "Blog")
-                </section><!-- .widget.widget_categories -->
+                   @Html.Action("Menu", "Blog")
 
-                <section class="widget widget_recent_posts">
-                    <h3 class="widget-title">
-                        <i class="icon-paper"></i>
-                        Последние посты
-                    </h3>
-                    <div class="item">
-                        <div class="thumb">
-                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post01.jpg" alt="Post01"></a>
-                        </div>
-                        <div class="info">
-                            <h4><a href="post-right-sidebar.html">Fast and Easy Prototyping App</a></h4>
-                        </div>
-                    </div><!-- .item -->
-                    <div class="item">
-                        <div class="thumb">
-                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post02.jpg" alt="Post02"></a>
-                        </div>
-                        <div class="info">
-                            <h4><a href="post-right-sidebar.html">Resize Your Server in a Single Click</a></h4>
-                        </div>
-                    </div><!-- .item -->
-                    <div class="item">
-                        <div class="thumb">
-                            <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post03.jpg" alt="Post03"></a>
-                        </div>
-                        <div class="info">
-                            <h4><a href="post-right-sidebar.html">Advanced Mobile App Development</a></h4>
-                        </div>
-                    </div><!-- .item -->
-                </section><!-- .widget.widget_recent_posts -->
+                   @Html.Action("MaxViewPost","Blog")
 
                 <section class="widget widget_tag_cloud">
                     <h3 class="widget-title">

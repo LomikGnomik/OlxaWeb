@@ -22,6 +22,7 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ActionResult Index(string category, int page = 1)
         {
+
             if (User.IsInRole("Admin")) 
             {
                 // Запрос для Админа (показывает опубликованные посты)
@@ -32,6 +33,8 @@ namespace OlxaWeb.WebUI.Controllers
                               .OrderBy(p => p.Id)
                               .Skip((page - 1) * PageSize)
                               .Take(PageSize),
+
+
                     PagingInfo = new PagingInfo
                     {
                         CurrentPage = page,
@@ -46,13 +49,15 @@ namespace OlxaWeb.WebUI.Controllers
             }
             else // Запрос для пользователей(не показывает опубликованные посты)
             {
+                
                 BlogViewModels viewModel = new BlogViewModels
                 {
-                  Posts = repository.Posts
+                    Posts = repository.Posts
                  .Where(p => p.Published == true & (category == null || p.Category == category))
                  .OrderBy(p => p.Id)
                  .Skip((page - 1) * PageSize)
                  .Take(PageSize),
+
                     PagingInfo = new PagingInfo
                     {
                         CurrentPage = page,
@@ -62,15 +67,28 @@ namespace OlxaWeb.WebUI.Controllers
                  repository.Posts.Where(e => e.Category == category).Count()
                     },
                     CurrentCategory = category
+                    
                 };
                 return View(viewModel);
             }
+
         }
 
         public ActionResult Post(int id)
         {
-            Post post = repository.Posts.FirstOrDefault(m => m.Id == id);
-            return View(post);
+            Post post = new Post();
+            if (User.IsInRole("Admin")){
+                post = repository.Posts.FirstOrDefault(m => m.Id == id);
+            }
+            else{
+                post = repository.Posts.FirstOrDefault(m => m.Id == id & m.Published == true);
+            }
+            if (post == null){
+                return Redirect("~/Blog/Index");
+            }
+            else{
+                return View(post);
+            }
         }
 
         public PartialViewResult Menu(string category = null)
@@ -81,7 +99,6 @@ namespace OlxaWeb.WebUI.Controllers
                 .Distinct()
                 .OrderBy(x => x);
 
-
             Dictionary<string,int> pcsInCategory = new Dictionary<string,int >() ;
             foreach (var cate in categories)
             {
@@ -91,14 +108,22 @@ namespace OlxaWeb.WebUI.Controllers
             }
             ViewBag.pcsInCategory = pcsInCategory;
             
-
             return PartialView(categories);
+        }
+
+        public PartialViewResult MaxViewPost()
+        {
+            IEnumerable<Post> MaxViewPosts = repository.Posts
+                              .Where(p => p.Published == true)
+                              .OrderByDescending(p => p.Counter).
+                              Take(3);
+
+            return PartialView(MaxViewPosts);
         }
 
         public ViewResult EditPost(int Id)
         {
-            Post post = repository.Posts
-                .FirstOrDefault(p => p.Id == Id);
+            Post post = repository.Posts.FirstOrDefault(p => p.Id == Id);
             return View(post);
         }
 
@@ -117,7 +142,6 @@ namespace OlxaWeb.WebUI.Controllers
             }
             if (ModelState.IsValid)
             {
-                
                 repository.SavePost(post);
                 TempData["message"] = string.Format("{0} has been saved", post.Title);
                 return RedirectToAction("Index");
@@ -140,6 +164,13 @@ namespace OlxaWeb.WebUI.Controllers
                 TempData["message"] = string.Format("{0} был удалён", deletedPost.Title);
             }
             return RedirectToAction("Index");
+        }
+        public void Counter(int Id) //счётчик просмотров статей
+        {
+            //  UPDATE table SET count = (count + 1) WHERE post_id = ЧЕМУ ТО ТАМ РАВНО
+            Post count = repository.Posts.FirstOrDefault(p => p.Id == Id);
+            count.Counter = count.Counter++;
+            repository.SavePost(count);
         }
     }
 }

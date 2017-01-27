@@ -32,7 +32,7 @@ namespace OlxaWeb.Domain.Concrete
                     dbEntry.Description = template.Description;
                     dbEntry.LinkDemo = template.LinkDemo;
                     dbEntry.LinkPicture = template.LinkPicture;
-                    dbEntry.Price = (decimal)template.Price;
+                    dbEntry.Price = template.Price;
                     dbEntry.Publish = template.Publish;
                     dbEntry.ShortDescription = template.ShortDescription;
                     dbEntry.Title = template.Title;
@@ -47,6 +47,16 @@ namespace OlxaWeb.Domain.Concrete
             if (dbEntry != null)
             {
                 context.Temmplates.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
+        public Temmplate PublishTemplate(int Id)
+        {
+            Temmplate dbEntry = context.Temmplates.Find(Id);
+            if (dbEntry != null)
+            {
+                dbEntry.Publish = dbEntry.Publish == true ? false:true;
                 context.SaveChanges();
             }
             return dbEntry;

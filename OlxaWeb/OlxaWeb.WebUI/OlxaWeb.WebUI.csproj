@@ -856,6 +856,7 @@
     <Content Include="Views\Portfolio\Site.cshtml" />
     <Content Include="Views\Portfolio\EditSite.cshtml" />
     <Content Include="Views\Develop\EditCard.cshtml" />
+    <Content Include="Views\Blog\MaxViewPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

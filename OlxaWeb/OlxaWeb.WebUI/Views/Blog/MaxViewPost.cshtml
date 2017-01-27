@@ -1,0 +1,20 @@
+﻿@model IEnumerable<OlxaWeb.Domain.Entities.Post>
+
+<section class="widget widget_recent_posts">
+    <h3 class="widget-title">
+        <i class="icon-paper"></i>
+        Наиболее просматриваемые посты
+    </h3>
+
+    @foreach (var post in Model)
+    {
+        <div class="item">
+            <div class="thumb">
+                <a href="post-right-sidebar.html"><img src="img/blog/sidebar/post01.jpg" alt="Post01"></a>
+            </div>
+            <div class="info">
+                <h4><a href="post-right-sidebar.html">@post.Title / @post.Counter</a></h4>
+            </div>
+        </div>
+    }
+</section>

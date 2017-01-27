@@ -5,6 +5,7 @@
     ViewBag.Title = "Post";
     Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
+@Html.Action("Counter","Blog")
 
 <!-- Content -->
 <div class="col-lg-9 col-md-8">
@@ -24,11 +25,9 @@
         <div class="column"><span>@Model.Modified</span></div>
     </div><!-- .post-meta -->
 
-
     <div class="image-carousel space-bottom-2x">
         <img src="~/Content/img/BlogPicture/@Model.UrlSlug" alt="Тут должна быть картинка">
     </div><!-- .image-carousel -->
-
 
     <p>@Model.Description</p>
 
@@ -44,23 +43,28 @@
         @if (User.IsInRole("Admin"))
         {
             <div class="column">
-                <div class="social-bar">
+                <div class="social-bar" style="float:right">
                     <a href="~/Blog/EditPost/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
                         <i class="fa fa-edit"></i>
                     </a>
-                    <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                    <a href="~/Blog/DeletePost/@Model.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
                         <i class="fa fa-window-close text-danger"></i>
                     </a>
-                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                        <i class="fa fa-minus-square" style="color:#808080"></i>
-                    </a>
-                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
-                        <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                    </a>
-
-                </div><!-- .social-bar -->
+                    @if (Model.Published == true)
+                    {
+                        <a href="~/Blog/PublishPost/@Model.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Скрыть с публикации">
+                            <i class="fa fa-minus-square" style="color:#808080"></i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="~/Blog/PublishPost/@Model.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
+                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                        </a>
+                    }
+                </div>
             </div>
-        }<!-- .column -->
+        }
         </div><!-- .post-tools -->
     </div><!-- .col-lg-9.col-md-8 -->
     @section Scripts {
