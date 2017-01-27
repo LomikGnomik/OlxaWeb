@@ -20,13 +20,32 @@ namespace OlxaWeb.WebUI.Controllers
         // GET: Portfolio
         public ActionResult Index()
         {
-            IEnumerable<string> categories = repository.Portfolios
-              .Select(x => x.Category)
-              .Distinct()
-              .OrderBy(x => x);
-            ViewBag.Filter = categories;
+            if (User.IsInRole("Admin"))
+            {
+                // //Запрос для Админа ( показывает неопубликованное портфолио)
+                IEnumerable<string> categories = repository.Portfolios
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+                ViewBag.Filter = categories;
 
-            return View(repository.Portfolios);
+                return View(repository.Portfolios);
+            }
+            else   //Запрос для гостей (не показывает неопубликованное портфолио)
+            {
+                IEnumerable<string> categories = repository.Portfolios
+                .Where(p => p.Publish == true)
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+                ViewBag.Filter = categories;
+
+                IEnumerable<Portfolio> portfolio = repository.Portfolios
+                  .Where(p => p.Publish == true)
+                  .OrderBy(p => p.Id);
+            
+            return View(portfolio);
+            }
         }
 
         public ActionResult Site(int Id)
@@ -36,8 +55,18 @@ namespace OlxaWeb.WebUI.Controllers
         }
         public ViewResult EditSite(int Id)
         {
+            IEnumerable<string> categories = new string[] {
+                "Сайт-Визитка",
+                "Корпоративный",
+                "Интернет-магазин",
+                "Информационный",
+                "Landing page",};
+                
+            ViewBag.Filter = categories;
+
             Portfolio portfolio = repository.Portfolios
                 .FirstOrDefault(p => p.Id == Id);
+
             return View(portfolio);
         }
         [HttpPost]
@@ -55,7 +84,6 @@ namespace OlxaWeb.WebUI.Controllers
 
             if (ModelState.IsValid)
             {
-
                 repository.SavePortfolio(portfolio);
                 TempData["message"] = string.Format("{0} has been saved", portfolio.Name);
                 return RedirectToAction("Index");

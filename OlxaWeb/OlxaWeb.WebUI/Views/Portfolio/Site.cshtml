@@ -74,23 +74,28 @@
                 </div><!-- .column -->
                 @if (User.IsInRole("Admin"))
                 {
-                <div class="column">
-                    <div class="social-bar">
-                        <a href="EditSite/@Model.Id"class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
-                            <i class="fa fa-window-close text-danger"></i>
-                        </a>
-
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Не опубликовано">
-                            <i class="fa fa-minus-square" style="color:#808080"></i>
-                        </a>
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовано!">
-                            <i class="fa fa-plus-square" style="color:#00ff21"></i>
-                        </a>
-                    </div><!-- .social-bar -->
-                </div><!-- .column -->
+                    <div class="column">
+                        <div class="social-bar" style="float:right">
+                            <a href="~/Portfolio/EditSite/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <a href="~/Portfolio/DeleteSite/@Model.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                                <i class="fa fa-window-close text-danger"></i>
+                            </a>
+                            @if (Model.Publish == true)
+                            {
+                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Скрыть с публикации">
+                                    <i class="fa fa-minus-square" style="color:#808080"></i>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
+                                    <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
                 }
             </div>
         </div><!-- .col-lg-7.col-md-6 -->

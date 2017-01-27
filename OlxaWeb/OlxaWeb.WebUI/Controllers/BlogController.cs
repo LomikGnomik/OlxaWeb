@@ -6,14 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OlxaWeb.WebUI.Models;
-using OlxaWeb.Domain.Entities;
+
 
 namespace OlxaWeb.WebUI.Controllers
 {
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 5; //количество постов на странице
+        public int PageSize = 6; //количество постов на странице
 
         public BlogController(IBlogRepository repo)
         {
@@ -22,22 +22,49 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ActionResult Index(string category, int page = 1)
         {
-            BlogViewModels viewModel = new BlogViewModels {
-                Posts = repository.Posts
-                    .Where(p => category == null || p.Category == category)
-                    .OrderBy(p => p.Id)
-                    .Skip((page - 1) * PageSize)
-                    .Take(PageSize),
-                PagingInfo = new PagingInfo {
-                    CurrentPage = page,
-                    ItemsPerPage = PageSize,
-                    TotalItems = category == null ?
-                    repository.Posts.Count() :
-                    repository.Posts.Where(e => e.Category == category).Count()
-                },
-                CurrentCategory = category
-            };
-            return View(viewModel);
+            if (User.IsInRole("Admin")) 
+            {
+                // Запрос для Админа (показывает опубликованные посты)
+                BlogViewModels viewModel = new BlogViewModels
+                {
+                    Posts = repository.Posts
+                              .Where(p =>category == null || p.Category == category)
+                              .OrderBy(p => p.Id)
+                              .Skip((page - 1) * PageSize)
+                              .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = page,
+                        ItemsPerPage = PageSize,
+                        TotalItems = category == null ?
+                              repository.Posts.Count() :
+                              repository.Posts.Where(e => e.Category == category).Count()
+                    },
+                    CurrentCategory = category
+                };
+                return View(viewModel);
+            }
+            else // Запрос для пользователей(не показывает опубликованные посты)
+            {
+                BlogViewModels viewModel = new BlogViewModels
+                {
+                  Posts = repository.Posts
+                 .Where(p => p.Published == true & (category == null || p.Category == category))
+                 .OrderBy(p => p.Id)
+                 .Skip((page - 1) * PageSize)
+                 .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = page,
+                        ItemsPerPage = PageSize,
+                        TotalItems = category == null ?
+                 repository.Posts.Count() :
+                 repository.Posts.Where(e => e.Category == category).Count()
+                    },
+                    CurrentCategory = category
+                };
+                return View(viewModel);
+            }
         }
 
         public ActionResult Post(int id)
@@ -53,6 +80,18 @@ namespace OlxaWeb.WebUI.Controllers
                 .Select(x => x.Category)
                 .Distinct()
                 .OrderBy(x => x);
+
+
+            Dictionary<string,int> pcsInCategory = new Dictionary<string,int >() ;
+            foreach (var cate in categories)
+            {
+                int pcs = repository.Posts
+                    .Count(x => x.Category == cate);
+                pcsInCategory.Add(cate,pcs);
+            }
+            ViewBag.pcsInCategory = pcsInCategory;
+            
+
             return PartialView(categories);
         }
 

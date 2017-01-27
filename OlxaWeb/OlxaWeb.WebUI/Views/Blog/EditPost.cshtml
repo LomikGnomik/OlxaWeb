@@ -6,8 +6,6 @@
 }
 
 
-
-
 <script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
 
 
@@ -61,18 +59,9 @@
             </div><!-- .column -->
             <div class="column">
                 <div class="social-bar">
-                    <a href="~/Blog/EditPost/@Model.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
-                        <i class="fa fa-check-square text-danger"></i>
-                    </a>
-                    @* Сохранить и отправить *@
-                    <input type="submit" value="Save" class="sb-facebook" />
-
-                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
+                    <button type="submit" value="Save" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;" title="Сохранить"><i class="fa fa-check" aria-hidden="true"></i></button>
+                    <button href="~/Blog/Index" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#ff0000" title="Отменить изменения"><i class="fa fa-window-close text-danger" aria-hidden="true"></i></button>
+                    <button href="~/Blog/DeletePost/@Model.Id" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#0015ff" title="Удалить"><i class="fa fa-trash-o" style="color:#0015ff"></i></button>
                 </div><!-- .social-bar -->
             </div><!-- .column -->
         </div><!-- .post-tools -->
