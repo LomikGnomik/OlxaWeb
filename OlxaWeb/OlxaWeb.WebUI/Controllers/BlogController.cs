@@ -33,6 +33,8 @@ namespace OlxaWeb.WebUI.Controllers
                               .OrderBy(p => p.Id)
                               .Skip((page - 1) * PageSize)
                               .Take(PageSize),
+
+
                     PagingInfo = new PagingInfo
                     {
                         CurrentPage = page,
@@ -47,6 +49,7 @@ namespace OlxaWeb.WebUI.Controllers
             }
             else // Запрос для пользователей(не показывает опубликованные посты)
             {
+                
                 BlogViewModels viewModel = new BlogViewModels
                 {
                     Posts = repository.Posts
@@ -64,6 +67,7 @@ namespace OlxaWeb.WebUI.Controllers
                  repository.Posts.Where(e => e.Category == category).Count()
                     },
                     CurrentCategory = category
+                    
                 };
                 return View(viewModel);
             }
@@ -152,7 +156,7 @@ namespace OlxaWeb.WebUI.Controllers
             return View("EditPost", new Post());
         }
         [HttpPost]
-        public ActionResult DeletePost(int Id)
+        public ActionResult DeleteBlog(int Id)
         {
             Post deletedPost = repository.DeletePost(Id);
             if (deletedPost != null)
@@ -167,25 +171,6 @@ namespace OlxaWeb.WebUI.Controllers
             Post count = repository.Posts.FirstOrDefault(p => p.Id == Id);
             count.Counter = count.Counter++;
             repository.SavePost(count);
-        }
-        public ActionResult Search(string search, int page=1)
-        {
-            BlogViewModels viewModel = new BlogViewModels
-            {
-                                Posts = repository.Posts
-                 .Where(p => p.Published == true & ( p.Title.ToLower().Contains(search.ToLower()))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower()))
-                 .OrderBy(p => p.PostedOn)
-                 .Skip((page - 1) * PageSize)
-                 .Take(PageSize),
-
-                PagingInfo = new PagingInfo
-                {
-                    CurrentPage = page,
-                    ItemsPerPage = PageSize,
-                    TotalItems = repository.Posts.Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))).Count()
-                },
-            };
-            return View("Index",viewModel);
         }
     }
 }
