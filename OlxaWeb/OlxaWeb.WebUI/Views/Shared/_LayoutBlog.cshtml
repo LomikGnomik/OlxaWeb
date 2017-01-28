@@ -34,17 +34,21 @@
             <div class="space-top-2x visible-sm visible-xs"></div>
             <aside class="sidebar">
                 <section class="widget widget_search">
-                    <form method="post" class="search-box">
-                        <input type="text" class="form-control" placeholder="Поиск по блогу">
-                        <button type="submit"><i class="icon-search"></i></button>
-                    </form>
+
+                    @using (Html.BeginForm("Search", "Blog"))
+                    {
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Поиск по блогу" name="search">
+                            <button type="submit"><i class="icon-search"></i></button>
+                        </div>
+                    }
                 </section>
 
                    @Html.Action("Menu", "Blog")
 
                    @Html.Action("MaxViewPost","Blog")
 
-                <section class="widget widget_tag_cloud">
+                @*<section class="widget widget_tag_cloud">
                     <h3 class="widget-title">
                         <i class="icon-tag"></i>
                         Featured Tags
@@ -53,7 +57,7 @@
                     <a href="#">Development</a>
                     <a href="#">Hosting</a>
                     <a href="#">Domains</a>
-                </section>
+                </section>*@
 
             </aside><!-- .sidebar -->
         </div><!-- .col-lg-3.col-md-4 -->

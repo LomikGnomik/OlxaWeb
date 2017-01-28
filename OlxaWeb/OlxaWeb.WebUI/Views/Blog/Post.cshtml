@@ -12,11 +12,7 @@
     <h3>@Model.Title</h3>
     <div class="post-meta">
         <div class="column">
-            <span>
-                <i class="icon-head"></i>
-                <a href="#">Bedismo</a>
-            </span>
-            <span>в</span>
+            <span>Категория :</span>
             <span>
                 <i class="icon-ribbon"></i>
                 <a href="#">@Model.Category</a>
@@ -32,14 +28,16 @@
     <p>@Model.Description</p>
 
     <div class="post-tools space-top-2x">
-        <div class="column">
+
+        @*<div class="column">
             <div class="tags-links">
                 <a href="#">Design</a>
                 <a href="#">Development</a>
                 <a href="#">Hosting</a>
                 <a href="#">Domains</a>
             </div>
-        </div><!-- .column -->
+        </div>*@
+
         @if (User.IsInRole("Admin"))
         {
             <div class="column">
