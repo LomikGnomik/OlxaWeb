@@ -683,6 +683,7 @@
     <Content Include="fonts\my-icons\font\flaticon.css" />
     <Content Include="fonts\my-icons\font\flaticon.html" />
     <Content Include="fonts\my-icons\font\Flaticon.svg" />
+    <Content Include="fonts\my-icons\license\license.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -720,11 +721,6 @@
     <Content Include="fonts\font_aw\scss\_screen-reader.scss" />
     <Content Include="fonts\font_aw\scss\_stacked.scss" />
     <Content Include="fonts\font_aw\scss\_variables.scss" />
-    <Content Include="fonts\my-icons\font\Flaticon.eot" />
-    <Content Include="fonts\my-icons\font\Flaticon.ttf" />
-    <Content Include="fonts\my-icons\font\Flaticon.woff" />
-    <Content Include="fonts\my-icons\font\_flaticon.scss" />
-    <Content Include="fonts\my-icons\license\license.pdf" />
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\CHANGES.md" />
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\LICENSE.md" />
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -740,6 +736,10 @@
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Content\ckeditor_4.6.2_full\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="fonts\my-icons\font\_flaticon.scss" />
+    <Content Include="fonts\my-icons\font\Flaticon.eot" />
+    <Content Include="fonts\my-icons\font\Flaticon.ttf" />
+    <Content Include="fonts\my-icons\font\Flaticon.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

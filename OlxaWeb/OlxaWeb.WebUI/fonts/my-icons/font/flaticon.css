@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 18/01/2017 18:00
+  	Creation date: 28/01/2017 18:49
   	*/
 
 @font-face {
@@ -24,53 +24,31 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 20px;
+        font-size: 30px;
 font-style: normal;
 /*margin-left: 20px;*/
 }
 
-/* меню */
 
-.flaticon-business-10:before { content: "\f108"; font-size:40px} /* о нас */
-.flaticon-business-6:before { content: "\f10d"; font-size:40px}  /* разработка */
-.flaticon-computer:before { content: "\f113"; font-size:40px}    /* продвижение */
-.flaticon-suitcase:before { content: "\f124";font-size:40px }    /* наши работы */
-.flaticon-ruble:before { content: "\f122"; font-size:40px}       /* услуги и цены */
-.flaticon-money-1:before { content: "\f11b"; font-size:40px}     /* контакты */
+/*главное меню*/
+
+.flaticon-business:before { content: "\f100"; font-size:40px; }     /*о нас*/
+.flaticon-business-1:before { content: "\f101";font-size:40px;  }   /*разработка*/
+.flaticon-computer-1:before { content: "\f106";font-size:40px;  }   /*продвижение*/
+.flaticon-portfolio:before { content: "\f10a"; font-size:40px; }    /*наши работы*/
+.flaticon-ruble:before { content: "\f10b";font-size:40px;  }        /*услуги и цены*/
+.flaticon-money:before { content: "\f109"; font-size:40px; }        /* контакты*/
+
+/*этапы сотрудничества шаблонные сайты*/
+.flaticon-commerce:before { content: "\f104"; font-weight:normal; } /*покупка*/
+.flaticon-cogwheel:before { content: "\f103"; font-weight:normal; } /*настройка*/
+.flaticon-transport:before { content: "\f10e"; font-weight:normal; }/*запуск*/
+.flaticon-computer:before { content: "\f105"; font-weight:normal; } /*поддержка*/
 
 
+.flaticon-clock:before { content: "\f102"; }
+.flaticon-drawing:before { content: "\f107"; }
+.flaticon-line:before { content: "\f108"; }
 
-
-.flaticon-application:before { content: "\f100"; }
-.flaticon-arrows:before { content: "\f101"; }
-.flaticon-arrows-1:before { content: "\f102"; }
-.flaticon-arrows-2:before { content: "\f103"; }
-.flaticon-arrows-3:before { content: "\f104"; }
-.flaticon-art:before { content: "\f105"; }
-.flaticon-business:before { content: "\f106"; }
-.flaticon-business-1:before { content: "\f107"; }
-.flaticon-business-2:before { content: "\f109"; }
-.flaticon-business-3:before { content: "\f10a"; }
-.flaticon-business-4:before { content: "\f10b"; }
-.flaticon-business-5:before { content: "\f10c"; }
-.flaticon-business-7:before { content: "\f10e"; }
-.flaticon-business-8:before { content: "\f10f"; }
-.flaticon-business-9:before { content: "\f110"; }
-.flaticon-calendar:before { content: "\f111"; }
-.flaticon-coins:before { content: "\f112"; }
-.flaticon-download:before { content: "\f114"; }
-.flaticon-labels:before { content: "\f115"; }
-.flaticon-line:before { content: "\f116"; }
-.flaticon-man:before { content: "\f117"; }
-.flaticon-man-1:before { content: "\f118"; }
-.flaticon-man-2:before { content: "\f119"; }
-.flaticon-money:before { content: "\f11a"; }
-.flaticon-monitor:before { content: "\f11c"; }
-.flaticon-people:before { content: "\f11d"; }
-.flaticon-people-1:before { content: "\f11e"; }
-.flaticon-people-2:before { content: "\f11f"; }
-.flaticon-phone:before { content: "\f120"; }
-.flaticon-phone-contact:before { content: "\f121"; }
-.flaticon-stopwatch:before { content: "\f123"; }
-.flaticon-tag:before { content: "\f125"; }
-.flaticon-work:before { content: "\f126"; }
+.flaticon-technology:before { content: "\f10c"; }
+.flaticon-technology-1:before { content: "\f10d"; }
