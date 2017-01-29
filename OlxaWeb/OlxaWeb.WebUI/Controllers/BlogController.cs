@@ -103,8 +103,7 @@ namespace OlxaWeb.WebUI.Controllers
             Dictionary<string,int> pcsInCategory = new Dictionary<string,int >() ;
             foreach (var cate in categories)
             {
-                int pcs = repository.Posts
-                    .Count(x => x.Category == cate);
+                int pcs = repository.Posts.Count(x => x.Category == cate & x.Published==true);
                 pcsInCategory.Add(cate,pcs);
             }
             ViewBag.pcsInCategory = pcsInCategory;
@@ -173,19 +172,15 @@ namespace OlxaWeb.WebUI.Controllers
             count.Counter = count.Counter++;
             repository.SavePost(count);
         }
-        public PartialViewResult Post_in_Develop()
+        public PartialViewResult Post_Site_Information(string category) //12 статей на сайте из блога по тематике "Разработка""SEO"
         {
-            IEnumerable<Post> postindevelop = repository.Posts
-                .Where(p => p.Published == true & p.Category == "Разработка")
+            ViewBag.Category = category;
+            IList<Post> postindevelop = repository.Posts
+                .Where(p => p.Published == true & p.Category == category)
                 .OrderBy(p => p.Id)
-                .Take(12);
+                .Take(12).ToList();
 
             return PartialView(postindevelop);
-        }
-        public PartialViewResult Post_in_SEO()
-        {
-
-            return PartialView();
         }
         public ActionResult Search(string search, int page = 1)
         {

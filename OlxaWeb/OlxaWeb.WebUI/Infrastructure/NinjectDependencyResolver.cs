@@ -64,18 +64,18 @@ namespace OlxaWeb.WebUI.Infrastructure
             new Post {Id=3,Title="Обосраться пост",ShortDescription="",Description="",Meta="",UrlSlug="image.jpg",Published=true,Category="О всяком",PostedOn=DateTime.Today, Modified=DateTime.Now,Counter=200 },
             new Post {Id=4,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Ляля",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=300 },
             new Post {Id=5,Title="",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="SEO",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=7,Title="Разработка. Пост 1  ",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=8,Title="Разработка. Пост 2 ",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=9,Title="Разработка. Пост 3",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=10,Title="Разработка. Пост 4",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=11,Title="Разработка. Пост 5",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=12,Title="Разработка. Пост 6",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=13,Title="Разработка. Пост 7",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=14,Title="Разработка. Пост 8",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=15,Title="Разработка. Пост 9",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=17,Title="Разработка. Пост 10",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=18,Title="Разработка. Пост 11",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
-                        new Post {Id=19,Title="Разработка. Пост 12",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 }
+            new Post {Id=8,Title="Разработка. Пост 2 ",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=7,Title="Разработка. Пост 1  ",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=9,Title="Разработка. Пост 3",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=10,Title="Разработка. Пост 4",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=11,Title="Разработка. Пост 5",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=12,Title="Разработка. Пост 6",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=13,Title="Разработка. Пост 7",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=14,Title="Разработка. Пост 8",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=15,Title="Разработка. Пост 9",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=17,Title="Разработка. Пост 10",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=18,Title="Разработка. Пост 11",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 },
+            new Post {Id=19,Title="Разработка. Пост 12",ShortDescription="",Description="",Meta="",UrlSlug="",Published=true,Category="Разработка",PostedOn=DateTime.Today, Modified=DateTime.Now ,Counter=10 }
 
             });
             kernel.Bind<IBlogRepository>().ToConstant(mockblog.Object);
