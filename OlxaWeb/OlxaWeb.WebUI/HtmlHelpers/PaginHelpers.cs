@@ -21,8 +21,7 @@ namespace OlxaWeb.WebUI.HtmlHelpers
                 if (i == pagingInfo.CurrentPage)
                 {
                     tag.AddCssClass("selected");
-                    tag.AddCssClass("btn-default");
-                   
+                    tag.AddCssClass("btn-default"); 
                 }
                // tag.AddCssClass("btn btn-default");
                 result.Append(tag.ToString());

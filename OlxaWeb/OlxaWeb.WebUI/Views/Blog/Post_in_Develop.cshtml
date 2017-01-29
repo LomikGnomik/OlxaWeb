@@ -1,0 +1,21 @@
+﻿@model IEnumerable<OlxaWeb.Domain.Entities.Post>
+
+
+<div class="container">
+    <br>
+    <h2 class="block-title">
+        <small>Полезная информация по разработке сайта</small>
+    </h2>
+    <div class="row">
+
+        @foreach (var post in @Model)
+        {
+
+                <div class="col-sm-4">
+                    <ul class="list-featured">
+                        <li><a href="#" class="no-border">@post.Title</a></li>
+                    </ul>
+                </div>
+        }
+    </div>
+</div>

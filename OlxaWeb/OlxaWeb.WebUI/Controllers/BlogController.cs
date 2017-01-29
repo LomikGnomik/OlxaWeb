@@ -23,6 +23,7 @@ namespace OlxaWeb.WebUI.Controllers
         public ActionResult Index(string category, int page = 1)
         {
 
+
             if (User.IsInRole("Admin")) 
             {
                 // Запрос для Админа (показывает опубликованные посты)
@@ -171,6 +172,42 @@ namespace OlxaWeb.WebUI.Controllers
             Post count = repository.Posts.FirstOrDefault(p => p.Id == Id);
             count.Counter = count.Counter++;
             repository.SavePost(count);
+        }
+        public PartialViewResult Post_in_Develop()
+        {
+            IEnumerable<Post> postindevelop = repository.Posts
+                .Where(p => p.Published == true & p.Category == "Разработка")
+                .OrderBy(p => p.Id)
+                .Take(12);
+
+            return PartialView(postindevelop);
+        }
+        public PartialViewResult Post_in_SEO()
+        {
+
+            return PartialView();
+        }
+        public ActionResult Search(string search, int page = 1)
+        {
+            
+           // ViewBag.Search = true;
+            BlogViewModels viewModel = new BlogViewModels
+            {
+                Posts = repository.Posts
+                 .Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
+                 .OrderBy(p => p.PostedOn)
+                 .Skip((page - 1) * PageSize)
+                 .Take(PageSize),
+
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Posts.Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))).Count()
+                },
+                SearchString = search
+            };
+            return View("Index", viewModel);
         }
     }
 }

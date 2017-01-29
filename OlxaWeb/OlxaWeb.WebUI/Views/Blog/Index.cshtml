@@ -63,7 +63,18 @@
     <!-- Pagination -->
     <section class="pagination space-top-2x">
         <div class="nav-links">
-            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+
+            @if (Model.SearchString != null)
+            {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Search", new { page = x, search = Model.SearchString }))
+            }
+            else
+            {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x, category = Model.CurrentCategory }))
+            }
+
+          
+            
         </div>
     </section><!-- .pagination -->
 </div><!-- .col-lg-9.col-md-8 -->
