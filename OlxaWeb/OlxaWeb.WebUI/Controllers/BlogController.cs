@@ -123,6 +123,11 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ViewResult EditPost(int Id)
         {
+            ViewBag.Filter= repository.Posts
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+
             Post post = repository.Posts.FirstOrDefault(p => p.Id == Id);
             return View(post);
         }
@@ -190,7 +195,7 @@ namespace OlxaWeb.WebUI.Controllers
             {
                 Posts = repository.Posts
                  .Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
-                 .OrderBy(p => p.PostedOn)
+               //  .OrderBy(p => p.PostedOn)
                  .Skip((page - 1) * PageSize)
                  .Take(PageSize),
 

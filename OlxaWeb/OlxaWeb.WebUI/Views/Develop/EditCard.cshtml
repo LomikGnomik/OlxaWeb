@@ -6,72 +6,94 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
-
 
 <div class="container">
-@using (Html.BeginForm("EditCard", "Develop", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
+    @using (Html.BeginForm("EditCard", "Develop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
     <!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
-    <section class="page-title">
-        <div class="container">
-            <div class="inner">
-                <div class="column">
-                    <div class="title">
-                        <h1>Разработка</h1>
-                    </div><!-- .title -->
-                </div><!-- .column -->
-                <div class="column">
-                    <ul class="menu-title text-center">
-                        <li class="active"><a href="#">Готовые решения</a></li>
-                        <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
-                        <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
-                    </ul><!-- .nav-filters -->
-                </div><!-- .column -->
+        <section class="page-title">
+            <div class="container">
+                <div class="inner">
+                    <div class="column">
+                        <div class="title">
+                            <h1>Разработка</h1>
+                        </div><!-- .title -->
+                    </div><!-- .column -->
+                    <div class="column">
+                        <ul class="menu-title text-center">
+                            <li class="active"><a href="#">Готовые решения</a></li>
+                            <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                            <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
+                        </ul><!-- .nav-filters -->
+                    </div><!-- .column -->
+                </div>
             </div>
-        </div>
-    </section><!-- .page-title -->
+        </section><!-- .page-title -->
         <div class="row">
-        @* Начало загрузки картинки *@
+
+
+            @Html.LabelFor(m => m.Title)
+            @Html.EditorFor(m => m.Title)
+            @Html.ValidationMessageFor(m => m.Title)
+
+            @Html.LabelFor(m => m.Category)
+            @Html.DropDownList("Category", new SelectList(new string[] {
+            "Сайт-Визитка",
+            "Корпоративный",
+            "Интернет-магазин",
+            "Информационный",
+            /*"Landing page",*/
+            "Лэндинг"
+       }), "Категории")
+
+            @Html.LabelFor(m => m.ShortDescription)
+            @Html.EditorFor(m => m.ShortDescription)
+
+            @Html.LabelFor(m => m.Description)
+            @Html.EditorFor(m => m.Description)
+
+            @Html.LabelFor(m => m.Price)
+            @Html.EditorFor(m => m.Price)
+
+            @Html.LabelFor(m => m.Publish)
+            @Html.CheckBoxFor(m => m.Publish)
+
+            @Html.LabelFor(m => m.LinkDemo)
+            @Html.EditorFor(m => m.LinkDemo)
+
+            @* Начало загрузки картинки *@
+
             <div class="col-lg-5 col-md-6 space-bottom-2x">
+
+                @Html.HiddenFor(m => m.LinkPicture)
                 <input type="file" name="picture" accept="image/*" onchange="loadFile(event)">
                 <div class="image-carousel space-bottom-2x">
-                    <img id="output" src="~/Content/img/TemplatePicture/@Model.LinkPicture" alt="Нет картинки" />
+                    <img id="output" src="~/Content/img/TemplateSitePicture/@Model.LinkPicture" alt="Нет картинки" />
                 </div>
                 <script>
-            var loadFile = function (event) {
-                var output = document.getElementById('output');
-                output.src = URL.createObjectURL(event.target.files[0]);
-            };
+                    var loadFile = function (event) {
+                        var output = document.getElementById('output');
+                        output.src = URL.createObjectURL(event.target.files[0]);
+                    };
                 </script>
-         @* Конец загрузки картинки *@
             </div><!-- .col-lg-5.col-md-6 -->
-            <div class="col-lg-7 col-md-6 space-bottom-2x">
-                <h2 class="shop-title">
-                    @Html.EditorFor(m => m.Title)
-                </h2>
+            @* Конец загрузки картинки *@
 
-                <select id="Category" name="Category">
+
+
+            @*<select id="Category" name="Category">
                     <option value="">Категории:</option>
                     @foreach (var category in ViewBag.Filter)
                 {
                         <option>@category</option>
                     }
-                </select>
+                </select>*@
             @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
-                <p class="text-gray">
-                    <textarea name="Description" id="editor1" rows="10" cols="80">
-                        @Model.Description
-                    </textarea>
-                    <script>
-                        CKEDITOR.replace('editor1');
-                    </script>
-                </p>
-                <div class="shop-tools">
-                    <span class="text-lg">@Html.EditorFor(m => m.Price)</span>
-                    <input type="checkbox" checked="@Model.Publish" />
-             
-                </div>
+
+
+
+
+            <div class="col-lg-7 col-md-6 space-bottom-2x">
                 <div class="post-tools space-top">
                     <div class="column">
                         <div class="social-bar">
@@ -83,7 +105,7 @@
                 </div>
             </div><!-- .col-lg-7.col-md-6 -->
         </div><!-- .row -->
-}
+    }
 </div><!-- .col-sm-6 -->
 @section Scripts {
 }

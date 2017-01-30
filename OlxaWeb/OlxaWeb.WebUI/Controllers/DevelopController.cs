@@ -22,7 +22,6 @@ namespace OlxaWeb.WebUI.Controllers
             return View();
         }
         // Продающая страница конкретного шаблонного сайта
-
         public ActionResult Card(int id)
         {
             Temmplate site=new Temmplate();
@@ -77,14 +76,14 @@ namespace OlxaWeb.WebUI.Controllers
         public ViewResult EditCard(int Id)
         {
             // Категории в выпадающем списке при добавлении в базу данных
-            IEnumerable<string> categories = new string[] {
-                "Сайт-Визитка",
-                "Корпоративный",
-                "Интернет-магазин",
-                "Информационный",
-                "Landing page",
-                };
-            ViewBag.Filter = categories;
+            //IEnumerable<string> categories = new string[] {
+            //    "Сайт-Визитка",
+            //    "Корпоративный",
+            //    "Интернет-магазин",
+            //    "Информационный",
+            //    "Landing page",
+            //    };
+            //ViewBag.Filter = categories;
 
             Temmplate temmplate = repository.Temmplates
                 .FirstOrDefault(p => p.Id == Id);
@@ -95,13 +94,16 @@ namespace OlxaWeb.WebUI.Controllers
         public ActionResult EditCard(HttpPostedFileBase picture, Temmplate temmplate)
         {
             if (picture != null)
-            {
+            {    
+                if (picture!=null)
+                {
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(picture.FileName);
                 //пишем  имя картинки в бд
-              //  post.UrlSlug = fileName;
+                temmplate.LinkPicture = fileName;
                 // сохраняем файл в папку img/BlogPicture/ в проекте
-                picture.SaveAs(Server.MapPath("~/Content/img/TemplatePicture/" + fileName));
+                picture.SaveAs(Server.MapPath("~/Content/img/TemplateSitePicture/" + fileName));
+                }
             }
             if (ModelState.IsValid)
             {

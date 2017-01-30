@@ -671,7 +671,7 @@
     <Content Include="Content\img\Home\yandex.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
-    <Content Include="Content\img\product-bg01.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\product-bg01.jpg" />
     <Content Include="Content\img\eror.jpg" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />

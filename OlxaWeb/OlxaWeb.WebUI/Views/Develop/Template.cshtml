@@ -33,7 +33,6 @@
             <small> Наиболее Быстрое и Простое Решение</small>
         </h2>
         <!-- Filters -->
-        @*@Html.DropDownList("Category", new SelectList(new string[] { "Лендинг", "Интернет-магазин", "Корпаративный" }), "Категории")*@
         <div class="text-center padding-top">
             @if (User.IsInRole("Admin"))
             {
@@ -88,14 +87,14 @@
             }
                     <div class="portfolio-item">
                         <div class="thumbnail">
-                            <img src="~/Content/img/1478172823164455436.png" alt="Portfolio" />
+                            <img src="~/Content/img/TemplateSitePicture/@Site.LinkPicture" alt="Portfolio" />
                             <a href="#" class="portfolio-title btn btn-ghost-sm"> демо </a>
                             <a href="~/Develop/Card/@Site.Id" class="portfolio-title btn btn-ghost-sm1"> подробнее </a>
                         </div>
                         <table class="table-title">
                             <tr>
-                                <td class="border-bottom-none"> <a href="~/Develop/Card/@Site.Id" style="border-bottom:none;"> @Site.Category</a></td>
-                                <td class="btn btn-ghost">12 000 <i class="fa fa-rub text-lg" aria-hidden="true"></i></td>
+                                <td class="border-bottom-none"> <a href="~/Develop/Card/@Site.Id" style="border-bottom:none;">@Site.Category</a></td>
+                                <td class="btn btn-ghost">@Site.Price <i class="fa fa-rub text-lg" aria-hidden="true"></i></td>
                             </tr>
                         </table>
                     </div>

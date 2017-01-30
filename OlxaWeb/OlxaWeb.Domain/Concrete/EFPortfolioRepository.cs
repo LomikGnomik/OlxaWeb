@@ -37,6 +37,7 @@ namespace OlxaWeb.Domain.Concrete
                     dbEntry.Price = portfolio.Price;
                     dbEntry.Publish = portfolio.Publish;
                     dbEntry.URL = portfolio.URL;
+                    dbEntry.ShortDescription = portfolio.ShortDescription;
                 }
             }
             context.SaveChanges();
@@ -48,6 +49,16 @@ namespace OlxaWeb.Domain.Concrete
             if (dbEntry != null)
             {
                 context.Portfolios.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
+        public Portfolio PublishPortfolio(int Id)
+        {
+            Portfolio dbEntry = context.Portfolios.Find(Id);
+            if (dbEntry != null)
+            {
+                dbEntry.Publish = dbEntry.Publish == true ? false : true;
                 context.SaveChanges();
             }
             return dbEntry;
