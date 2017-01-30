@@ -70,7 +70,7 @@
     </div><!-- .container -->
 </section><!-- .fw-section.next-to-footer -->
 
-@Html.Partial("_PartialInformationDevelop")
+@Html.Action("Post_Site_Information", "Blog", new { category = "Разработка" })
 
 @section Scripts {
 }

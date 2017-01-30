@@ -54,22 +54,22 @@
                             </a>
                             @if (site.Publish == true)
                             {
-                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
+                                <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
                                     <i class="fa fa-minus-square" style="color:#808080"></i>
                                 </a>
                             }
                             else
                             {
-                                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
+                                <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
                                     <i class="fa fa-plus-square" style="color:#00ff21"></i>
                                 </a>
                             }
                         </div>
                     </div>
 }
-                    <a href="Site/@site.Id" class="portfolio-item">
+                    <a href="~/Portfolio/Site/@site.Id" class="portfolio-item">
                         <div class="thumbnail waves-effect waves-light">
-                            <img src="~/Content/img/1478172823164455436.png" alt="Portfolio">
+                            <img src="~/Content/img/PorfolioPicture/@site.PicturePC" alt="Portfolio">
                             <h3 class="portfolio-title">@site.Name</h3>
                         </div>
                     </a>

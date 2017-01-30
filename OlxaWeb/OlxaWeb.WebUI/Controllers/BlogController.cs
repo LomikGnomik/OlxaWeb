@@ -103,8 +103,7 @@ namespace OlxaWeb.WebUI.Controllers
             Dictionary<string,int> pcsInCategory = new Dictionary<string,int >() ;
             foreach (var cate in categories)
             {
-                int pcs = repository.Posts
-                    .Count(x => x.Category == cate);
+                int pcs = repository.Posts.Count(x => x.Category == cate & x.Published==true);
                 pcsInCategory.Add(cate,pcs);
             }
             ViewBag.pcsInCategory = pcsInCategory;
@@ -124,6 +123,11 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ViewResult EditPost(int Id)
         {
+            ViewBag.Filter= repository.Posts
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+
             Post post = repository.Posts.FirstOrDefault(p => p.Id == Id);
             return View(post);
         }
@@ -173,19 +177,15 @@ namespace OlxaWeb.WebUI.Controllers
             count.Counter = count.Counter++;
             repository.SavePost(count);
         }
-        public PartialViewResult Post_in_Develop()
+        public PartialViewResult Post_Site_Information(string category) //12 статей на сайте из блога по тематике "Разработка""SEO"
         {
-            IEnumerable<Post> postindevelop = repository.Posts
-                .Where(p => p.Published == true & p.Category == "Разработка")
+            ViewBag.Category = category;
+            IList<Post> postindevelop = repository.Posts
+                .Where(p => p.Published == true & p.Category == category)
                 .OrderBy(p => p.Id)
-                .Take(12);
+                .Take(12).ToList();
 
             return PartialView(postindevelop);
-        }
-        public PartialViewResult Post_in_SEO()
-        {
-
-            return PartialView();
         }
         public ActionResult Search(string search, int page = 1)
         {
@@ -195,7 +195,7 @@ namespace OlxaWeb.WebUI.Controllers
             {
                 Posts = repository.Posts
                  .Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
-                 .OrderBy(p => p.PostedOn)
+               //  .OrderBy(p => p.PostedOn)
                  .Skip((page - 1) * PageSize)
                  .Take(PageSize),
 

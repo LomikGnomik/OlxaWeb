@@ -132,5 +132,11 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View("EditSite", new Portfolio());
         }
+        public RedirectResult PublishPortfolio(int Id)
+        {
+            Portfolio PublishTemplate = repository.PublishPortfolio(Id);
+
+            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
+        }
     }
 }

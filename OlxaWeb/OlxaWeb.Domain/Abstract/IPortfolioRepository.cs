@@ -12,5 +12,6 @@ namespace OlxaWeb.Domain.Abstract
         IEnumerable<Portfolio> Portfolios { get; }
         void SavePortfolio(Portfolio portfolio);
         Portfolio DeletePortfolio(int Id);
+        Portfolio PublishPortfolio(int Id);
     }
 }

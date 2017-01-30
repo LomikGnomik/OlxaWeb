@@ -6,87 +6,98 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm("EditSite", "Portfolio"))//, FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-<!-- Page Title -->
-<!--Add modifier class : "pt-fullwidth" to stretch page title and make it occupy 100% of the page width. -->
-<section class="page-title">
-    <div class="container">
-        <div class="inner">
-            <div class="column">
-                <div class="title">
-                    <h1>Single Product</h1>
-                </div><!-- .title -->
-            </div><!-- .column -->
-            <div class="column">
-                <div class="breadcrumbs">
-                    <a href="index.html">Home</a>
-                    <span class="delimiter"><i class="icon-arrow-right"></i></span>
-                    <span>Single Product</span>
-                </div><!-- .breadcrumbs -->
-            </div><!-- .column -->
-        </div>
-    </div>
-</section><!-- .page-title -->
-<!-- Single Product -->
-<section class="page-title"></section><!-- .page-title -->
-<section class="shop-single container">
-    <div class="row">
-        <div class="col-lg-5 col-md-6 space-bottom-2x">
-            <!-- Shop Image Carousel -->
-            <!-- Data API:
-              data-loop="true/false" enable/disable looping
-              data-autoplay="true/false" enable/disable carousel autoplay
-              data-interval="3000" autoplay interval timeout in miliseconds
-              data-autoheight="true/false" enable/disable autoheight with transition
-              Simply add necessary data attribute to the ".image-carousel" with appropriate value to adjust carousel functionality.
-             -->
-            <div class="image-carousel">
-                <div class="inner">
-                    <img src="img/shop/gallery/01.jpg" alt="Image">
-                    <img src="img/shop/gallery/02.jpg" alt="Image">
-                    <img src="img/shop/gallery/03.jpg" alt="Image">
-                </div>
-            </div><!-- .image-carousel -->
-        </div><!-- .col-lg-5.col-md-6 -->
-        <div class="col-lg-7 col-md-6 space-bottom-2x">
-            <h2 class="shop-title"><a href="#">@Model.Name</a></h2>
+<div class="container">
+    @using (Html.BeginForm("EditSite", "Portfolio", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
 
-            <select id="Category" name="Category">
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+
+        @Html.LabelFor(m => m.Category)
+        @Html.DropDownList("Category", new SelectList(new string[] {
+            "Сайт-Визитка",
+            "Корпоративный",
+            "Интернет-магазин",
+            "Информационный",
+            /*"Landing page",*/
+            "Лэндинг",
+            "Эксклюзив"
+       }), "Категории")
+
+        @Html.LabelFor(m => m.URL)
+        @Html.EditorFor(m => m.URL)
+
+        @Html.LabelFor(m => m.ShortDescription)
+        @Html.EditorFor(m => m.ShortDescription)
+
+        @Html.LabelFor(m => m.Description)
+        @Html.EditorFor(m => m.Description)
+
+        <div class="row">
+            <div class="col-md-6">
+                @* Начало загрузки картинки для компа  *@
+                @Html.HiddenFor(m => m.PicturePC)
+                <input type="file" name="picturePC" accept="image/*" onchange="loadFile(event)" >
+          
+                    <img id="PC" src="~/Content/img/PortfolioPicture/@Model.PicturePC" alt="Нет картинки" />
+        
+                <script>
+                    var loadFile = function (event) {
+                      
+                        var outputPC = document.getElementById('PC');
+                        outputPC.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
+                @* Конец загрузки картинки для компа *@
+            </div>
+            <div class="col-md-6">
+                @* Начало загрузки картинки для сотового *@
+                @Html.HiddenFor(m => m.PictureMobile)
+                <input type="file" name="pictureMobile" accept="image/*" onchange="loadFile(event)">
+
+                    <img id="outputM" src="~/Content/img/PortfolioSitePicture/@Model.PictureMobile" alt="Нет картинки" />
+
+                <script>
+                    var loadFile = function (event) {
+                        var outputM = document.getElementById('outputM');
+                        outputM.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
+                @* Конец загрузки картинки сотового *@
+            </div>
+        </div>
+
+        @Html.LabelFor(m => m.Price)
+        @Html.EditorFor(m => m.Price)
+
+        @Html.LabelFor(m => m.Day)
+        @Html.EditorFor(m => m.Day)
+
+        @Html.LabelFor(m => m.Publish)
+        @Html.CheckBoxFor(m => m.Publish)
+
+
+        @*<select id="Category" name="Category">
                 <option value="">Категории:</option>
                 @foreach (var category in ViewBag.Filter)
                 {
                     <option>@category</option>
                 }
-            </select>
+            </select>*@
 
-            <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            <div class="shop-tools">
-                <div class="count">
-                    <span class="label">Qty: </span>
-                    <div class="count-input">
-                        <a class="incr-btn" data-action="decrease" href="#">–</a>
-                        <input class="quantity" type="text" value="2">
-                        <a class="incr-btn" data-action="increase" href="#">+</a>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-primary btn-icon-right waves-effect waves-light">
-                    Add To Cart
-                    <i class="icon-bag"></i>
-                </a>
-                <span class="text-lg">$344.99</span>
-            </div>
+        <div class="col-lg-7 col-md-6 space-bottom-2x">
             <div class="post-tools space-top">
                 <div class="column">
                     <div class="social-bar">
                         <button type="submit" value="Save" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;" title="Сохранить"><i class="fa fa-check" aria-hidden="true"></i></button>
-                        <button href="~/Portfolio/Index" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#ff0000" title="Отменить изменения"><i class="fa fa-window-close text-danger" aria-hidden="true"></i></button>
-                        <button href="~/Portfolio/DeleteSite/@Model.Id" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#0015ff" title="Удалить"><i class="fa fa-trash-o" style="color:#0015ff"></i></button>
+                        <button href="~/Develop/Template" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#ff0000" title="Отменить изменения"><i class="fa fa-window-close text-danger" aria-hidden="true"></i></button>
+                        <button href="~/Develop/DeletePortfolio/@Model.Id" class="btn btn-primary btn-ghost space-top-none space-bottom-none" style="padding-left: 15px;padding-right: 15px; margin-right: 0;border-color:#0015ff" title="Удалить"><i class="fa fa-trash-o" style="color:#0015ff"></i></button>
                     </div><!-- .social-bar -->
+                </div><!-- .column -->
             </div>
         </div><!-- .col-lg-7.col-md-6 -->
-    </div><!-- .row -->
-</section><!-- .shop-single -->
-}
-@section Scripts {
-}
+    }
+</div>
+
+    @section Scripts {
+    }
