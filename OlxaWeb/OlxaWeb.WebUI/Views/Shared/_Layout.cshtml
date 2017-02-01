@@ -12,7 +12,8 @@
 
 
 </head>
-<body>
+<body class="is-preloader preloading">
+
     <div id="preloader" data-spinner="spinner1" data-screenbg="#fff"></div>
     <!-- Page Wrapper -->
     <div class="page-wrapper">
@@ -41,14 +42,14 @@
                     </a><!-- .site-logo -->
                     <!-- Mobile Menu Toggle -->
                     <div class="nav-toggle"><span></span></div>
-                <div class="toolbar">
-                    <p class="fone">  Наш телефон: 8(223)223-22-22 </p>
-                </div>
+                    <div class="toolbar">
+                        <p class="fone">  Наш телефон: 8(223)223-22-22 </p>
+                    </div>
                     @*<div class="toolbar">
-                        <a href="#" class="text-sm" data-toggle="modal" data-target="#loginModal">Запишись</a>
-                        <a href="#" class="btn btn-sm btn-ghost btn-primary btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="fa fa-lemon-o" aria-hidden="true"></i></a>
-                         <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a>
-                    </div>*@<!-- .toolbar -->
+                            <a href="#" class="text-sm" data-toggle="modal" data-target="#loginModal">Запишись</a>
+                            <a href="#" class="btn btn-sm btn-ghost btn-primary btn-icon-right waves-effect waves-light" data-toggle="modal" data-target="#loginModal">Вход <i class="fa fa-lemon-o" aria-hidden="true"></i></a>
+                             <a href="shopping-cart.html" class="cart-btn"><i class="icon-bag"></i></a>
+                        </div>*@<!-- .toolbar -->
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
@@ -62,9 +63,9 @@
                             <a href="~/Develop/index"><i class="flaticon-business-1"></i>Разработка</a>
                             <div class="mega-menu">
                                 <ul>
-                                    <li @(ViewBag.SubMenu=="Template"? "class=current-menu-item":"") >@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
-                                    <li @(ViewBag.SubMenu=="Individual"? "class=current-menu-item":"")>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
-                                    <li @(ViewBag.SubMenu=="Exclusive"? "class=current-menu-item":"")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
+                                    <li @(ViewBag.SubMenu == "Template" ? "class=current-menu-item" : "")>@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
+                                    <li @(ViewBag.SubMenu == "Individual" ? "class=current-menu-item" : "")>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
+                                    <li @(ViewBag.SubMenu == "Exclusive" ? "class=current-menu-item" : "")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
                                 </ul>
                             </div>
                         </li>
@@ -88,8 +89,8 @@
                             <a href="~/Home/Contact"><i class="flaticon-money"></i>Контакты</a>
                         </li>
                         @*<li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
-                            <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
-                        </li>*@
+                                <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
+                            </li>*@
                     </ul>
                     <!-- .menu -->
                 </nav>
@@ -132,15 +133,15 @@
             </div><!-- .modal-dialog -->
         </div><!-- .modal.fade -->
 
-            @RenderBody()
-      
+        @RenderBody()
+
         <!-- -----------------------------------------------Footer------------------------------------------------------------------ -->
         <footer class="footer">
             <div class="top-footer">
                 <div class="container">
                     <div class="tools">
                         <div class="cell">
-                            <i><img src="~/Content/footer/help.png" alt="Email"></i>
+                            <i><img src="~/Content/footer/envelope.png" alt="Email"></i>
                             <span><a href="mailto:info@email.com">info@email.com</a></span>
                         </div>
                         <div class="cell">
@@ -168,75 +169,78 @@
                     </div>
                 </div><!-- .container -->
             </div><!-- .top-footer -->
-                <div class="bottom-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <section class="widget widget_text">
-                                    <a href="index.html" class="site-logo">
-                                        <img src="~/Content/img/logo.png" alt="OlxaWeb" />
-                                    </a><!-- .site-logo -->
-                                    <p>Мы занимаемся созданием сайтов на ASP.NET фрэймворке. Так же у нас есть уже готовые решения для вашего бизнеса.</p>
-                                </section><!-- .widget.widget_text -->
-                            </div><!-- .col-md-3 -->
-                            <div class="col-md-3 col-sm-6">
-                                <section class="widget widget_pages">
-                                    <h3 class="widget-title">
-                                        <i class="fa fa-cogs text-primary" aria-hidden="true"></i>
-                                        Разработка
-                                    </h3>
-                                    <ul>
-                                        <li>@Html.ActionLink("Готовые Решения", "Template", "Develop")</li>
-                                        <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
-                                        <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
-                                    </ul>
-                                </section><!-- .widget.widget_pages -->
-                            </div><!-- .col-md-3 -->
-                            <div class="clearfix visible-sm"></div>
-                            <div class="col-md-3 col-sm-6">
-                                <section class="widget widget_pages">
-                                    <h3 class="widget-title">
-                                        <i class="fa fa-line-chart text-primary" aria-hidden="true"></i>
-                                        Продвижение
-                                    </h3>
-                                    <ul>
-                                        <li>@Html.ActionLink("Начальное", "", "")</li>
-                                        <li>@Html.ActionLink("Оптимальное", "", "")</li>
-                                        <li>@Html.ActionLink("Продвинутое", "", "")</li>
-                                    </ul>
-                                </section><!-- .widget.widget_pages -->
-                            </div><!-- .col-md-3 -->
-                            <div class="col-md-3 col-sm-6">
-                                <section class="widget widget_pages">
-                                    <h3 class="widget-title">
-                                        <i class="fa fa-leaf text-primary" aria-hidden="true"></i>
-                                        OlxaWeb
-                                    </h3>
-                                    <ul>
-                                        <li>@Html.ActionLink("Контакты", "Contacts", "")</li>
-                                        <li>@Html.ActionLink("ЧаВо", "", "")</li>
-                                        <li>@Html.ActionLink("Блог", "Index", "Blog")</li>
-                                    </ul>
-                                </section><!-- .widget.widget_pages -->
-                            </div><!-- .col-md-3 -->
-                        </div><!-- .row -->
-                        <div class="copyright">
-                            <div class="column">
-                                <p>&copy;<a href="~/Account/Login"> OlxaWeb 2016 - 2017 <a/><i class="fa fa-heart text-danger"></i></p>
-                            </div><!-- .column -->
-                        </div><!-- .copyright -->
-                    </div><!-- .container -->
-                </div><!-- .bottom-footer -->
-</footer><!-- .footer -->
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_text">
+                                <a href="index.html" class="site-logo">
+                                    <img src="~/Content/img/logo.png" alt="OlxaWeb" />
+                                </a><!-- .site-logo -->
+                                <p>Мы занимаемся созданием сайтов на ASP.NET фрэймворке. Так же у нас есть уже готовые решения для вашего бизнеса.</p>
+                            </section><!-- .widget.widget_text -->
+                        </div><!-- .col-md-3 -->
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="fa fa-cogs text-primary" aria-hidden="true"></i>
+                                    Разработка
+                                </h3>
+                                <ul>
+                                    <li>@Html.ActionLink("Готовые Решения", "Template", "Develop")</li>
+                                    <li>@Html.ActionLink("Индивидуальные", "Individual", "Develop")</li>
+                                    <li>@Html.ActionLink("Эксклюзивные", "Exclusive", "Develop")</li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                        <div class="clearfix visible-sm"></div>
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="fa fa-line-chart text-primary" aria-hidden="true"></i>
+                                    Продвижение
+                                </h3>
+                                <ul>
+                                    <li>@Html.ActionLink("Начальное", "", "")</li>
+                                    <li>@Html.ActionLink("Оптимальное", "", "")</li>
+                                    <li>@Html.ActionLink("Продвинутое", "", "")</li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                        <div class="col-md-3 col-sm-6">
+                            <section class="widget widget_pages">
+                                <h3 class="widget-title">
+                                    <i class="fa fa-leaf text-primary" aria-hidden="true"></i>
+                                    OlxaWeb
+                                </h3>
+                                <ul>
+                                    <li>@Html.ActionLink("Контакты", "Contacts", "")</li>
+                                    <li>@Html.ActionLink("ЧаВо", "", "")</li>
+                                    <li>@Html.ActionLink("Блог", "Index", "Blog")</li>
+                                </ul>
+                            </section><!-- .widget.widget_pages -->
+                        </div><!-- .col-md-3 -->
+                    </div><!-- .row -->
+                    <div class="copyright">
+                        <div class="column">
+                            <p>&copy;<a href="~/Account/Login"> OlxaWeb 2016 - 2017 <a /><i class="fa fa-heart text-danger"></i></p>
+                        </div><!-- .column -->
+                    </div><!-- .copyright -->
+                </div><!-- .container -->
+            </div><!-- .bottom-footer -->
+        </footer><!-- .footer -->
     </div><!-- .page-wrapper -->
-
     <!-- Scroll To Top Button -->
     <a href="#" class="scroll-to-top-btn">
         <i class="fa fa-chevron-up text-primary" aria-hidden="true"></i>
     </a><!-- .scroll-to-top-btn -->
-    @RenderSection("Scripts")
+
+
+    <script src="~/Scripts/js/vendor/modernizr.custom.js"></script>
+    <script src="~/Scripts/js/scripts.js"></script>
     <script src="~/Scripts/js/vendor/jquery-2.1.4.min.js"></script>
-    @*<script src="~/Scripts/js/vendor/preloader.min.js"></script>*@
+
+    <script src="~/Scripts/js/vendor/preloader.min.js"></script>
     <script src="~/Scripts/js/vendor/bootstrap.min.js"></script>
     <script src="~/Scripts/js/vendor/waves.min.js"></script>
     <script src="~/Scripts/js/vendor/placeholder.js"></script>
@@ -249,9 +253,11 @@
     <script src="~/Scripts/js/vendor/jquery.stellar.min.js"></script>
     <script src="~/Scripts/js/vendor/scrollreveal.min.js"></script>
 
+    @RenderSection("Scripts")
 
-   
-    
+
+
+
     <script src="~/Scripts/js/scripts.js"></script>
 </body>
 </html>
