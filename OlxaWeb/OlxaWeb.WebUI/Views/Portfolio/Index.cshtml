@@ -42,31 +42,31 @@
             {
                 <!-- Portfolio Item -->
                 <div class="grid-item @site.Category">
-@if (User.IsInRole("Admin"))
-{
-                    <div class="column">
-                        <div class="social-bar" style="float:right">
-                            <a href="~/Portfolio/EditSite/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="~/Portfolio/DeletePortfolio/@site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
-                                <i class="fa fa-window-close text-danger"></i>
-                            </a>
-                            @if (site.Publish == true)
-                            {
-                                <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
-                                    <i class="fa fa-minus-square" style="color:#808080"></i>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="column">
+                            <div class="social-bar" style="float:right">
+                                <a href="~/Portfolio/EditSite/@site.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
+                                    <i class="fa fa-edit"></i>
                                 </a>
-                            }
-                            else
-                            {
-                                <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
-                                    <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                                <a href="~/Portfolio/DeletePortfolio/@site.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                                    <i class="fa fa-window-close text-danger"></i>
                                 </a>
-                            }
+                                @if (site.Publish == true)
+                                {
+                                    <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Убрать с публикации">
+                                        <i class="fa fa-minus-square" style="color:#808080"></i>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="~/Portfolio/PublishPortfolio/@site.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать!">
+                                        <i class="fa fa-plus-square" style="color:#00ff21"></i>
+                                    </a>
+                                }
+                            </div>
                         </div>
-                    </div>
-}
+                    }
                     <a href="~/Portfolio/Site/@site.Id" class="portfolio-item">
                         <div class="thumbnail waves-effect waves-light">
                             <img src="~/Content/img/PorfolioPicture/@site.PicturePC" alt="Portfolio">
