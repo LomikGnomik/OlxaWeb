@@ -7342,6 +7342,9 @@ a.image-box {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
+.tab-hover:hover{
+    outline:3px solid #19c55e;
+}
 .tile-tabs .tab .tab-title {
   font-size: 16px;
   font-weight: 600;
@@ -10666,6 +10669,10 @@ body::before {
   box-shadow: 0 0 0 1px #1bdb68;
   cursor: default;
 }
+.btn-padding{
+    margin:5px;
+    margin-top:10px;
+}
 
 /*Стиль для оформления "этапы разработки" */
 
@@ -11162,4 +11169,6 @@ span.round-tab:hover {
  .btn-border-price{
      margin:0;     
  }
+
+ /* параметры отображения картинок в портфолио*/
 

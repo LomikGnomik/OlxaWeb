@@ -46,7 +46,7 @@ font-style: normal;
 .flaticon-computer:before { content: "\f105"; font-weight:normal; } /*поддержка*/
 
 
-.flaticon-clock:before { content: "\f102"; }
+.flaticon-clock:before { content: "\f102"; font-size:50px;font-weight:normal; }
 .flaticon-drawing:before { content: "\f107"; }
 .flaticon-line:before { content: "\f108"; }
 

@@ -679,8 +679,17 @@
     <Content Include="Content\img\Home\yandex.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
+    <Content Include="Content\img\PorfolioPicture\164569217.jpg" />
+    <Content Include="Content\img\PorfolioPicture\glavnaya.png" />
+    <Content Include="Content\img\PorfolioPicture\home-sport-2a.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\007-world-map-o.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\445_web-dizayn.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\designer-developer.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\FGRpEqFLA-s.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\flat-vector-black-white-people-haircut-vector-avatar-icon-style-set-young-male-female-hipster-programmer-designer-beard-66192853.jpg" />
     <Content Include="Content\img\TemplateSitePicture\product-bg01.jpg" />
     <Content Include="Content\img\eror.jpg" />
+    <Content Include="Content\img\TemplateSitePicture\russia.jpg" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font_aw\css\font-awesome.css" />
@@ -867,7 +876,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\PorfolioPicture\" />
     <Folder Include="fonts\Playfair_Display\" />
     <Folder Include="Views\EMAIL_SMS_send\" />
   </ItemGroup>

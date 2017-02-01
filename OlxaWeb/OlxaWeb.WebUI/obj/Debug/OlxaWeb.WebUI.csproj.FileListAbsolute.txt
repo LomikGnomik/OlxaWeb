@@ -166,3 +166,7 @@ E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\AntiXssLibrary.dll
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\HtmlSanitizationLibrary.dll
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\AntiXssLibrary.xml
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\HtmlSanitizationLibrary.xml
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\AntiXssLibrary.dll
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\HtmlSanitizationLibrary.dll
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\AntiXssLibrary.xml
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.WebUI\bin\HtmlSanitizationLibrary.xml

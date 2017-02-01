@@ -48,3 +48,7 @@ E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.dll
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.dll
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.xml
 E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.xml
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.dll
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.dll
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.xml
+C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.xml
