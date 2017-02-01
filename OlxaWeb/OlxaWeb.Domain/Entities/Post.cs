@@ -44,15 +44,15 @@ namespace OlxaWeb.Domain.Entities
         public virtual string Category
         { get; set; }
 
-        //[DataType(DataType.Date)]
-        //[Display(Name = "Дата написания поста")]
-        //public virtual DateTime PostedOn
-        //{ get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Дата написания поста")]
+        public virtual DateTime PostedOn
+        { get; set; }
 
-        //[DataType(DataType.Date)]
-        //[Display(Name = "Пост изменён")]
-        //public virtual DateTime? Modified
-        //{ get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Пост изменён")]
+        public virtual DateTime? Modified
+        { get; set; }
 
         [Display(Name = "Количество просмотров")]
         public virtual int Counter //счётчик просмотров

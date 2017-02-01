@@ -11,7 +11,7 @@
     {
         <article class="post-item">
             <a href="~/Blog/Post/@post.Id" class="post-thumb waves-effect">
-                <img src=~/Content/img/BlogPicture/@post.UrlSlug alt="Здесь была картинка.А где?">
+                <img src=~/Content/img/BlogPicture/@post.Picture alt="Здесь была картинка.А где?">
             </a><!-- .post-thumb -->
             <div class="post-body">
                 <div class="post-meta">
@@ -25,12 +25,12 @@
                             <a href="#">@post.Category</a>
                         </span>
                     </div>
-                    @*<div class="column"><span>@post.PostedOn.Day.@post.PostedOn.Month.@post.PostedOn.Year</span></div>*@
+                    <div class="column"><span>@post.PostedOn.Day.@post.PostedOn.Month.@post.PostedOn.Year</span></div>
                 </div><!-- .post-meta -->
                 <a href="Blog/Post/@post.Id" class="post-title">
                     <h3>@post.Title</h3>
                 </a>
-                <p>@post.ShortDescription</p>
+                <p>@Html.Raw( @post.ShortDescription)</p>
                 @Html.ActionLink("Подробнее", "Post", "Blog", new { id = post.Id }, null)
             </div><!-- .post-body -->
             @if (User.IsInRole("Admin"))
@@ -40,18 +40,18 @@
                         <a href="~/Blog/EditPost/@post.Id" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Редактировать">
                             <i class="fa fa-edit"></i>
                         </a>
-                        <a href="#~/Blog/DeletePost/@post.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
+                        <a href="~/Blog/DeletePost/@post.Id" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Удалить">
                             <i class="fa fa-window-close text-danger"></i>
                         </a>
                    @if(post.Published)
                    {
-                        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Снять с публикации">
+                        <a href="~/Blog/PublishPost/@post.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Снять с публикации">
                             <i class="fa fa-minus-square" style="color:#808080"></i>
                         </a>
                    }
                    else
                    {
-                    <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
+                    <a href="~/Blog/PublishPost/@post.Id" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Опубликовать">
                         <i class="fa fa-plus-square" style="color:#00ff21"></i>
                     </a>
                    }

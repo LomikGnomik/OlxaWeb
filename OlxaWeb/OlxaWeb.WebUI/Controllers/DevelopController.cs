@@ -93,8 +93,6 @@ namespace OlxaWeb.WebUI.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult EditCard(HttpPostedFileBase picture, Temmplate temmplate)
         {
-            if (picture != null)
-            {    
                 if (picture!=null)
                 {
                 // получаем имя файла
@@ -104,7 +102,6 @@ namespace OlxaWeb.WebUI.Controllers
                 // сохраняем файл в папку img/BlogPicture/ в проекте
                 picture.SaveAs(Server.MapPath("~/Content/img/TemplateSitePicture/" + fileName));
                 }
-            }
             if (ModelState.IsValid)
             {
                 repository.SaveTemplate(temmplate);

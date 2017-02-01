@@ -13,21 +13,19 @@
         <div class="inner">
             <div class="column">
                 <div class="title">
-                    <h1>Single Product</h1>
+                    <h1>Наша работа</h1>
                 </div><!-- .title -->
             </div><!-- .column -->
             <div class="column">
                 <div class="breadcrumbs">
-                    <a href="index.html">Home</a>
+                    <a href="~/Portfolio/Index">Галлерея работ :</a>
                     <span class="delimiter"><i class="icon-arrow-right"></i></span>
-                    <span>Single Product</span>
+                    <span> @Model.Name</span>
                 </div><!-- .breadcrumbs -->
             </div><!-- .column -->
         </div>
     </div>
 </section><!-- .page-title -->
-  <!-- Single Product -->
-<section class="page-title"></section><!-- .page-title -->
 <section class="shop-single container">
     <div class="row">
         <div class="col-lg-5 col-md-6 space-bottom-2x">
@@ -41,30 +39,14 @@
              -->
             <div class="image-carousel">
                 <div class="inner">
-                    <img src="img/shop/gallery/01.jpg" alt="Image">
-                    <img src="img/shop/gallery/02.jpg" alt="Image">
-                    <img src="img/shop/gallery/03.jpg" alt="Image">
+                    <img src="~/Content/img/PorfolioPicture/@Model.PicturePC" />
+                    <img src="~/Content/img/PorfolioPicture/@Model.PictureMobile" />
                 </div>
             </div><!-- .image-carousel -->
         </div><!-- .col-lg-5.col-md-6 -->
         <div class="col-lg-7 col-md-6 space-bottom-2x">
             <h2 class="shop-title"><a href="#">@Model.Name</a></h2>
-            <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            <div class="shop-tools">
-                <div class="count">
-                    <span class="label">Qty: </span>
-                    <div class="count-input">
-                        <a class="incr-btn" data-action="decrease" href="#">–</a>
-                        <input class="quantity" type="text" value="2">
-                        <a class="incr-btn" data-action="increase" href="#">+</a>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-primary btn-icon-right waves-effect waves-light">
-                    Add To Cart
-                    <i class="icon-bag"></i>
-                </a>
-                <span class="text-lg">$344.99</span>
-            </div>
+            <p class="text-gray">@Model.Description</p>
             <div class="post-tools space-top">
                 <div class="column">
                     <div class="tags-links">
@@ -101,73 +83,7 @@
         </div><!-- .col-lg-7.col-md-6 -->
     </div><!-- .row -->
     <div class="row padding-top">
-        <div class="col-sm-6 space-bottom">
-            <!-- Nav Tabs -->
-            <ul class="nav-tabs" role="tablist">
-                <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Details</a></li>
-                <li><a href="#tab2" role="tab" data-toggle="tab">Review</a></li>
-                <li><a href="#tab3" role="tab" data-toggle="tab">Support</a></li>
-            </ul><!-- .nav-tabs -->
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane transition fade in active" id="tab1">
-                    <span class="text-bold">Dimensions</span>
-                    <p class="text-gray">40.5mm x 37.5mm x 10.5mm</p>
-                    <span class="text-bold">Band</span>
-                    <p class="text-gray">22mm wide, compatible with all 22mm watch bands.</p>
-                    <span class="text-bold">Weight</span>
-                    <p class="text-gray">62.3g (w/ leather band), 116.3g (w/ metal band) (w/ included silicone strap)</p>
-                </div>
-                <div role="tabpanel" class="tab-pane transition fade" id="tab2">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/120506679?color=2895f1&title=0&byline=0&portrait=0" width="640" height="360"></iframe>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane transition fade" id="tab3">
-                    <h3>Ask your question</h3>
-                    <form method="post">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="text" name="support_name" class="form-control" placeholder="Name" required>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="email" name="support_email" class="form-control" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <textarea name="support_message" rows="6" placeholder="Question" required></textarea>
-                        <button type="submit" class="btn btn-default btn-block waves-effect waves-light">Send Question</button>
-                    </form>
-                </div>
-            </div><!-- .tab-content -->
-        </div><!-- .col-sm-6 -->
-        <div class="col-sm-6 padding-top-2x">
-            <div class="row text-center">
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Time Tracking</p>
-                    <img src="img/features/17.png" class="block-center" alt="Feature">
-                </div>
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Video Player</p>
-                    <img src="img/features/18.png" class="block-center" alt="Feature">
-                </div>
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Notes</p>
-                    <img src="img/features/19.png" class="block-center" alt="Feature">
-                </div>
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Eye Care</p>
-                    <img src="img/features/20.png" class="block-center" alt="Feature">
-                </div>
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Fingerprint Scan</p>
-                    <img src="img/features/21.png" class="block-center" alt="Feature">
-                </div>
-                <div class="col-sm-4 col-xs-6 padding-bottom">
-                    <p class="space-bottom-none">Live Chat</p>
-                    <img src="img/features/22.png" class="block-center" alt="Feature">
-                </div>
-            </div>
-        </div><!-- .col-sm-6 -->
+      
     </div><!-- .row -->
 </section><!-- .shop-single -->
 @section Scripts {

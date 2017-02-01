@@ -96,18 +96,26 @@ namespace OlxaWeb.WebUI.Controllers
             return View(portfolio);
         }
         [HttpPost]
-        public ActionResult EditSite(HttpPostedFileBase picture, Portfolio portfolio)
+        public ActionResult EditSite(HttpPostedFileBase picturePC, HttpPostedFileBase pictureMobile, Portfolio portfolio)
         {
-            if (picture != null)
+            if (picturePC != null)
             {
                 // получаем имя файла
-                string fileName = System.IO.Path.GetFileName(picture.FileName);
+                string fileNamePC = System.IO.Path.GetFileName(picturePC.FileName);
                 //пишем  имя картинки в бд
-            //    portfolio.UrlSlug = fileName;
-                // сохраняем файл в папку img/BlogPicture/ в проекте
-                picture.SaveAs(Server.MapPath("~/Content/img/PortfolioPicture/" + fileName));
+                portfolio.PicturePC = fileNamePC;
+                // сохраняем файл в папку  в проекте
+                picturePC.SaveAs(Server.MapPath("~/Content/img/PorfolioPicture/" + fileNamePC));
             }
-
+            if (pictureMobile != null)
+            {
+                // получаем имя файла
+                string fileNameMobile = System.IO.Path.GetFileName(pictureMobile.FileName);
+                //пишем  имя картинки в бд
+                portfolio.PictureMobile = fileNameMobile;
+                // сохраняем файл в папку  в проекте
+                pictureMobile.SaveAs(Server.MapPath("~/Content/img/PorfolioPicture/" + fileNameMobile));
+            }
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);

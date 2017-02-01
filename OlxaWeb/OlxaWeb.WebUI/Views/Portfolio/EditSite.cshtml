@@ -37,12 +37,12 @@
             <div class="col-md-6">
                 @* Начало загрузки картинки для компа  *@
                 @Html.HiddenFor(m => m.PicturePC)
-                <input type="file" name="picturePC" accept="image/*" onchange="loadFile(event)" >
+                <input type="file" name="picturePC" accept="image/*" onchange="loadFilePC(event)" >
           
                     <img id="PC" src="~/Content/img/PortfolioPicture/@Model.PicturePC" alt="Нет картинки" />
         
                 <script>
-                    var loadFile = function (event) {
+                    var loadFilePC = function (event) {
                       
                         var outputPC = document.getElementById('PC');
                         outputPC.src = URL.createObjectURL(event.target.files[0]);
@@ -53,13 +53,13 @@
             <div class="col-md-6">
                 @* Начало загрузки картинки для сотового *@
                 @Html.HiddenFor(m => m.PictureMobile)
-                <input type="file" name="pictureMobile" accept="image/*" onchange="loadFile(event)">
+                <input type="file" name="pictureMobile" accept="image/*" onchange="loadFileM(event)">
 
-                    <img id="outputM" src="~/Content/img/PortfolioSitePicture/@Model.PictureMobile" alt="Нет картинки" />
+                    <img id="M" src="~/Content/img/PortfolioSitePicture/@Model.PictureMobile" alt="Нет картинки" />
 
                 <script>
-                    var loadFile = function (event) {
-                        var outputM = document.getElementById('outputM');
+                    var loadFileM = function (event) {
+                        var outputM = document.getElementById('M');
                         outputM.src = URL.createObjectURL(event.target.files[0]);
                     };
                 </script>

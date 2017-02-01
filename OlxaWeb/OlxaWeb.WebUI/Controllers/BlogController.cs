@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OlxaWeb.WebUI.Models;
-
+using Microsoft.Security.Application;
 
 namespace OlxaWeb.WebUI.Controllers
 {
@@ -22,8 +22,6 @@ namespace OlxaWeb.WebUI.Controllers
 
         public ActionResult Index(string category, int page = 1)
         {
-
-
             if (User.IsInRole("Admin")) 
             {
                 // Запрос для Админа (показывает опубликованные посты)
@@ -34,8 +32,6 @@ namespace OlxaWeb.WebUI.Controllers
                               .OrderBy(p => p.Id)
                               .Skip((page - 1) * PageSize)
                               .Take(PageSize),
-
-
                     PagingInfo = new PagingInfo
                     {
                         CurrentPage = page,
@@ -49,8 +45,7 @@ namespace OlxaWeb.WebUI.Controllers
                 return View(viewModel);
             }
             else // Запрос для пользователей(не показывает опубликованные посты)
-            {
-                
+            { 
                 BlogViewModels viewModel = new BlogViewModels
                 {
                     Posts = repository.Posts
@@ -68,11 +63,9 @@ namespace OlxaWeb.WebUI.Controllers
                  repository.Posts.Where(e => e.Category == category).Count()
                     },
                     CurrentCategory = category
-                    
                 };
                 return View(viewModel);
             }
-
         }
 
         public ActionResult Post(int id)
@@ -141,7 +134,7 @@ namespace OlxaWeb.WebUI.Controllers
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(picture.FileName);
                 //пишем  имя картинки в бд
-                post.UrlSlug = fileName;
+                post.Picture = fileName;
                 // сохраняем файл в папку img/BlogPicture/ в проекте
                 picture.SaveAs(Server.MapPath("~/Content/img/BlogPicture/" + fileName));
             }
@@ -160,6 +153,7 @@ namespace OlxaWeb.WebUI.Controllers
         {
             return View("EditPost", new Post());
         }
+
         [HttpPost]
         public ActionResult DeleteBlog(int Id)
         {
@@ -170,13 +164,15 @@ namespace OlxaWeb.WebUI.Controllers
             }
             return RedirectToAction("Index");
         }
+
         public void Counter(int Id) //счётчик просмотров статей
         {
             //  UPDATE table SET count = (count + 1) WHERE post_id = ЧЕМУ ТО ТАМ РАВНО
             Post count = repository.Posts.FirstOrDefault(p => p.Id == Id);
-            count.Counter = count.Counter++;
+            count.Counter = ++count.Counter;
             repository.SavePost(count);
         }
+
         public PartialViewResult Post_Site_Information(string category) //12 статей на сайте из блога по тематике "Разработка""SEO"
         {
             ViewBag.Category = category;
@@ -187,15 +183,14 @@ namespace OlxaWeb.WebUI.Controllers
 
             return PartialView(postindevelop);
         }
+
         public ActionResult Search(string search, int page = 1)
         {
-            
-           // ViewBag.Search = true;
             BlogViewModels viewModel = new BlogViewModels
             {
                 Posts = repository.Posts
-                 .Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
-               //  .OrderBy(p => p.PostedOn)
+                 .Where(p => p.Published == true & (p.Title.ToLower().Contains(Sanitizer.GetSafeHtmlFragment(search.ToLower())))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
+                 .OrderBy(p => p.PostedOn)
                  .Skip((page - 1) * PageSize)
                  .Take(PageSize),
 
@@ -203,11 +198,18 @@ namespace OlxaWeb.WebUI.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Posts.Where(p => p.Published == true & (p.Title.ToLower().Contains(search.ToLower()))).Count()
+                    TotalItems = repository.Posts.Where(p => p.Published == true & (p.Title.ToLower().Contains(Sanitizer.GetSafeHtmlFragment(search.ToLower())))).Count()
                 },
                 SearchString = search
             };
             return View("Index", viewModel);
+
+        }
+        public RedirectResult PublishPost(int Id)
+        {
+           Post PublishTemplate = repository.PublishPost(Id);
+
+            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
     }
 }

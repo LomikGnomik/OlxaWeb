@@ -1,4 +1,5 @@
-﻿using OlxaWeb.Domain.Abstract;
+﻿using Microsoft.Security.Application;
+using OlxaWeb.Domain.Abstract;
 using OlxaWeb.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace OlxaWeb.Domain.Concrete
         {
             if (post.Id == 0)
             {
+                post.PostedOn = DateTime.Now;
+                post.Modified = DateTime.Now;
                 context.Posts.Add(post);
             }
             else
@@ -29,16 +32,16 @@ namespace OlxaWeb.Domain.Concrete
                 Post dbEntry = context.Posts.Find(post.Id);
                 if (dbEntry != null)
                 {
-                  //  dbEntry.Category = post.Category;
-                  //  dbEntry.Description = post.Description;
-                  //  dbEntry.Meta = post.Meta;
-                  //  dbEntry.Modified = DateTime.Now;
-                  //  dbEntry.PostedOn = post.PostedOn;
-                   // dbEntry.Published = post.Published;
-                  //  dbEntry.ShortDescription = post.ShortDescription;
+                    dbEntry.Category = post.Category;
+                    dbEntry.Description = Sanitizer.GetSafeHtmlFragment(post.Description);
+                    dbEntry.Meta = post.Meta;
+                    dbEntry.Modified = DateTime.Now;
+                    dbEntry.Published = post.Published;
+                    dbEntry.ShortDescription = post.ShortDescription;
                     dbEntry.Title = post.Title;
-                  //  dbEntry.UrlSlug = post.UrlSlug;
-                  //  dbEntry.Counter = post.Counter;
+                    dbEntry.UrlSlug = post.UrlSlug;
+                    dbEntry.Counter = post.Counter;
+                    dbEntry.Picture = post.Picture;
                 }
             }
             context.SaveChanges();
@@ -50,6 +53,16 @@ namespace OlxaWeb.Domain.Concrete
             if (dbEntry != null)
             {
                 context.Posts.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
+        public Post PublishPost(int Id)
+        {
+            Post dbEntry = context.Posts.Find(Id);
+            if (dbEntry != null)
+            {
+                dbEntry.Published = dbEntry.Published == true ? false : true;
                 context.SaveChanges();
             }
             return dbEntry;
