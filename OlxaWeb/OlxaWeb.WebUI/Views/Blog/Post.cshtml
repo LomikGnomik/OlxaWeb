@@ -7,6 +7,7 @@
 }
 @Html.Action("Counter","Blog")
 
+
 <!-- Content -->
 <div class="col-lg-9 col-md-8">
     <h3>@Model.Title</h3>
@@ -22,10 +23,10 @@
     </div><!-- .post-meta -->
 
     <div class="image-carousel space-bottom-2x">
-        <img src="~/Content/img/BlogPicture/@Model.UrlSlug" alt="Тут должна быть картинка">
+        <img src="~/Content/img/BlogPicture/@Model.Picture" alt="Тут должна быть картинка">
     </div><!-- .image-carousel -->
 
-    <p>@Model.Description</p>
+    <p>@Html.Raw( @Model.Description)</p>
 
     <div class="post-tools space-top-2x">
 

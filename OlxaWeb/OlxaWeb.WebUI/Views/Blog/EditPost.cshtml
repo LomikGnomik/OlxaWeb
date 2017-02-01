@@ -7,12 +7,11 @@
 <script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
 
 
-<div class="container">
+
     @using (Html.BeginForm("EditPost", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <!-- Content -->
         <div class="col-lg-9 col-md-8">
-
 
             @Html.LabelFor(model => model.Title)
             @Html.EditorFor(model => model.Title)
@@ -20,8 +19,8 @@
             @Html.LabelFor(model => model.Category)
             @Html.EditorFor(model => model.Category)
 
-
             @* загрузка картинки*@
+            @Html.HiddenFor(m=>m.Picture)
             <input type="file" name="picture" accept="image/*" onchange="loadFile(event)">
             <div class="image-carousel space-bottom-2x">
                 <img id="output" src="~/Content/img/BlogPicture/@Model.Picture" alt="Нет картинки" />
@@ -65,6 +64,9 @@
             @Html.LabelFor(model => model.UrlSlug)
             @Html.EditorFor(model => model.UrlSlug)
 
+            @Html.LabelFor(m=>m.Counter)
+            @Html.EditorFor(m => m.Counter)
+
             <div class="post-tools space-top-2x">
                 <div class="column">
                     <div class="social-bar">
@@ -76,8 +78,6 @@
             </div><!-- .post-tools -->
         </div><!-- .col-lg-9.col-md-8 -->
     }
-</div>
-
 @section Scripts {
 <script src="~/Content/ckeditor_4.6.2_full/ckeditor/ckeditor.js"></script>
 }

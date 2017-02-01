@@ -14,7 +14,6 @@
 </head>
 <body>
     <div id="preloader" data-spinner="spinner1" data-screenbg="#fff"></div>
-
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <!-- ----------------------------------закрепленое окошко с контктами скайп,фейсбук,твитер------------------------------->
@@ -53,23 +52,22 @@
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
-
             <div class="container">
                 <nav class="main-navigation">
                     <ul class="menu">
                         <li class="menu-item-has-children @(ViewBag.Current=="About"?"current-menu-item":"")">
                             <a href="~/Home/index"><i class="flaticon-business"></i> О нас</a>
+                        </li>
                         <li class="menu-item-has-children @(ViewBag.Current=="Develop"?"current-menu-item":"")">
                             <a href="~/Develop/index"><i class="flaticon-business-1"></i>Разработка</a>
                             <div class="mega-menu">
                                 <ul>
                                     <li @(ViewBag.SubMenu=="Template"? "class=current-menu-item":"") >@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
                                     <li @(ViewBag.SubMenu=="Individual"? "class=current-menu-item":"")>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
-                                    <li @(ViewBag.SubMenu=="Exclusive" ? "class=current-menu-item":"")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
+                                    <li @(ViewBag.SubMenu=="Exclusive"? "class=current-menu-item":"")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
                                 </ul>
                             </div>
                         </li>
-
                         <li class="menu-item-has-children @(ViewBag.Current=="SEO"?"current-menu-item":"")">
                             <a href="~/SEO/index"><i class="flaticon-computer-1"></i>Продвижение</a>
                             <div class="mega-menu">
@@ -89,16 +87,13 @@
                         <li class="menu-item-has-children @(ViewBag.Current=="Contact"?"current-menu-item":"")">
                             <a href="~/Home/Contact"><i class="flaticon-money"></i>Контакты</a>
                         </li>
-
                         @*<li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
                             <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
                         </li>*@
-
                     </ul>
                     <!-- .menu -->
                 </nav>
             </div><!-- .container -->
-
             <div class="social-bar mobile-socials">
                 <a href="#" class="sb-skype">
                     <i class="fa fa-skype"></i>
@@ -137,7 +132,6 @@
             </div><!-- .modal-dialog -->
         </div><!-- .modal.fade -->
 
-        
             @RenderBody()
       
         <!-- -----------------------------------------------Footer------------------------------------------------------------------ -->
@@ -174,8 +168,6 @@
                     </div>
                 </div><!-- .container -->
             </div><!-- .top-footer -->
-
-
                 <div class="bottom-footer">
                     <div class="container">
                         <div class="row">
@@ -236,7 +228,6 @@
                     </div><!-- .container -->
                 </div><!-- .bottom-footer -->
 </footer><!-- .footer -->
-
     </div><!-- .page-wrapper -->
 
     <!-- Scroll To Top Button -->
@@ -245,7 +236,7 @@
     </a><!-- .scroll-to-top-btn -->
     @RenderSection("Scripts")
     <script src="~/Scripts/js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="~/Scripts/js/vendor/preloader.min.js"></script>
+    @*<script src="~/Scripts/js/vendor/preloader.min.js"></script>*@
     <script src="~/Scripts/js/vendor/bootstrap.min.js"></script>
     <script src="~/Scripts/js/vendor/waves.min.js"></script>
     <script src="~/Scripts/js/vendor/placeholder.js"></script>

@@ -44,3 +44,7 @@ C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\System.Web.WebPages.Ra
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\obj\Debug\OlxaWeb.Domain.csprojResolveAssemblyReference.cache
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\obj\Debug\OlxaWeb.Domain.dll
 C:\projects\_Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\obj\Debug\OlxaWeb.Domain.pdb
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.dll
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\AntiXssLibrary.xml
+E:\0.Git\OlxaWeb\OlxaWeb\OlxaWeb.Domain\bin\Debug\HtmlSanitizationLibrary.xml
