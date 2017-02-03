@@ -5,7 +5,7 @@
 /**
   01. Font Awesome
   02. Feather Icons
-  03. Flaticon
+  03. 
   04. CSS Reset
   05. Bootstrap
   06. Scaffolding
@@ -5097,9 +5097,8 @@ input[type="button"].btn-block {
 }
 
 .main-navigation .menu > li > a i { /* цвет картинок меню*/
-  display: block;
-  font-size: 40px;
-  font-weight:100;
+ display: block;
+  font-size: 47px;
   color: #19c55e;
   line-height: 1;
   margin-top: 7px;
@@ -5169,7 +5168,7 @@ input[type="button"].btn-block {
   display: none;
   position: absolute;
   list-style: none;
-  width: 300px;
+  width: 265px;
   padding: 24px;
   background-color: #19c55e;
   text-align: left;
@@ -5453,6 +5452,7 @@ input[type="button"].btn-block {
   .navbar .main-navigation .menu > li.current-menu-item > a:after,
   .navbar .main-navigation .menu > li.current_page_item > a:after {
     display: none;
+
   }
   .navbar .main-navigation .menu > li .sub-menu,
   .navbar .main-navigation .menu > li .mega-menu {
@@ -11172,3 +11172,64 @@ span.round-tab:hover {
 
  /* параметры отображения картинок в портфолио*/
 
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/my-icons/font/Flaticon.eot");
+  src: url("../fonts/my-icons/font/Flaticon.eot#iefix") format("embedded-opentype"), url("../fonts/my-icons/font/flaticon.woff") format("woff"), url("../fonts/my-icons/font/flaticon.ttf") format("truetype"), url("../fonts/my-icons/font/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+
+     
+  /*font-size: 40px;*/
+
+
+
+
+  display: inline-block;
+  font-family: Flaticon;
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+.flaticon-business:before { content:  "\f101"; }
+.flaticon-business-1:before { content:"\f100"; }
+.flaticon-business-2:before { content: "\f102"; }
+.flaticon-clock:before { content: "\f103"; }
+.flaticon-clock-1:before { content: "\f104"; }
+.flaticon-cogwheel:before { content: "\f105"; }
+.flaticon-cogwheel-1:before { content: "\f106"; }
+.flaticon-commerce:before { content: "\f107"; }
+.flaticon-computer:before { content: "\f108"; }
+.flaticon-computer-1:before { content: "\f109"; }
+.flaticon-computer-2:before { content: "\f10a"; }
+.flaticon-draw:before { content: "\f10b"; }
+.flaticon-drawing:before { content: "\f10c"; }
+.flaticon-file:before { content: "\f10d"; }
+.flaticon-gps:before { content: "\f10e"; }
+.flaticon-interface:before { content: "\f10f"; }
+.flaticon-layers:before { content: "\f110"; }
+.flaticon-line:before { content: "\f111"; }
+.flaticon-money:before { content: "\f112"; }
+.flaticon-monitor:before { content: "\f113"; }
+.flaticon-paint:before { content: "\f114"; }
+.flaticon-people:before { content: "\f115"; }
+.flaticon-portfolio:before { content: "\f116"; }
+.flaticon-ruble:before { content: "\f117"; }
+.flaticon-science:before { content: "\f118"; }
+.flaticon-search:before { content: "\f119"; }
+.flaticon-technology:before { content: "\f11a"; }
+.flaticon-technology-1:before { content: "\f11b"; }
+.flaticon-transport:before { content: "\f11c"; }
