@@ -33,7 +33,7 @@
         </div><!-- .social-bar -->
         <!-- Navbar -->
         <!-- Add class ".navbar-sticky" to make navbar stuck when it hits the top of the page. Another modifier class is: "navbar-fullwidth" to stretch navbar and make it occupy 100% of the page width. The screen width at which navbar collapses can be controlled through the variable "$nav-collapse" in sass/variables.scss -->
-        <header class="navbar navbar-sticky">
+        <header class="navbar navbar-sticky @(ViewBag.Title=="Landing"?"navbar-fullwidth":"")" >
             <!-- --------------------------------------Topbar  (Уплывающая шапка с лого) ---------------------------->
             <div class="topbar">
                 <div class="container">
@@ -53,60 +53,67 @@
                 </div><!-- .container -->
             </div><!-- .topbar -->
             <!-- ---------------------------------Главное меню Toolbar--------------------------------------------------- -->
-            <div class="container">
-                <nav class="main-navigation">
-                    <ul class="menu">
-                        <li class="menu-item-has-children @(ViewBag.Current=="About"?"current-menu-item":"")">
-                            <a href="~/Home/index"><i class="flaticon-business"></i> О нас</a>
-                        </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="Develop"?"current-menu-item":"")">
+                <div class="container">
+                    <nav class="main-navigation">
+                        <ul class="menu">
+                            <li class="menu-item-has-children @(ViewBag.Current=="About"?"current-menu-item":"")">
+                                <a href="~/Home/index"><i class="flaticon-business"></i>OlxaWeb</a>
+                            </li>
+                            <li class="menu-item-has-children @(ViewBag.Current=="Develop"?"current-menu-item":"")">
                             <a href="~/Develop/index"><i class="flaticon-business-1"></i>Разработка</a>
-                            <div class="mega-menu">
-                                <ul>
-                                    <li @(ViewBag.SubMenu == "Template" ? "class=current-menu-item" : "")>@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
-                                    <li @(ViewBag.SubMenu == "Individual" ? "class=current-menu-item" : "")>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
-                                    <li @(ViewBag.SubMenu == "Exclusive" ? "class=current-menu-item" : "")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="SEO"?"current-menu-item":"")">
-                            <a href="~/SEO/index"><i class="flaticon-computer-1"></i>Продвижение</a>
-                            <div class="mega-menu">
-                                <ul>
-                                    <li>@Html.ActionLink("Начальное", "index", "SEO")</li>
-                                    <li>@Html.ActionLink("Оптимальное", "", "SEO")</li>
-                                    <li>@Html.ActionLink("Продвинутое", "", "SEO")</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="Portfolio"?"current-menu-item":"")">
-                            <a href="~/Portfolio/index"><i class="flaticon-portfolio"></i>Наши работы</a>
-                        </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="Price"?"current-menu-item":"")">
-                            <a href="~/Price/index"><i class="flaticon-ruble"></i>Услуги и цены</a>
-                        </li>
-                        <li class="menu-item-has-children @(ViewBag.Current=="Contact"?"current-menu-item":"")">
-                            <a href="~/Home/Contact"><i class="flaticon-money"></i>Контакты</a>
-                        </li>
-                        @*<li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
-                                <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
-                            </li>*@
-                    </ul>
-                    <!-- .menu -->
-                </nav>
-            </div><!-- .container -->
-            <div class="social-bar mobile-socials">
-                <a href="#" class="sb-skype">
-                    <i class="fa fa-skype"></i>
-                </a>
-                <a href="#" class="sb-facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="sb-twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </div>
-        </header><!-- .navbar -->
+                                @*<div class="mega-menu">
+                                    <ul>
+                                        <li @(ViewBag.SubMenu == "Template" ? "class=current-menu-item" : "")>@Html.ActionLink("Готовые решения", "Template", "Develop") </li>
+                                        <li @(ViewBag.SubMenu == "Individual" ? "class=current-menu-item" : "")>@Html.ActionLink("Индивидуальные проекты", "Individual", "Develop")</li>
+                                        <li @(ViewBag.SubMenu == "Exclusive" ? "class=current-menu-item" : "")>@Html.ActionLink("Эксклюзивные проекты", "Exclusive", "Develop")</li>
+                                    </ul>
+                                </div>*@
+                            </li>
+                            <li class="menu-item-has-children @(ViewBag.Current=="SEO"?"current-menu-item":"")">
+                                <a href="~/SEO/index"><i class="flaticon-computer-1"></i>Продвижение</a>
+                                @*<div class="mega-menu">
+                                    <ul>
+                                        <li>@Html.ActionLink("Начальное", "index", "SEO")</li>
+                                        <li>@Html.ActionLink("Оптимальное", "", "SEO")</li>
+                                        <li>@Html.ActionLink("Продвинутое", "", "SEO")</li>
+                                    </ul>
+                                </div>*@
+                            </li>
+                            <li class="menu-item-has-children @(ViewBag.Current=="Portfolio"?"current-menu-item":"")">
+                                <a href="~/Portfolio/index"><i class="flaticon-portfolio"></i>Наши работы</a>
+                            </li>
+                            <li class="menu-item-has-children @(ViewBag.Current=="Price"?"current-menu-item":"")">
+                                <a href="~/Price/index"><i class="flaticon-ruble"></i>Услуги и цены</a>
+                            </li>
+                            <li class="menu-item-has-children @(ViewBag.Current=="Contact"?"current-menu-item":"")">
+                                <a href="~/Home/Contact"><i class="flaticon-money"></i>Мы</a>
+                                <div class="mega-menu">
+                                    <ul>
+                                        <li @(ViewBag.SubMenu == "Brigade" ? "class=current-menu-item" : "")>@Html.ActionLink("Наша команда", "Brigade", "Home") </li>
+                                        <li @(ViewBag.SubMenu == "Contact" ? "class=current-menu-item" : "")>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                                        <li @(ViewBag.SubMenu == "Blog" ? "class=current-menu-item" : "")>@Html.ActionLink("Наш Блог", "Index", "Blog")</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            @*<li class="menu-item-has-children @(ViewBag.Current=="MySite"?"current-menu-item":"")">
+                            <a href="~/Home/Mysite"><i class="fa fa-power-off" aria-hidden="true"></i>Мой сайт</a>
+                        </li>*@
+                        </ul>
+                        <!-- .menu -->
+                    </nav>
+                </div><!-- .container -->
+                <div class="social-bar mobile-socials">
+                    <a href="#" class="sb-skype">
+                        <i class="fa fa-skype"></i>
+                    </a>
+                    <a href="#" class="sb-facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="sb-twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </header><!-- .navbar -->
         <!-- -------------------------------------- модальное окно для входа и регистрации ---------------------------------------- -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
             <div class="modal-dialog">

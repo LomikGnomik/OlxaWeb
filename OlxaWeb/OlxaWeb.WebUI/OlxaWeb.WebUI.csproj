@@ -643,7 +643,6 @@
     <Content Include="Content\footer\envelope.png" />
     <Content Include="Content\footer\help.png" />
     <Content Include="Content\footer\phone.png" />
-    <Content Include="Content\img\05.jpg" />
     <Content Include="Content\img\1478172823164455436.png" />
     <Content Include="Content\img\BlogPicture\1478172823164455436.png" />
     <Content Include="Content\img\BlogPicture\HiRes-Blank-Faces.jpg" />
@@ -651,6 +650,18 @@
     <Content Include="Content\img\cards.png" />
     <Content Include="Content\img\contacts-icon.png" />
     <Content Include="Content\img\cta-bg.jpg" />
+    <Content Include="Content\img\del\0_6ace2_e4fa297c_XL.jpg" />
+    <Content Include="Content\img\del\1333020964-2467096-stock_vector___digital_cards_197-mb_digital-cards3_www.hqtexture.com.jpg" />
+    <Content Include="Content\img\Home\Landing\Adaptiv_Mobile.jpg" />
+    <Content Include="Content\img\Home\Landing\Adaptiv_Table.jpg" />
+    <Content Include="Content\img\Home\Landing\Brouser_Mobile.jpg" />
+    <Content Include="Content\img\Home\Landing\Browser_Tablet.jpg" />
+    <Content Include="Content\img\Home\Landing\nout.png" />
+    <Content Include="Content\img\Home\Landing\fon_for_nout.jpg" />
+    <Content Include="Content\img\del\giphy.gif" />
+    <Content Include="Content\img\del\Görsel-4646.jpg" />
+    <Content Include="Content\img\del\i.jpg" />
+    <Content Include="Content\img\del\shutterstock_87712507.jpg" />
     <Content Include="Content\img\Home\08.png" />
     <Content Include="Content\img\Home\09.png" />
     <Content Include="Content\img\Home\10.png" />
@@ -672,10 +683,14 @@
     <Content Include="Content\img\Home\google-logo.jpg" />
     <Content Include="Content\img\Home\ipad.png" />
     <Content Include="Content\img\Home\ipad_adaptiv.jpg" />
-    <Content Include="Content\img\Home\ipad_Speed.gif" />
+    <Content Include="Content\img\Home\Landing\ipad_Speed.gif" />
     <Content Include="Content\img\Home\iphone.png" />
     <Content Include="Content\img\Home\iphone_adaptiv.jpg" />
+    <Content Include="Content\img\Home\Landing\SEO_Mobile1.jpg" />
+    <Content Include="Content\img\Home\Landing\Speed_Mobile.jpg" />
+    <Content Include="Content\img\Home\Landing\SEO_Table.jpg" />
     <Content Include="Content\img\Home\seo-cta-bg.png" />
+    <Content Include="Content\img\Home\SEO_Mobile.jpg" />
     <Content Include="Content\img\Home\yandex.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pebble01.png" />
@@ -700,7 +715,6 @@
     <Content Include="fonts\my-icons\font\flaticon.css" />
     <Content Include="fonts\my-icons\font\flaticon.html" />
     <Content Include="fonts\my-icons\font\Flaticon.svg" />
-    <Content Include="fonts\my-icons\license\license.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -876,6 +890,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\my-icons\license\" />
     <Folder Include="fonts\Playfair_Display\" />
     <Folder Include="Views\EMAIL_SMS_send\" />
   </ItemGroup>
